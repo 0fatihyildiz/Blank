@@ -4,7 +4,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: "./core/main.styl",
-            name: "StylusPackage",
+            name: "blank=styles",
             fileName: "stylus-package",
             formats: ["es", "cjs"],
         },
@@ -18,7 +18,6 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             stylus: {
-                // Stylus'a özel seçenekler
             },
         },
     },
