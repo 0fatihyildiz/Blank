@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "stylus": "^0.63.0"
+  "devDependencies": {
+    "vite": "^5.4.9"
   }
 }
