@@ -1,0 +1,21 @@
+{
+  "name": "styles",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  ".": "dist/index.css",
+  "scripts": {
+    "dev": "vite build --watch",
+    "lint": "stylelint --fix \"core/**/*.styl\"",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "stylelint": "^16.10.0",
+    "stylelint-stylus": "^1.0.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "stylus": "^0.63.0"
+  }
+}

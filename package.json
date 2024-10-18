@@ -1,0 +1,32 @@
+{
+  "name": "blank",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:styles": "pnpm --filter @blank/styles dev",
+    "dev:vue": "pnpm --filter @blank/vue dev",
+    "dev:react": "pnpm --filter @blank/react dev",
+    "dev:playground-vue": "pnpm --filter playground-vue dev",
+    "dev:playground-react": "pnpm --filter playground-react dev",
+    "build:styles": "pnpm --filter @blank/styles build",
+    "build:vue": "pnpm --filter @blank/vue build",
+    "build:react": "pnpm --filter @blank/react build",
+    "lint:styles": "pnpm --filter @blank/styles lint"
+  },
+  "workspaces": [
+    "packages/*",
+    "playground/*"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/compiler-sfc": "^3.5.12",
+    "vite": "^5.4.9"
+  },
+  "dependencies": {
+    "npm-run-all2": "^6.2.4"
+  }
+}

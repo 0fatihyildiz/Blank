@@ -1,0 +1,29 @@
+{
+	"name": "@blank/vue",
+	"type": "module",
+	"version": "0.0.1",
+	"private": true,
+	"main": "dist/index.es.js",
+	"module": "dist/index.es.js",
+	"types": "dist/types/index.d.ts",
+	"scripts": {
+		"dev": "run-p tsc:watch main:watch",
+		"build": "run-s tsc:build main:build",
+		"main:watch": "vite build --watch",
+		"main:build": "vite build",
+		"tsc:watch": "vue-tsc --project tsconfig.json --watch",
+		"tsc:build": "vue-tsc --project tsconfig.json"
+	},
+	"dependencies": {
+		"npm-run-all2": "^6.2.4",
+		"vue": "^3.5.10"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^3.8.0",
+		"@vitejs/plugin-vue": "^5.1.4",
+		"eslint": "^9.12.0",
+		"typescript": "^5.5.3",
+		"vite": "^5.4.8",
+		"vue-tsc": "^2.1.6"
+	}
+}
