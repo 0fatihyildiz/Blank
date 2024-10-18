@@ -117,6 +117,9 @@ importers:
       '@blank/react':
         specifier: workspace:../../packages/react
         version: link:../../packages/react
+      '@blank/styles':
+        specifier: workspace:../../packages/styles
+        version: link:../../packages/styles
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -163,13 +166,25 @@ importers:
 
   playground/vue:
     dependencies:
+      '@blank/styles':
+        specifier: workspace:../../packages/styles
+        version: link:../../packages/styles
+      '@blank/vue':
+        specifier: workspace:../../packages/vue
+        version: link:../../packages/vue
       vue:
         specifier: ^3.5.10
         version: 3.5.12(typescript@5.6.3)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^3.8.0
+        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.12)(eslint@9.12.0)(typescript@5.6.3)
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.9)(vue@3.5.12)
+      eslint:
+        specifier: ^9.12.0
+        version: 9.12.0
       typescript:
         specifier: ^5.5.3
         version: 5.6.3

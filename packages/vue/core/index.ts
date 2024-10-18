@@ -1,1 +1,1 @@
-export * as Components from './components/index';
+export * from './components/index'
