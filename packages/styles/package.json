@@ -5,11 +5,13 @@
   "type": "module",
   ".": "dist/index.css",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite build --watch",
+    "lint": "stylelint --fix \"core/**/*.styl\"",
+    "build": "tsc && vite build"
   },
   "devDependencies": {
+    "stylelint": "^16.10.0",
+    "stylelint-stylus": "^1.0.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.8"
   },
