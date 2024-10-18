@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      npm-run-all2:
+        specifier: ^6.2.4
+        version: 6.2.4
     devDependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
