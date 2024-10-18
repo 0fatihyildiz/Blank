@@ -1,12 +1,29 @@
 {
-  "name": "react",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@blank/react",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "run-p tsc:watch main:watch",
+    "build": "run-s tsc:build main:build",
+    "main:watch": "vite build --watch",
+    "main:build": "vite build",
+    "tsc:watch": "tsc --project tsconfig.json --watch",
+    "tsc:build": "tsc --project tsconfig.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "globals": "^15.9.0",
+    "npm-run-all2": "^6.2.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vite-plugin-dts": "^4.2.4"
+  }
 }

@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:vue": "pnpm --filter @blank/vue dev"
+    "dev:vue": "pnpm --filter @blank/vue dev",
+    "dev:react": "pnpm --filter @blank/react dev",
+    "build:vue": "pnpm --filter @blank/vue build",
+    "build:react": "pnpm --filter @blank/react build"
   },
   "workspaces": [
     "packages/*"

@@ -4,11 +4,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [vue()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'core'),
-    },
-  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'core/index.ts'),
@@ -23,6 +18,6 @@ export default defineConfig({
           vue: 'Vue'
         }
       }
-    }
+    },
   }
 });
