@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:styles": "pnpm --filter @blank/styles dev",
     "dev:vue": "pnpm --filter @blank/vue dev",
     "dev:react": "pnpm --filter @blank/react dev",
+    "build:styles": "pnpm --filter @blank/styles build",
     "build:vue": "pnpm --filter @blank/vue build",
-    "build:react": "pnpm --filter @blank/react build"
+    "build:react": "pnpm --filter @blank/react build",
+    "lint:styles": "pnpm --filter @blank/styles lint"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "playground/*"
   ],
   "keywords": [],
   "author": "",
