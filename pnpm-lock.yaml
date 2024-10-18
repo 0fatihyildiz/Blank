@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.8.0
-        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint@9.12.0)(typescript@5.6.3)
+        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.12)(eslint@9.12.0)(typescript@5.6.3)
       '@eslint/js':
         specifier: ^9.11.1
         version: 9.12.0
@@ -91,7 +91,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^3.8.0
-        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint@9.12.0)(typescript@5.6.3)
+        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.12)(eslint@9.12.0)(typescript@5.6.3)
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.9)(vue@3.5.12)
@@ -117,6 +117,9 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^3.8.0
+        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.12)(eslint@9.12.0)(typescript@5.6.3)
       '@eslint/js':
         specifier: ^9.11.1
         version: 9.12.0
@@ -130,7 +133,7 @@ importers:
         specifier: ^4.3.2
         version: 4.3.2(vite@5.4.9)
       eslint:
-        specifier: ^9.11.1
+        specifier: ^9.12.0
         version: 9.12.0
       eslint-plugin-react-hooks:
         specifier: ^5.1.0-rc.0
@@ -183,7 +186,7 @@ packages:
       '@jridgewell/trace-mapping': 0.3.25
     dev: true
 
-  /@antfu/eslint-config@3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint@9.12.0)(typescript@5.6.3):
+  /@antfu/eslint-config@3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.12)(eslint@9.12.0)(typescript@5.6.3):
     resolution: {integrity: sha512-O5QSufPHpKTm0wk1OQ5c2mOZVzCqYV3hIDrt5zt+cOWqiG8YXLPkSOD4fFwjomATtOuUbcLUwkcgY5dErM7aIw==}
     hasBin: true
     peerDependencies:
@@ -249,6 +252,8 @@ packages:
       eslint-plugin-n: 17.11.1(eslint@9.12.0)
       eslint-plugin-no-only-tests: 3.3.0
       eslint-plugin-perfectionist: 3.9.1(eslint@9.12.0)(typescript@5.6.3)(vue-eslint-parser@9.4.3)
+      eslint-plugin-react-hooks: 5.1.0-rc-fb9a90fa48-20240614(eslint@9.12.0)
+      eslint-plugin-react-refresh: 0.4.12(eslint@9.12.0)
       eslint-plugin-regexp: 2.6.0(eslint@9.12.0)
       eslint-plugin-toml: 0.11.1(eslint@9.12.0)
       eslint-plugin-unicorn: 56.0.0(eslint@9.12.0)
