@@ -5,7 +5,7 @@ export default defineConfig({
         lib: {
             entry: "./core/main.styl",
             name: "blank=styles",
-            fileName: "stylus-package",
+            fileName: "blank-styles",
             formats: ["es", "cjs"],
         },
         rollupOptions: {
@@ -17,8 +17,6 @@ export default defineConfig({
     },
     css: {
         preprocessorOptions: {
-            stylus: {
-            },
         },
     },
 });
