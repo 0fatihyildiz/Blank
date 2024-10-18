@@ -114,6 +114,9 @@ importers:
 
   playground/react:
     dependencies:
+      '@blank/react':
+        specifier: workspace:../../packages/react
+        version: link:../../packages/react
       react:
         specifier: ^18.3.1
         version: 18.3.1
