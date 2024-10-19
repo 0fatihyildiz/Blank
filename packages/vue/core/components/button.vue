@@ -1,15 +1,15 @@
 <script setup lang="ts">
 interface Props {
-	readonly text: string
-	test: string
-	test2: string
+	variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'destructive'
+	size?: 32 | 40 | 48
+	disabled?: boolean
 }
 
-const { text } = defineProps<Props>()
+defineProps<Props>()
 </script>
 
 <template>
 	<button class="button">
-		{{ text }}
+		<slot />
 	</button>
 </template>

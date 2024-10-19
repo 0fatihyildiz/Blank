@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Icon } from '@blank/vue'
+import { Button, Container } from '@blank/vue'
 </script>
 
 <template>
-	<div>
-		<Icon name="RiAdvertisementLine" />
-	</div>
+	<Container>
+		<Button>Click me</Button>
+	</Container>
 </template>
