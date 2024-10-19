@@ -15,7 +15,9 @@
     "build:react": "pnpm --filter @blank/react build",
     "lint:styles": "pnpm --filter @blank/styles lint",
     "prepare": "husky",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "generate-changelog": "auto-changelog -u"
   },
   "workspaces": [
     "packages/*",
@@ -29,6 +31,7 @@
     "@commitlint/config-conventional": "^19.5.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/compiler-sfc": "^3.5.12",
+    "auto-changelog": "^2.5.0",
     "husky": "^9.1.6",
     "vite": "^5.4.9"
   },
