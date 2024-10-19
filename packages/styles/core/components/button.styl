@@ -1,2 +1,65 @@
-.button
-  flex(row, center, center)
+.blank
+  &__button
+    Body2(500)
+    flex(column, center, center)
+    spacing('padding', 8px, 16px, 8px, 16px)
+    spacing('margin', 8px, 16px, 8px, 16px) // This line remove when you production build
+    spacing('gap', 8px, 16px)
+    border-radius: 12px
+
+    &.primary
+      background-color $Primary900
+      color $BaseWhite
+      shadow-1()
+
+      &:hover
+        background-color $Primary800
+
+      &:active
+        background-color $Primary700
+
+    &.secondary
+      color $BaseBlack
+      background-color $BaseWhite
+      border solid 1px $AlphaBlack10
+      shadow-1()
+
+      &:hover
+        background-color $Primary50
+
+      &:active
+        background-color $Secondary700
+
+    &.tertiary
+      color $BaseBlack
+      background-color $AlphaBlack5
+
+      &:hover
+        background-color $AlphaBlack10
+
+      &:active
+        background-color $Secondary700
+
+    &.quaternary
+      color $AlphaBlack60
+
+      &:hover
+        background-color $Primary100
+        color $BaseBlack
+
+      &:active
+        background-color $Primary200
+
+    &.destructive
+      color $BaseWhite
+      background-color $Destructive500
+      shadow-1()
+
+      &:hover
+        background-color $Destructive600
+
+      &:active
+        background-color $Destructive700
+
+    &:focus
+      focus-ring()
