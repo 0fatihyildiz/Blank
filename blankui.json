@@ -1,0 +1,975 @@
+{
+    "version": "1.0.4",
+    "collections": [
+        {
+            "name": "Typography",
+            "modes": [
+                {
+                    "name": "Style",
+                    "variables": [
+                        {
+                            "name": "Display/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 96,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 100,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Display/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 96,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 100,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Display/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 96,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 100,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Display/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 96,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 100,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Display/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 96,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 100,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H1/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 72,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 78,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H1/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 72,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 78,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H1/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 72,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 78,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H1/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 72,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 78,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H1/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 72,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 78,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H2/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 64,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 68,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H2/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 64,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 68,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H2/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 64,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 68,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H2/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 64,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 68,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H2/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 64,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 68,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H3/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 48,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 54,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H3/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 48,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 54,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H3/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 48,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 54,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H3/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 48,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 54,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H3/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 48,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 54,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -2,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H4/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 36,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 42,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H4/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 36,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 42,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H4/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 36,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 42,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H4/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 36,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 42,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H4/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 36,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 42,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H5/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 30,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 36,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H5/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 30,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 36,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H5/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 30,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 36,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H5/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 30,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 36,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H5/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 30,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 36,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.7999999523162842,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H6/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 24,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 32,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.600000023841858,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H6/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 24,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 32,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.600000023841858,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H6/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 24,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 32,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.600000023841858,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H6/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 24,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 32,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.600000023841858,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "H6/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 24,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 32,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.600000023841858,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Subheadline/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 20,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 28,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.399999976158142,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Subheadline/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 20,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 28,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.399999976158142,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Subheadline/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 20,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 28,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.399999976158142,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Subheadline/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 20,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 28,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.399999976158142,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Subheadline/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 20,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 28,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.399999976158142,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 1/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 18,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 26,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.2000000476837158,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 1/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 18,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 26,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.2000000476837158,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 1/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 18,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 26,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.2000000476837158,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 1/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 18,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 26,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.2000000476837158,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 1/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 18,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 26,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1.2000000476837158,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 2/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 16,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 24,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 2/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 16,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 24,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 2/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 16,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 24,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 2/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 16,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 24,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Body 2/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 16,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 24,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 1/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 14,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 20,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 1/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 14,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 20,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 1/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 14,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 20,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 1/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 14,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 20,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 1/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 14,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 20,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 2/400 - Regular",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 12,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Regular",
+                                "lineHeight": 16,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 2/500 - Medium",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 12,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Medium",
+                                "lineHeight": 16,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 2/600 - Semi Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 12,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Semi Bold",
+                                "lineHeight": 16,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 2/700 - Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 12,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Bold",
+                                "lineHeight": 16,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        },
+                        {
+                            "name": "Caption 2/800 - Extra Bold",
+                            "type": "typography",
+                            "isAlias": false,
+                            "value": {
+                                "fontSize": 12,
+                                "fontFamily": "Inter",
+                                "fontWeight": "Extra Bold",
+                                "lineHeight": 16,
+                                "lineHeightUnit": "PIXELS",
+                                "letterSpacing": -1,
+                                "letterSpacingUnit": "PERCENT",
+                                "textCase": "ORIGINAL",
+                                "textDecoration": "NONE"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
