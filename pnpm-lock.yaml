@@ -36,6 +36,9 @@ importers:
 
   packages/react:
     dependencies:
+      '@remixicon/react':
+        specifier: ^4.3.0
+        version: 4.3.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -98,6 +101,9 @@ importers:
 
   packages/vue:
     dependencies:
+      '@remixicon/vue':
+        specifier: ^4.3.0
+        version: 4.3.0(vue@3.5.12)
       npm-run-all2:
         specifier: ^6.2.4
         version: 6.2.4
@@ -1174,6 +1180,22 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dev: true
+
+  /@remixicon/react@4.3.0(react@18.3.1):
+    resolution: {integrity: sha512-mAVDn8pAa9dURltGwiYrf7bPIqjG4ZAnCUHfjpgz3g+HLSDNXOaJ67Z5wmjVB5KMGpp9JbbTN5vsp2z+ajVLWg==}
+    peerDependencies:
+      react: '>=18.2.0'
+    dependencies:
+      react: 18.3.1
+    dev: false
+
+  /@remixicon/vue@4.3.0(vue@3.5.12):
+    resolution: {integrity: sha512-kDe6klEfK2Xkls2SQBhyzcX+YQd4v4W3S+lvKGrFTBC6rKIudbRYpozpi2b2hbiZD6u6vE0ruFFq3G2xUQHQvA==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.5.12(typescript@5.6.3)
+    dev: false
 
   /@rollup/pluginutils@5.1.2:
     resolution: {integrity: sha512-/FIdS3PyZ39bjZlwqFnWqCOVnW7o963LtKMwQOD0NhQqw22gSr2YY1afu3FxRip4ZCZNsD5jq6Aaz6QV3D/Njw==}
