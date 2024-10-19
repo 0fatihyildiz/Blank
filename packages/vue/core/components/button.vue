@@ -5,11 +5,15 @@ interface Props {
 	disabled?: boolean
 }
 
-defineProps<Props>()
+withDefaults(defineProps<Props>(), {
+	variant: 'primary',
+	size: 40,
+	disabled: false,
+})
 </script>
 
 <template>
-	<button class="blank__button primary">
+	<button class="blank__button" :class="[variant]">
 		<slot />
 	</button>
 </template>

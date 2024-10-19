@@ -1,9 +1,5 @@
 .blank
-    background-color #fff
-    padding 20px
+    desktop-grid()
 
-    &__container
-        display flex
-        justify-content center
-        align-items center
-        width 100%
+    @media (max-width: 768px)
+        mobile-grid()
