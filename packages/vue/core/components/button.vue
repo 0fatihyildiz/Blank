@@ -9,7 +9,7 @@ defineProps<Props>()
 </script>
 
 <template>
-	<button class="button">
+	<button class="blank__button primary">
 		<slot />
 	</button>
 </template>
