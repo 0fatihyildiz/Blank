@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Button } from '@blank/vue'
+import { Icon } from '@blank/vue'
 </script>
 
 <template>
 	<div>
-		<Button test2="" test="" text="" />
+		<Icon name="RiAdvertisementLine" />
 	</div>
 </template>
