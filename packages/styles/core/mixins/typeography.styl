@@ -1,36 +1,21 @@
-text-display(name, fontWeight)
-    font-size 96px
-    font-family 'Inter'
-    font-weight fontWeight
-    line-height 100px
-    letter-spacing -2%
-    text-transform original
-    text-decoration none
-
-display400 = {
-    name: 'Display/400 - Regular'
-    weight: 'Regular'
-}
-
-display500 = {
-    name: 'Display/500 - Medium'
-    weight: 'Medium'
-}
-
-display600 = {
-    name: 'Display/600 - Semi Bold'
-    weight: 'Semi Bold'
-}
-
-display700 = {
-    name: 'Display/700 - Bold'
-    weight: 'Bold'
-}
-
-display800 = {
-    name: 'Display/800 - Extra Bold'
-    weight: 'Extra Bold'
-}
+text-display(weight){
+        fontSize = 96px
+        lineHeight = 100px
+        letterSpacing = -2%
+        fontFamily = 'Inter'
+        textCase = 'ORIGINAL'
+        textDecoration = 'NONE'
+        if weight == 'Regular'
+            font-weight '400'
+        else if weight == 'Medium'
+            font-weight '500'
+        else if weight == 'Semi Bold'
+            font-weight '600'
+        else if weight == 'Bold'
+            font-weight '700'
+        else if weight == 'Extra Bold'
+            font-weight '800'
+    }
 
 H1(fontWeight)
     fontSize 72px
