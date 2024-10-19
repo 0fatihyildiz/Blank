@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev:styles": "pnpm --filter @blank/styles dev",
     "dev:vue": "pnpm --filter @blank/vue dev",
@@ -12,7 +13,9 @@
     "build:styles": "pnpm --filter @blank/styles build",
     "build:vue": "pnpm --filter @blank/vue build",
     "build:react": "pnpm --filter @blank/react build",
-    "lint:styles": "pnpm --filter @blank/styles lint"
+    "lint:styles": "pnpm --filter @blank/styles lint",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "workspaces": [
     "packages/*",
@@ -22,8 +25,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/compiler-sfc": "^3.5.12",
+    "husky": "^9.1.6",
     "vite": "^5.4.9"
   },
   "dependencies": {
