@@ -14,7 +14,11 @@
 		"tsc:watch": "vue-tsc --project tsconfig.json --watch",
 		"tsc:build": "vue-tsc --project tsconfig.json"
 	},
+	"peerDependencies": {
+		"@remixicon/vue": "^4.3.0"
+	},
 	"dependencies": {
+		"@remixicon/vue": "^4.3.0",
 		"npm-run-all2": "^6.2.4",
 		"vue": "^3.5.10"
 	},

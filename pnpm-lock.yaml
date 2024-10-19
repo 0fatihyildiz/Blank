@@ -101,6 +101,9 @@ importers:
 
   packages/vue:
     dependencies:
+      '@remixicon/vue':
+        specifier: ^4.3.0
+        version: 4.3.0(vue@3.5.12)
       npm-run-all2:
         specifier: ^6.2.4
         version: 6.2.4
@@ -1184,6 +1187,14 @@ packages:
       react: '>=18.2.0'
     dependencies:
       react: 18.3.1
+    dev: false
+
+  /@remixicon/vue@4.3.0(vue@3.5.12):
+    resolution: {integrity: sha512-kDe6klEfK2Xkls2SQBhyzcX+YQd4v4W3S+lvKGrFTBC6rKIudbRYpozpi2b2hbiZD6u6vE0ruFFq3G2xUQHQvA==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.5.12(typescript@5.6.3)
     dev: false
 
   /@rollup/pluginutils@5.1.2:
