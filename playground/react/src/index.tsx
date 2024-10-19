@@ -1,9 +1,11 @@
+import { Button } from '@blank/react'
+
 function App() {
-  return (
-    <>
-      test
-    </>
-  )
+	return (
+		<div>
+			<Button />
+		</div>
+	)
 }
 
 export default App
