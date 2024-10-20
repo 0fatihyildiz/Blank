@@ -2,9 +2,9 @@
   "name": "blank",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "npm-run-all2 --parallel dev:*",
     "dev:vue": "npm-run-all2 --parallel dev:styles dev:vue:build dev:playground-vue",
     "dev:react": "npm-run-all2 --parallel dev:styles dev:react:build dev:playground-react",
     "dev:styles": "pnpm --filter @blank/styles dev",
@@ -12,18 +12,23 @@
     "dev:react:build": "pnpm --filter @blank/react dev",
     "dev:playground-vue": "pnpm --filter playground-vue dev",
     "dev:playground-react": "pnpm --filter playground-react dev",
+    "build": "npm-run-all2 --parallel build:*",
     "build:styles": "pnpm --filter @blank/styles build",
     "build:vue": "pnpm --filter @blank/vue build",
     "build:react": "pnpm --filter @blank/react build",
+    "build:shared-icons": "pnpm --filter icons build",
+    "build:shared-types": "pnpm --filter types build",
     "lint:styles": "pnpm --filter @blank/styles lint",
     "prepare": "husky",
     "commitlint": "commitlint --edit",
     "version": "auto-changelog -p && git add CHANGELOG.md",
-    "generate-changelog": "auto-changelog -u"
+    "generate-changelog": "auto-changelog -u",
+    "postinstall": "npm-run-all2 --parallel build:styles build:vue build:react build:shared-icons build:shared-types"
   },
   "workspaces": [
     "packages/*",
-    "playground/*"
+    "playground/*",
+    "shared/*"
   ],
   "keywords": [],
   "author": "",
