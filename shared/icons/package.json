@@ -1,0 +1,20 @@
+{
+  "name": "icons",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "unbuild"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "unbuild": "^2.0.0"
+  }
+}

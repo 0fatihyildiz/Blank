@@ -1,11 +1,7 @@
 <script setup lang="ts">
-interface Props {
-	variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary' | 'destructive'
-	size?: 32 | 40 | 48
-	disabled?: boolean
-}
+import type { Button } from '@blank/types'
 
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Button.ButtonProps>(), {
 	variant: 'primary',
 	size: 40,
 	disabled: false,
