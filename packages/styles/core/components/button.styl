@@ -1,11 +1,24 @@
 .blank
   &__button
-    Body2(500)
     flex(row, center, center, inline-flex)
-    spacing('padding', 12px, 16px)
-    spacing('margin', 12px, 16px)
-    spacing('gap', 8px)
-    border-radius: 12px
+
+    &.large
+      Body2(500)
+      spacing('gap', 8px)
+      spacing('padding', 12px, 16px)
+      border-radius: 12px
+
+    &.medium
+      Body2(500)
+      spacing('gap', 8px)
+      spacing('padding', 8px, 16px)
+      border-radius: 12px
+
+    &.small
+      Caption1(500)
+      spacing('gap', 4px)
+      spacing('padding', 8px, 16px)
+      border-radius: 8px
 
     &.primary
       background-color $Primary900
@@ -28,7 +41,7 @@
         background-color $Primary50
 
       &:active
-        background-color $Secondary700
+        background-color $Primary100
 
     &.tertiary
       color $BaseBlack
@@ -38,7 +51,7 @@
         background-color $AlphaBlack10
 
       &:active
-        background-color $Secondary700
+        background-color $AlphaBlack20
 
     &.quaternary
       color $AlphaBlack60
@@ -63,3 +76,16 @@
 
     &:focus
       focus-ring()
+
+    &:disabled
+      background-color $AlphaBlack5
+      color $AlphaBlack30
+      cursor not-allowed
+      box-shadow none
+      border none
+
+      &:hover
+        background-color $AlphaBlack5
+
+      &:active
+        background-color $AlphaBlack5
