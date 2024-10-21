@@ -49,6 +49,12 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.8.0
         version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.13)(eslint@9.13.0)(typescript@5.6.3)
+      '@blank/icons':
+        specifier: workspace:../../shared/icons
+        version: link:../../shared/icons
+      '@blank/types':
+        specifier: workspace:../../shared/types
+        version: link:../../shared/types
       '@eslint/js':
         specifier: ^9.11.1
         version: 9.13.0
