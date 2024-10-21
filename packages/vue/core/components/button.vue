@@ -3,13 +3,13 @@ import type { Button } from '@blank/types'
 
 withDefaults(defineProps<Button.ButtonProps>(), {
 	variant: 'primary',
-	size: 40,
+	size: 'medium',
 	disabled: false,
 })
 </script>
 
 <template>
-	<button class="blank__button" :class="[variant]">
+	<button class="blank__button" :class="[variant, size]" :disabled="disabled">
 		<slot />
 	</button>
 </template>
