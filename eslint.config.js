@@ -7,5 +7,5 @@ export default antfu({
         jsx: true,
         semi: false,
     },
-    ignores: ['**/dist', '**/node_modules', '**/.tsup', 'pnpm-lock.yaml', 'pnpm-workspace.yaml'],
+    ignores: ['**/dist', '**/node_modules', '**/.tsup', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '**/playground/**'],
 })

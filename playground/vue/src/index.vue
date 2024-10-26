@@ -4,7 +4,7 @@ import { Button, Container, Icon } from '@blank/vue'
 
 <template>
 	<Container>
-		<Button size="small">
+		<Button>
 			<Icon name="RiCommandFill" size="20" />
 			Click me
 			<Icon name="RiArrowRightLine" size="20" />
