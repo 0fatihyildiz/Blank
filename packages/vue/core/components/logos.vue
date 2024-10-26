@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { Logos } from '@blank/icons'
+import { CompanyLogos } from '@blank/icons'
 
 defineProps<{
 	name: string
 	size?: number
 }>()
 
-const shapeIcons = JSON.parse(JSON.stringify(Logos))
+const shapeIcons = JSON.parse(JSON.stringify(CompanyLogos))
 </script>
 
 <template>
