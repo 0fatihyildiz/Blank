@@ -5,7 +5,7 @@
 	"type": "module",
 	"main": "dist/index.js",
 	"module": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"types": ".tsup/declaration/index.d.ts",
 	"scripts": {
 		"dev": "tsup --watch",
 		"build": "tsup"

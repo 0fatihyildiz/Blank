@@ -21,6 +21,7 @@
 		"build:icons": "pnpm --filter icons build",
 		"build:types": "pnpm --filter types build",
 		"lint:styles": "pnpm --filter @blank/styles lint",
+    "clean": "sh ./bin/clean.sh",
 		"prepare": "husky",
 		"commitlint": "commitlint --edit",
 		"version": "auto-changelog -p && git add CHANGELOG.md",
