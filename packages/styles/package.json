@@ -1,24 +1,24 @@
 {
-  "name": "@blank/styles",
-  "private": false,
-  "version": "0.0.1",
-  "type": "module",
-  "main": "./dist/style.css",
-  "exports": {
-    ".": "./dist/style.css"
-  },
-  "scripts": {
-    "dev": "vite build --watch",
-    "lint": "stylelint --fix \"core/**/*.styl\"",
-    "build": "tsc && vite build"
-  },
-  "devDependencies": {
-    "stylelint": "^16.10.0",
-    "stylelint-stylus": "^1.0.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.4.8"
-  },
-  "dependencies": {
-    "stylus": "^0.63.0"
-  }
+    "name": "@blank/styles",
+    "type": "module",
+    "version": "0.0.1",
+    "private": false,
+    "exports": {
+        ".": "./dist/style.css"
+    },
+    "main": "./dist/style.css",
+    "scripts": {
+        "dev": "vite build --watch",
+        "lint": "stylelint --fix \"core/**/*.styl\"",
+        "build": "tsc && vite build"
+    },
+    "dependencies": {
+        "stylus": "^0.63.0"
+    },
+    "devDependencies": {
+        "stylelint": "^16.10.0",
+        "stylelint-stylus": "^1.0.0",
+        "typescript": "^5.5.3",
+        "vite": "^5.4.8"
+    }
 }

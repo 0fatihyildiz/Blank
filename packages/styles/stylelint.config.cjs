@@ -1,9 +1,9 @@
 module.exports = {
     extends: [
-        "stylelint-stylus/recommended",
-        "stylelint-stylus/standard",
+        'stylelint-stylus/recommended',
+        'stylelint-stylus/standard',
     ],
     rules: {
-        "stylus/declaration-colon": "never"
+        'stylus/declaration-colon': 'never',
     },
-};
+}

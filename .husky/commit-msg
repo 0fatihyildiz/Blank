@@ -1,2 +1,3 @@
 pnpm commitlint ${1}
 pnpm build
+pnpm lint

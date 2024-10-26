@@ -1,20 +1,20 @@
 {
-	"name": "@blank/icons",
-	"version": "0.0.1",
-	"description": "",
-	"type": "module",
-	"main": "dist/index.js",
-	"module": "dist/index.js",
-	"types": ".tsup/declaration/index.d.ts",
-	"scripts": {
-		"dev": "tsup --watch",
-		"build": "tsup"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"tsup": "^8.3.0",
-		"typescript": "^5.6.2"
-	}
+    "name": "@blank/icons",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "keywords": [],
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": ".tsup/declaration/index.d.ts",
+    "scripts": {
+        "dev": "tsup --watch",
+        "build": "tsup"
+    },
+    "devDependencies": {
+        "tsup": "^8.3.0",
+        "typescript": "^5.6.2"
+    }
 }

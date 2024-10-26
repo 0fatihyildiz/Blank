@@ -1,4 +1,4 @@
 packages:
-  - "packages/*"
-  - "playground/*"
-  - "shared/*"
+    - "packages/*"
+    - "playground/*"
+    - "shared/*"

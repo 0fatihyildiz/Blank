@@ -12,6 +12,9 @@ importers:
         specifier: ^6.2.4
         version: 6.2.4
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: ^3.8.0
+        version: 3.8.0(@typescript-eslint/utils@8.10.0)(@vue/compiler-sfc@3.5.12)(eslint-plugin-react-hooks@5.1.0-rc-fb9a90fa48-20240614)(eslint-plugin-react-refresh@0.4.13)(eslint@9.13.0)(typescript@5.6.3)
       '@commitlint/cli':
         specifier: ^19.5.0
         version: 19.5.0(@types/node@22.7.7)(typescript@5.6.3)
@@ -27,9 +30,15 @@ importers:
       auto-changelog:
         specifier: ^2.5.0
         version: 2.5.0
+      eslint:
+        specifier: ^9.12.0
+        version: 9.13.0
       husky:
         specifier: ^9.1.6
         version: 9.1.6
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.9
         version: 5.4.9(@types/node@22.7.7)(stylus@0.63.0)
