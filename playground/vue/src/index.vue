@@ -28,7 +28,6 @@ import { Button, Container, Icon, Logos } from '@blank/vue'
 			<Icon name="remix:arrow-right-line" size="20" />
 		</Button>
 
-		<Logos name="company:figma" size="small" color="gray" />
-		<Logos name="company:zoom" color="gray" />
+		<Logos name="company:figma" size="small" />
 	</Container>
 </template>
