@@ -7,8 +7,8 @@
 	"module": "dist/index.es.js",
 	"types": "dist/types/index.d.ts",
 	"scripts": {
-		"dev": "run-p tsc:watch main:watch",
-		"build": "run-s tsc:build main:build",
+		"dev": "run-p main:watch tsc:watch",
+		"build": "run-s main:build tsc:build",
 		"main:watch": "vite build --watch",
 		"main:build": "vite build",
 		"tsc:watch": "vue-tsc --project tsconfig.json --watch",

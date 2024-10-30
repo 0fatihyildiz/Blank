@@ -1,12 +1,12 @@
-import type { Remix, Stars, Status } from '@blank/icons'
+import type { Remix, Social, Status } from '@blank/icons'
 import type { Prefix } from '.'
 
 type RemixIconNames = Prefix<'remix', keyof typeof Remix.icons>
-type StarsIconNames = Prefix<'stars', keyof typeof Stars.icons>
 type StatusIconNames = Prefix<'status', keyof typeof Status.icons>
+type SocialIconNames = Prefix<'social', keyof typeof Social.icons>
 
 interface IconProps {
-    name: RemixIconNames | StarsIconNames | StatusIconNames
+    name: RemixIconNames | StatusIconNames | SocialIconNames
     size?: string
     color?: string
 }

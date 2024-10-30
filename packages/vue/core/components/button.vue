@@ -21,7 +21,6 @@ const classes = computed(() => {
 
 <template>
 	<button class="blank__button" :class="classes" :disabled="disabled">
-		<slot v-if="props.appearance !== 'icon'" />
-		<!-- <Icon v-else :name="props.icon" /> -->
+		<slot />
 	</button>
 </template>
