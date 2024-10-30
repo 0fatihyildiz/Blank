@@ -4,10 +4,8 @@ import { Button, Container, Icon } from '@blank/vue'
 
 <template>
 	<Container>
-		<Button>
+		<Button appearance="icon">
 			<Icon name="RiCommandFill" size="20" />
-			Click me
-			<Icon name="RiArrowRightLine" size="20" />
 		</Button>
 
 		<Button variant="secondary">
