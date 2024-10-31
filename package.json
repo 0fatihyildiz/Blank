@@ -4,11 +4,11 @@
     "version": "0.0.1",
     "description": "",
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "keywords": [],
     "scripts": {
         "dev": "npm-run-all2 --parallel dev:*",
-        "dev:vue": "npm-run-all2 --parallel dev:styles dev:vue:build dev:playground-vue dev:icons dev:types",
+        "dev:vue": "npm-run-all2 --parallel dev:styles dev:types dev:icons dev:vue:build dev:playground-vue",
         "dev:react": "npm-run-all2 --parallel dev:styles dev:react:build dev:playground-react dev:icons dev:types",
         "dev:styles": "pnpm --filter @blank/styles dev",
         "dev:icons": "pnpm --filter icons dev",

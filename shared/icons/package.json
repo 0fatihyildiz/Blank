@@ -4,11 +4,11 @@
     "version": "0.0.1",
     "description": "",
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "keywords": [],
     "main": "dist/index.js",
     "module": "dist/index.js",
-    "types": ".tsup/declaration/index.d.ts",
+    "types": "dist/index.d.ts",
     "scripts": {
         "dev": "tsup --watch",
         "build": "tsup"
