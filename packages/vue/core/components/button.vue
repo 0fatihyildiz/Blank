@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@blank/types'
 import { computed } from 'vue'
-import Icon from '../common/icon.vue'
 
 const props = withDefaults(defineProps<ButtonProps>(), {
 	variant: 'primary',

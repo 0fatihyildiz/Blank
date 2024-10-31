@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Container, Icon, Logos } from '@blank/vue'
+import { Button, Container, Icon, Input, Logos } from '@blank/vue'
 </script>
 
 <template>
@@ -29,5 +29,13 @@ import { Button, Container, Icon, Logos } from '@blank/vue'
 		</Button>
 
 		<Logos name="company:figma" size="small" />
+		<Logos name="company:zoom" size="medium" />
+		<Logos name="company:airtable" size="medium" />
+		<Logos name="company:amazon" size="medium" />
+
+		<Input label="Label" helper="Helper text" placeholder="placeholder" tail-icon="remix:command-fill" lead-icon="remix:command-fill" />
+		<Input label="Label" helper="Helper text" placeholder="placeholder" size="large" />
+		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" />
+		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" tail-icon="remix:command-fill" lead-icon="remix:command-fill" disabled />
 	</Container>
 </template>

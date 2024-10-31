@@ -30,9 +30,7 @@ const IconNotFound = defineComponent({
 		v-if="iconData"
 		class="blank__logos"
 		:class="`blank__logos__${props.size}`"
-		:height="props.size"
-		:width="props.size"
-		viewBox="0 0 111 48"
+		viewBox="0 0 79 40"
 		xmlns="http://www.w3.org/2000/svg"
 		v-html="iconData.body"
 	/>
