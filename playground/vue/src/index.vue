@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Container, Icon, Logos } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Logos } from '@blank/vue'
 </script>
 
 <template>
@@ -29,5 +29,38 @@ import { Button, Container, Icon, Logos } from '@blank/vue'
 		</Button>
 
 		<Logos name="company:figma" size="small" />
+		<div>
+			<ButtonGroup size="small">
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
+		<div>
+			<ButtonGroup>
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
+		<div>
+			<ButtonGroup size="large">
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
 	</Container>
 </template>
