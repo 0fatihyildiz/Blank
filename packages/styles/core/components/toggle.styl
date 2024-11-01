@@ -1,0 +1,127 @@
+.blank {
+  &__toggle-container {
+    flex(row, none, center, inline-flex);
+    spacing('gap', 12px);
+    spacing('padding', 2px, 2px);
+    width: max-content;
+
+    &.reverse {
+      .toggle-label {
+        order: 2; 
+      }
+      .toggle {
+        order: 1; 
+      }
+    }
+
+    .toggle-label {
+      color: $Primary900; 
+
+      &.medium {
+        Body2(500);
+      }
+
+      &.small {
+        Caption1(500);
+      }
+
+      &.disabled {
+        color: $AlphaBlack30; 
+      }
+    }
+
+    .toggle {
+      position: relative;
+      width: 50px;
+      height: 25px;
+      background-color: $AlphaBlack5;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .toggle-circle {
+        content: "";
+        width: 23px;
+        height: 23px;
+        background-color: $BaseWhite;
+        border-radius: 50%;
+        position: absolute;
+        left: 2px; 
+        transition: left 0.3s;
+        shadow-1()
+      }
+
+      &.active {
+        background-color: $Success500;
+
+        .toggle-circle {
+          left: calc(100% - 25px); 
+        }
+      }
+
+      &.disabled {
+        background-color: $AlphaBlack10;
+        cursor: not-allowed;
+
+        .toggle-circle {
+          background-color: $AlphaWhite60;
+        }
+      }
+
+      &.large {
+        width: 60px;
+        height: 30px;
+        border-radius: 30px;
+
+        .toggle-circle {
+          width: 25px;
+          height: 25px;
+          left: 2px;
+        }
+
+        &.active .toggle-circle {
+          left: calc(100% - 28px);
+        }
+      }
+
+      &.medium {
+        width: 50px;
+        height: 25px;
+        border-radius: 25px;
+
+        .toggle-circle {
+          width: 20px;
+          height: 20px;
+          left: 2px;
+        }
+
+        &.active .toggle-circle {
+          left: calc(100% - 23px);
+        }
+      }
+
+      &.small {
+        width: 40px;
+        height: 20px;
+        border-radius: 20px;
+
+        .toggle-circle {
+          width: 16px;
+          height: 16px;
+          left: 2px;
+        }
+
+        &.active .toggle-circle {
+          left: calc(100% - 19px);
+        }
+      }
+
+      &.toggle-position {
+        order: 1; 
+      }
+    }
+  }
+}
