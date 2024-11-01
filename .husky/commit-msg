@@ -1,1 +1,3 @@
 pnpm commitlint ${1}
+pnpm lint:fix
+pnpm lint:styles

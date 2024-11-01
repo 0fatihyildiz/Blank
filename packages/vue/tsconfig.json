@@ -1,22 +1,22 @@
 {
-	"compilerOptions": {
-		"target": "ESNext",
-		"baseUrl": ".",
-		"rootDir": "core",
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"paths": {
-			"@/*": ["core/*"],
-			"@blank/types": ["../../src/shared/types/.tsuo/declaration/index.d.ts"]
-		},
-		"strict": true,
-		"declaration": true,
-		"declarationDir": "dist/types",
-		"emitDeclarationOnly": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"skipLibCheck": true
-	},
-	"include": ["core/**/*"],
-	"exclude": ["node_modules", "dist"]
+    "compilerOptions": {
+        "target": "ESNext",
+        "baseUrl": ".",
+        "rootDir": "core",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "paths": {
+            "@/*": ["core/*"],
+            "@blank/types": ["../../src/shared/types/.tsuo/declaration/index.d.ts"]
+        },
+        "strict": true,
+        "declaration": true,
+        "declarationDir": "dist/types",
+        "emitDeclarationOnly": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true
+    },
+    "include": ["core/**/*"],
+    "exclude": ["node_modules", "dist"]
 }
