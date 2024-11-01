@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, Container, Icon, Input, Logos } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Input, Logos } from '@blank/vue'
 </script>
 
 <template>
@@ -37,5 +37,38 @@ import { Button, Container, Icon, Input, Logos } from '@blank/vue'
 		<Input label="Label" helper="Helper text" placeholder="placeholder" size="large" />
 		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" />
 		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" tail-icon="remix:command-fill" lead-icon="remix:command-fill" disabled />
+		<div>
+			<ButtonGroup size="small">
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
+		<div>
+			<ButtonGroup>
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
+		<div>
+			<ButtonGroup size="large">
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Primary
+				</Button>
+				<Button>
+					Quaternary
+				</Button>
+			</ButtonGroup>
+		</div>
 	</Container>
 </template>
