@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon, Logos } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Logos, Radio } from '@blank/vue'
 </script>
 
 <template>
 	<Container>
+		<Radio />
+
 		<Button variant="primary">
 			<Icon name="remix:command-fill" size="20" />
 			Click me
