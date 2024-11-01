@@ -1,19 +1,21 @@
 grid-layout(pattern, sectionSize, color, alignment, gutterSize, count, offset = 0)
-    display grid
+    display: grid
+    grid-gap: gutterSize px
     grid-template-columns: repeat(count, 1fr)
-    grid-gap gutterSize px
-    if pattern == 'COLUMNS'
-        if alignment == 'CENTER'
-            margin-left auto
-            margin-right auto
-        else if alignment == 'STRETCH'
+
+    if (pattern == 'COLUMNS')
+        if (alignment == 'CENTER')
+            margin-left: auto
+            margin-right: auto
+        else if (alignment == 'STRETCH')
             grid-template-columns: repeat(count, minmax(0, 1fr))
-            padding-left offset px
-            padding-right offset px
-    background-color rgba(color.r, color.g, color.b, color.a)
+            padding-left: offset px
+            padding-right: offset px
+
+    background-color: rgba(color.r, color.g, color.b, color.a)
 
 desktop-grid()
-    grid-layout('COLUMNS', 78, {r: 0, g: 0, b: 0, a: 0}, 'CENTER', 24, 12)
+    grid-layout('COLUMNS', 78, { r: 0, g: 0, b: 0, a: 0 }, 'CENTER', 24, 12)
 
 mobile-grid()
-    grid-layout('COLUMNS', 0, {r: 0, g: 0, b: 0, a: 0}, 'STRETCH', 16, 4, 16)
+    grid-layout('COLUMNS', 0, { r: 0, g: 0, b: 0, a: 0 }, 'STRETCH', 16, 4, 16)
