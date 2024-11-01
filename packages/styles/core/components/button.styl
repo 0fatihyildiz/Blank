@@ -21,111 +21,111 @@
       border-radius: 8px
 
     &.icon
-      padding 0
       border-radius: 50%
+      padding: 0
 
       &.large
-        width 48px
-        height 48px
+        height: 48px
+        width: 48px
 
       &.medium
-        width 40px
-        height 40px
+        height: 40px
+        width: 40px
 
       &.small
-        width 32px
-        height 32px
+        height: 32px
+        width: 32px
 
     &__text
-      text-decoration: none
       color: inherit
+      text-decoration: none
 
     &.primary
-      background-color $Primary900
-      color $BaseWhite
+      background-color: $Primary900
+      color: $BaseWhite
       shadow-1()
 
       &:hover
-        background-color $Primary800
+        background-color: $Primary800
 
       &:active
-        background-color $Primary700
+        background-color: $Primary700
 
     &.secondary
-      color $BaseBlack
-      background-color $BaseWhite
-      border solid 1px $AlphaBlack10
+      background-color: $BaseWhite
+      border: solid 1px $AlphaBlack10
+      color: $BaseBlack
       shadow-1()
 
       &:hover
-        background-color $Primary50
+        background-color: $Primary50
 
       &:active
-        background-color $Primary100
+        background-color: $Primary100
 
     &.tertiary
-      color $BaseBlack
-      background-color $AlphaBlack5
+      background-color: $AlphaBlack5
+      color: $BaseBlack
 
       &:hover
-        background-color $AlphaBlack10
+        background-color: $AlphaBlack10
 
       &:active
-        background-color $AlphaBlack20
+        background-color: $AlphaBlack20
 
     &.quaternary
-      color $AlphaBlack60
+      color: $AlphaBlack60
 
       &:hover
-        background-color $Primary100
-        color $BaseBlack
+        background-color: $Primary100
+        color: $BaseBlack
 
       &:active
-        background-color $Primary200
+        background-color: $Primary200
 
     &.destructive
-      color $BaseWhite
-      background-color $Destructive500
+      background-color: $Destructive500
+      color: $BaseWhite
       shadow-1()
 
       &:hover
-        background-color $Destructive600
+        background-color: $Destructive600
 
       &:active
-        background-color $Destructive700
+        background-color: $Destructive700
 
     &:focus
-      z-index 1
+      z-index: 1
       focus-ring()
 
     &:disabled
-      background-color $AlphaBlack5
-      color $AlphaBlack30
-      cursor not-allowed
-      box-shadow none
-      border none
+      background-color: $AlphaBlack5
+      border: none
+      box-shadow: none
+      color: $AlphaBlack30
+      cursor: not-allowed
 
       &:hover
-        background-color $AlphaBlack5
+        background-color: $AlphaBlack5
 
       &:active
-        background-color $AlphaBlack5
+        background-color: $AlphaBlack5
 
     &.text
-      background-color transparent
-      color $AlphaBlack60
-      padding 0
-      border none
-      box-shadow none
+      background-color: transparent
+      border: none
+      box-shadow: none
+      color: $AlphaBlack60
+      padding: 0
 
       &:hover
-        color $Primary900
-        background-color transparent
+        background-color: transparent
+        color: $Primary900
 
       &:active
-        color $Primary900
         background: transparent
+        color: $Primary900
 
       &:disabled
-        color $AlphaBlack30
-        cursor not-allowed
+        color: $AlphaBlack30
+        cursor: not-allowed
