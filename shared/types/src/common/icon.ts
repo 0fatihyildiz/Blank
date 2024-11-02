@@ -1,14 +1,21 @@
-import type { Remix, Social, Status } from '@blank/icons'
+import type { Cryptocurrency, Logos, Payment, Remix } from '@blank/icons'
 import type { Prefix } from '.'
 
-type RemixIconNames = Prefix<'remix', keyof typeof Remix.icons>
-type StatusIconNames = Prefix<'status', keyof typeof Status.icons>
-type SocialIconNames = Prefix<'social', keyof typeof Social.icons>
+type CryptocurrencyName = keyof typeof Cryptocurrency['icons']
+type LogosName = keyof typeof Logos['icons']
+type PaymentNames = keyof typeof Payment['icons']
+type RemixNames = keyof typeof Remix['icons']
+
+type RemixIconNames = Prefix<'remix', RemixNames>
+type LogosIconNames = Prefix<'logo', LogosName>
+type CryptocurrencyIconNames = Prefix<'cryptocurrency', CryptocurrencyName>
+type PaymentIconNames = Prefix<'payment', PaymentNames>
 
 interface IconProps {
-    name: RemixIconNames | StatusIconNames | SocialIconNames
     size?: string
     color?: string
+    name: RemixIconNames | LogosIconNames | CryptocurrencyIconNames | PaymentIconNames
+    inherit?: boolean
 }
 
 export type { IconProps }

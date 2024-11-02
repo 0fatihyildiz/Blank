@@ -3,6 +3,8 @@
         "thisismanta.stylus-supremacy",
         "sysoev.language-stylus",
         "dbaeumer.vscode-eslint",
-        "vue.volar"
+        "vue.volar",
+        "gruntfuggly.todo-tree",
+        "antfu.iconify"
     ]
 }

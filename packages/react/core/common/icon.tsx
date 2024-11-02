@@ -1,18 +1,14 @@
-// import * as Icons from '@remixicon/react'
+import type { IconProps } from '@blank/types'
+import { Cryptocurrency, Logos, Payment, Remix } from '@blank/icons'
+import { addCollection, Icon as IconComponent } from '@iconify/react'
 
-// type IconName = keyof typeof Icons
+const Icon: React.FC<IconProps> = ({ name, ...props }) => {
+    addCollection(Cryptocurrency)
+    addCollection(Logos)
+    addCollection(Payment)
+    addCollection(Remix)
 
-interface IconProps {
-    // name: IconName
-    size?: number
-    color?: string
-}
-
-const Icon: React.FC<IconProps> = () => {
-    // const IconComponent = Icons[name]
-
-    // return <IconComponent size={size} color={color} />
-    return null
+    return <IconComponent {...props} icon={name} />
 }
 
 export default Icon
