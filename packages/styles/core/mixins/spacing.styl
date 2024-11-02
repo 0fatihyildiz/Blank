@@ -1,8 +1,8 @@
 spacing(type, top, right = top, bottom = top, left = right)
-    if type == 'padding' || type == 'margin'
-        {type} top right bottom left
-    else if type == 'gap'
-        if right == top
-            gap top
+    if (type == 'padding' || (type == 'margin'))
+        {type}: top right bottom left
+    else if (type == 'gap')
+        if (right == top)
+            gap: top
         else
-            gap top right
+            gap: top right

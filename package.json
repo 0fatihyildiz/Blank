@@ -25,6 +25,7 @@
         "build:types": "pnpm --filter types build",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
+        "lint:styles": "pnpm --filter @blank/styles lint",
         "clean": "sh ./bin/clean.sh",
         "prepare": "husky",
         "commitlint": "commitlint --edit",
