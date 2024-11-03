@@ -37,7 +37,6 @@ function App() {
 				<Toggle size="medium"></Toggle>
 				<Toggle size="small" disabled></Toggle>
 				<Toggle size="medium" disabled></Toggle>
-
 				<Toggle label="berke" labelDirection="right" size="small"></Toggle>
 				<Toggle label="berke" labelDirection="left" size="medium"></Toggle>
 				<Toggle size="medium" label="berke" disabled></Toggle>
