@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ButtonProps } from '@blank/types'
+import type { Button } from '@blank/types'
 import { computed } from 'vue'
 import Icon from '../common/icon.vue'
 
-const props = withDefaults(defineProps<ButtonProps>(), {
+const props = withDefaults(defineProps<Button.ButtonProps>(), {
 	variant: 'primary',
 	size: 'medium',
 	appearance: 'default',
