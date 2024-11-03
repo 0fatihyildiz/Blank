@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Toggle } from '@blank/vue'
 </script>
 
 <template>
@@ -54,6 +54,16 @@ import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
 					Quaternary
 				</Button>
 			</ButtonGroup>
+		</div>
+		<div :style="{ display: 'flex', flexDirection: 'column' }">
+			<Toggle size="small" />
+			<Toggle size="medium" />
+			<Toggle size="small" disabled />
+			<Toggle size="medium" disabled />
+
+			<Toggle label="berke" label-direction="left" size="small" />
+			<Toggle label="berke" label-direction="right" size="medium" />
+			<Toggle label="berke" size="medium" disabled />
 		</div>
 	</Container>
 </template>
