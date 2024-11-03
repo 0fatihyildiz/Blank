@@ -2,26 +2,21 @@
 import type { ToggleProps } from '@blank/types'
 import { defineEmits, defineProps, ref, watch, withDefaults } from 'vue'
 
-const props = withDefaults(defineProps<ToggleProps>(), {
+const props = withDefaults(defineProps<Omit<Omit<ToggleProps, 'onChange'>, 'checked'>>(), {
     size: 'medium',
     label: '',
     labelDirection: 'left',
     disabled: false,
-    checked: false,
-    onChange: undefined,
 })
-const emit = defineEmits<{
-    (e: 'onChange', value: boolean): void
-}>()
-const isActive = ref(!!props.checked)
-watch(() => props.checked, (newVal) => {
-    isActive.value = !!newVal
+
+const model = defineModel({
+    default: false,
+    type: Boolean,
 })
+
 function handleToggle() {
     if (!props.disabled) {
-        const newState = !isActive.value
-        isActive.value = newState
-        emit('onChange', newState)
+        model.value = !model.value
     }
 }
 </script>
@@ -32,9 +27,9 @@ function handleToggle() {
             {{ label }}
         </span>
         <div
-            :aria-checked="isActive ? 'true' : 'false'"
+            :aria-checked="model ? 'true' : 'false'"
             :aria-disabled="disabled"
-            :class="`toggle ${size} ${isActive ? 'active' : ''} ${disabled ? 'disabled' : ''} toggle-position`"
+            :class="`toggle ${size} ${model ? 'active' : ''} ${disabled ? 'disabled' : ''} toggle-position`"
             @click="handleToggle"
         >
             <span class="toggle-circle" />
