@@ -1,5 +1,7 @@
 .blank
-    desktop-grid()
-
-    @media (max-width: 768px)
+    &__container
+        spacing('padding', 24px)
         mobile-grid()
+
+        @media (max-width: 768px)
+            mobile-grid()

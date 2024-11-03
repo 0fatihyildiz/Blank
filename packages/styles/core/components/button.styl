@@ -20,6 +20,26 @@
       spacing('padding', 8px, 16px)
       border-radius: 8px
 
+    &.icon
+      padding 0
+      border-radius: 50%
+
+      &.large
+        width 48px
+        height 48px
+
+      &.medium
+        width 40px
+        height 40px
+
+      &.small
+        width 32px
+        height 32px
+
+    &__text
+      text-decoration: none
+      color: inherit
+
     &.primary
       background-color $Primary900
       color $BaseWhite
@@ -89,3 +109,22 @@
 
       &:active
         background-color $AlphaBlack5
+
+    &.text
+      background-color transparent
+      color $AlphaBlack60
+      padding 0
+      border none
+      box-shadow none
+
+      &:hover
+        color $Primary900
+        background-color transparent
+
+      &:active
+        color $Primary900
+        background: transparent
+
+      &:disabled
+        color $AlphaBlack30
+        cursor not-allowed
