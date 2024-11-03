@@ -37,10 +37,8 @@
             &:focus-within
                 focus-ring()
 
-            .icon
-                height 20px
-                width 20px
-                color $AlphaBlack60
+
+            .slot
                 position absolute
                 top 50%
                 transform translateY(-50%)
@@ -51,6 +49,9 @@
                 &.lead
                     right 16px
 
+                .icon
+                    height 20px
+                    color $AlphaBlack60
 
             input
                 spacing('padding', 0, 16px)
@@ -61,10 +62,16 @@
                 cursor text
 
                 &.tail
-                    padding-left 48px
+                    &__medium
+                        padding-left 48px
+                    &__large
+                        padding-left 104px
 
                 &.lead
-                    padding-right 48px
+                    &__medium
+                        padding-right 48px
+                    &__large
+                        padding-right 100px
 
                 &::placeholder
                     color $AlphaBlack60

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Input } from '@blank/vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
 		</Button>
 
 		<Button variant="secondary">
-			<Icon name="cryptocurrency:braintrust" size="20" />
+			<Icon name="remix:command-fill" size="20" />
 			Click me
 		</Button>
 
@@ -21,15 +21,18 @@ import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
 			Click me
 		</Button>
 
-		<Logos name="company:figma" size="small" />
-		<Logos name="company:zoom" size="medium" />
-		<Logos name="company:airtable" size="medium" />
-		<Logos name="company:amazon" size="medium" />
+		<Input label="Label" helper="Helper text" placeholder="placeholder" tail="logo:google" lead="remix:command-fill">
+			<template #tail>
+				<Icon name="payment:paypal" size="20" />
+			</template>
+		</Input>
 
-		<Input label="Label" helper="Helper text" placeholder="placeholder" tail-icon="remix:command-fill" lead-icon="remix:command-fill" />
 		<Input label="Label" helper="Helper text" placeholder="placeholder" size="large" />
+
 		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" />
-		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" tail-icon="remix:command-fill" lead-icon="remix:command-fill" disabled />
+
+		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" tail="remix:admin-fill" lead="remix:command-fill" disabled />
+
 		<div>
 			<ButtonGroup size="small">
 				<Button>
@@ -40,6 +43,7 @@ import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
 				</Button>
 			</ButtonGroup>
 		</div>
+
 		<div>
 			<ButtonGroup>
 				<Button>
@@ -50,6 +54,7 @@ import { Button, ButtonGroup, Container, Icon } from '@blank/vue'
 				</Button>
 			</ButtonGroup>
 		</div>
+
 		<div>
 			<ButtonGroup size="large">
 				<Button>
