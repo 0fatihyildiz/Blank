@@ -1,0 +1,20 @@
+.blank
+    background: #000
+
+&.right-group
+    flex(column, center, end, flex)
+
+    .blank__radio
+        flex(row-reverse, center, center, flex)
+
+&.left-group
+    flex(column, center, start, flex)
+
+    .blank__radio
+        flex(row, center, center, flex)
+
+    &__radio-group
+        flex(column, center, start, flex)
+
+        .blank__radio
+            border-radius: 0

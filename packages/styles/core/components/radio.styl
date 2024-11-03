@@ -1,19 +1,61 @@
-.blank
-    &__radio
-        flex(row, center, center, inline-flex)
-        cursor pointer
-        input
-            cursor pointer
-            background $BaseBlack
-            width 16px
-            height 16px
-            border-radius 50%
-            
-            &:checked 
-                background: $Info500
+.blank__radio
+    // flex(row, center, center, inline-flex) !important
+    cursor: pointer
 
-        label
-            Body2(500)
-            color $Primary900
-            margin-left 8px
-            cursor pointer
+&.right
+    flex(row-reverse, center, center, flex)
+
+&.left
+    flex(row, center, center, flex)
+
+input
+    border: 1px solid $AlphaBlack10
+    border-radius: 50%
+    cursor: pointer
+    position: relative
+
+    &.medium
+        height: 24px
+        width: 24px
+
+    &.small
+        height: 20px
+        width: 20px
+
+    &:disabled
+        background-color: $AlphaBlack10
+
+    &:checked
+        background: $Info500
+        border: 0
+
+        &::after
+            background: $BaseWhite
+            border-radius: 50%
+            content: ''
+            height: 8px
+            left: 50%
+            position: absolute
+            top: 50%
+            transform: translate(-50%, -50%)
+            transition: background-color .2s
+            width: 8px
+
+            &.medium
+                height: 8px
+                width: 8px
+
+            &.small
+                height: 6px
+                width: 6px
+
+label
+    Body2(500)
+    color: $Primary900
+    cursor: pointer
+    font-weight: 500
+    margin 0 8px
+
+input:disabled + label
+    color: $AlphaBlack20
+    cursor: not-allowed

@@ -1,3 +1,5 @@
 export { default as Button } from './button.vue'
 export { default as ButtonGroup } from './buttonGroup.vue'
 export { default as Radio } from './radio.vue'
+export { default as RadioGroup } from './radioGroup.vue'
+export { default as Toggle } from './toggle.vue'

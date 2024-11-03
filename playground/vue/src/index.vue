@@ -1,68 +1,62 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon, Logos, Radio } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Radio, RadioGroup, Toggle } from '@blank/vue'
 </script>
 
 <template>
 	<Container>
-		<Radio />
-
 		<Button variant="primary">
-			<Icon name="remix:command-fill" size="20" />
 			Click me
-			<Icon name="remix:arrow-right-line" size="20" />
 		</Button>
 
 		<Button variant="secondary">
-			<Icon name="remix:command-fill" size="20" />
+			<Icon name="cryptocurrency:braintrust" size="20" />
 			Click me
-			<Icon name="remix:arrow-right-line" size="20" />
 		</Button>
 
 		<Button variant="tertiary">
-			<Icon name="remix:command-fill" size="20" />
 			Click me
-			<Icon name="remix:arrow-right-line" size="20" />
 		</Button>
 
 		<Button variant="quaternary">
-			<Icon name="remix:command-fill" size="20" />
 			Click me
-			<Icon name="remix:arrow-right-line" size="20" />
 		</Button>
 
 		<Logos name="company:figma" size="small" />
 		<div>
 			<ButtonGroup size="small">
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
 		<div>
 			<ButtonGroup>
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
 		<div>
 			<ButtonGroup size="large">
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
+		<div :style="{ display: 'flex', flexDirection: 'column' }">
+			<Toggle size="small" />
+			<Toggle size="medium" />
+			<Toggle size="small" disabled />
+			<Toggle size="medium" disabled />
+
+			<Toggle label="berke" label-direction="left" size="small" />
+			<Toggle label="berke" label-direction="right" size="medium" />
+			<Toggle label="berke" size="medium" disabled />
+		</div>
+		=======
+		<RadioGroup direction="right-group">
+			<Radio size="small" label="Kerem" />
+			<Radio size="small" label="Kerem1" />
+			<Radio size="small" label="Kerem2" />
+		</RadioGroup>
+		>>>>>>> Stashed changes
 	</Container>
 </template>
