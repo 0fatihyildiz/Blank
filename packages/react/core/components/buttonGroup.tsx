@@ -1,5 +1,5 @@
 import type { ButtonGroupProps } from '@blank/types'
-import type { PropsWithChildren, ReactNode } from 'react'
+import type { PropsWithChildren } from 'react'
 import React, { createContext, useContext } from 'react'
 
 const ButtonGroupContext = createContext<{ size: 'small' | 'medium' | 'large' }>({ size: 'medium' })
