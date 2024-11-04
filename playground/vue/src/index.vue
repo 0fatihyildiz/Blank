@@ -12,10 +12,10 @@ watch(selectedRadio, (newValue) => {
 
 <template>
 	<Container>
-		<RadioGroup v-model="selectedRadio" direction="right-group">
-			<Radio size="small" label="Kerem" />
-			<Radio size="small" label="Kerem1" />
-			<Radio size="small" label="Kerem2" />
+		<RadioGroup v-model="selectedRadio" size="medium" direction="right-group">
+			<Radio label="Kerem" />
+			<Radio label="Kerem1" />
+			<Radio label="Kerem2" />
 		</RadioGroup>
 		<Button variant="primary">
 			Click me

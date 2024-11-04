@@ -50,11 +50,17 @@ input
                 width: 6px
 
 label
-    Body2(500)
+    Body1(500)
     color: $Primary900
     cursor: pointer
-    font-weight: 500
     margin 0 8px
+    font-size: 100px
+
+
+    &.medium
+        Body1(500)
+    &.small
+        Body2(500)
 
 input:disabled + label
     color: $AlphaBlack20
