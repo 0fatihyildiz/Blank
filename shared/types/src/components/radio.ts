@@ -4,6 +4,7 @@ interface RadioProps {
     size?: 'small' | 'medium'
     direction?: 'left' | 'right'
     vModel?: boolean
+    value?: string
 }
 
 export type { RadioProps }

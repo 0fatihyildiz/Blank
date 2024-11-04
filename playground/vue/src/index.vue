@@ -1,9 +1,22 @@
 <script setup lang="ts">
 import { Button, ButtonGroup, Container, Icon, Radio, RadioGroup, Toggle } from '@blank/vue'
+import { ref, watch } from 'vue'
+
+const selectedRadio = ref<string>('')
+watch(selectedRadio, (newValue) => {
+	if (newValue) {
+		console.log(`Seçilen değer INDEX: ${newValue}`)
+	}
+})
 </script>
 
 <template>
 	<Container>
+		<RadioGroup v-model="selectedRadio" direction="right-group">
+			<Radio size="small" label="Kerem" />
+			<Radio size="small" label="Kerem1" />
+			<Radio size="small" label="Kerem2" />
+		</RadioGroup>
 		<Button variant="primary">
 			Click me
 		</Button>
@@ -51,12 +64,5 @@ import { Button, ButtonGroup, Container, Icon, Radio, RadioGroup, Toggle } from 
 			<Toggle label="berke" label-direction="right" size="medium" />
 			<Toggle label="berke" size="medium" disabled />
 		</div>
-		=======
-		<RadioGroup direction="right-group">
-			<Radio size="small" label="Kerem" />
-			<Radio size="small" label="Kerem1" />
-			<Radio size="small" label="Kerem2" />
-		</RadioGroup>
-		>>>>>>> Stashed changes
 	</Container>
 </template>
