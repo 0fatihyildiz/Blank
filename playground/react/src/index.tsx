@@ -52,7 +52,7 @@ function App() {
 					berke
 				</Badge>
 			</div>
-			<BadgeGroup variant="primary" badges={badges}>
+			<BadgeGroup variant="info" badges={badges}>
 			</BadgeGroup>
 		</div>
 	)
