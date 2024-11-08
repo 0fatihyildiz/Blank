@@ -1,0 +1,40 @@
+.blank
+    &__badge-group
+        width fit-content
+        flex(row,center,center,flex)
+        border-radius: 20px
+        spacing('padding',6px,8px)
+        spacing('gap',8px)
+        height 32px
+        Caption1(500)
+
+        &.default
+            color $Primary900
+            background-color $BaseWhite
+            border 1px solid $AlphaBlack10  
+
+        &.neutral
+            color $Primary900
+            background-color $AlphaBlack5
+
+        &.destructive
+            color $Destructive600
+            background-color $Destructive100 
+
+        &.warning
+            color  $Warning600
+            background-color $Warning100
+
+        &.success
+            color $Success600 
+            background-color $Success100
+
+        &.primary
+            color $BaseWhite
+            background-color $Primary900
+
+        &.white
+            color $Primary900
+            background-color #FFFFFF
+        &.clickable 
+            cursor: pointer;

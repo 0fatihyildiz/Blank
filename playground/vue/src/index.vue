@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon, Toggle } from '@blank/vue'
+import { Badge, BadgeGroup, Button, ButtonGroup, Container, Icon, Toggle } from '@blank/vue'
+
+const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
+function handleClick() {
+	console.log('Badge group clicked!')
+}
 </script>
 
 <template>
@@ -65,5 +70,9 @@ import { Button, ButtonGroup, Container, Icon, Toggle } from '@blank/vue'
 			<Toggle label="berke" label-direction="right" size="medium" />
 			<Toggle label="berke" size="medium" disabled />
 		</div>
+		<Badge variant="default" @click="handleClick">
+			test
+		</Badge>
+		<BadgeGroup variant="primary" :badges="badges" @click="handleClick" />
 	</Container>
 </template>

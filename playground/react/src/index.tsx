@@ -1,6 +1,7 @@
-import { Button, Icon, Toggle } from '@blank/react'
+import { Badge, BadgeGroup, Button, Icon, Toggle } from '@blank/react'
 
 function App() {
+	const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
 	return (
 		<div>
 			<Button size="small">
@@ -41,6 +42,18 @@ function App() {
 				<Toggle label="berke" labelDirection="left" size="medium"></Toggle>
 				<Toggle size="medium" label="berke" disabled></Toggle>
 			</div>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+				<Badge variant="primary" size="medium">
+					berke
+					<Icon name="remix:command-fill" />
+				</Badge>
+				<Badge variant="primary" size="small">
+					<Icon name="remix:command-fill" />
+					berke
+				</Badge>
+			</div>
+			<BadgeGroup variant="primary" badges={badges}>
+			</BadgeGroup>
 		</div>
 	)
 }

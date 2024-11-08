@@ -1,3 +1,5 @@
+export * from './badge'
+export * from './badgeGroups'
 export * from './button'
 export * from './buttonGroups'
 export * from './toggle'
