@@ -12,6 +12,6 @@ export default antfu({
         'no-trailing-spaces': ['error', { skipBlankLines: true, ignoreComments: true }],
         'no-console': 0,
         'node/prefer-global/process': 0,
-        'vue/no-template-shadow': 'off'
+        'vue/no-template-shadow': 'off',
     },
 })
