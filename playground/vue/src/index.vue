@@ -21,17 +21,63 @@ import { Button, ButtonGroup, Container, Icon, Input } from '@blank/vue'
 			Click me
 		</Button>
 
-		<Input label="Label" helper="Helper text" placeholder="placeholder" tail="logo:google" lead="remix:command-fill">
+		<!-- Example 1: Using lead icon and slot for tail with button -->
+		<Input
+			id="test"
+			label="Label"
+			helper="Helper text"
+			placeholder="placeholder"
+			size="medium"
+			:tail="{ size: 'medium' }"
+			:lead="{ name: 'remix:command-fill', type: 'icon', size: 'small' }"
+		>
 			<template #tail>
-				<Icon name="payment:paypal" size="20" />
+				<Button size="small">
+					Primary
+				</Button>
 			</template>
 		</Input>
 
-		<Input label="Label" helper="Helper text" placeholder="placeholder" size="large" />
+		<!-- Example 2: Different appearances for input -->
+		<Input id="test5" label="Label" appearance="url" :lead="{
+			name: 'remix:command-fill',
+			type: 'icon',
+			size: 'small',
+		}" />
+		<Input id="test5" label="Label" appearance="phone" />
+		<Input id="test5" label="Label" appearance="currency" />
 
-		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" />
+		<!-- Example 3: Large sized input with placeholder -->
+		<Input
+			id="test1"
+			label="Label"
+			helper="Helper text"
+			placeholder="placeholder"
+			size="large"
+		/>
 
-		<Input label="Label" helper="Helper text" error="This is a error text" placeholder="placeholder" size="large" tail="remix:admin-fill" lead="remix:command-fill" disabled />
+		<!-- Example 4: Input with error message -->
+		<Input
+			id="test2"
+			label="Label"
+			helper="Helper text"
+			error="This is an error text"
+			placeholder="placeholder"
+			size="large"
+		/>
+
+		<!-- Example 5: Disabled input with both lead and tail icons -->
+		<Input
+			id="test3"
+			label="Label"
+			helper="Helper text"
+			error="This is an error text"
+			placeholder="placeholder"
+			size="large"
+			:tail="{ name: 'remix:admin-fill', type: 'icon', size: 'small' }"
+			:lead="{ name: 'remix:command-fill', type: 'icon', size: 'small' }"
+			disabled
+		/>
 
 		<div>
 			<ButtonGroup size="small">

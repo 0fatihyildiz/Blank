@@ -42,16 +42,30 @@
                 position absolute
                 top 50%
                 transform translateY(-50%)
+                height: 100%
+                flex(column, center, center, flex)
 
                 &.tail
-                    left 16px
+                    left 0
 
                 &.lead
-                    right 16px
+                    right 0
+
+                &.small
+                    width 42px
+
+                &.medium
+                    width 100px
+                    spacing('padding', 4px, 4px)
 
                 .icon
                     height 20px
                     color $AlphaBlack60
+
+                div, button, svg, select
+                    border-radius 10px
+                    width 100%
+                    height 100%
 
             input
                 spacing('padding', 0, 16px)
@@ -62,16 +76,16 @@
                 cursor text
 
                 &.tail
-                    &__medium
+                    &__small
                         padding-left 48px
-                    &__large
+                    &__medium
                         padding-left 104px
 
                 &.lead
-                    &__medium
+                    &__small
                         padding-right 48px
-                    &__large
-                        padding-right 100px
+                    &__medium
+                        padding-right 104px
 
                 &::placeholder
                     color $AlphaBlack60
@@ -101,3 +115,49 @@
 
             .icon
                 color $AlphaBlack30
+
+        &.url
+            .blank__input__base
+                .slot
+                    &.tail
+                        spacing('padding', 0)
+                        width 87px
+
+                        .url-slot
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color $AlphaBlack40
+                            border-right: solid 1px $AlphaBlack10
+                            border-radius 0 !important
+
+        &.phone
+            .blank__input__base
+                .slot
+                    &.tail
+                        width 96px
+
+                        .phone-slot
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color $AlphaBlack50
+
+        &.currency
+            .blank__input__base
+                .slot
+                    &.tail
+                        span
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color $AlphaBlack50
+
+                    &.lead
+                        text-align: right
+                        width 75px
+                        select
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color $AlphaBlack50
+

@@ -1,6 +1,13 @@
 import type { IconProps } from '@/common'
 
+interface TailOrLeadProps {
+    name?: IconProps['name']
+    type?: 'text' | 'icon'
+    size?: 'small' | 'medium'
+}
+
 interface InputProps {
+    id: string
     type?: 'text' | 'password' | 'email'
     size?: 'medium' | 'large'
     appearance?: 'default' | 'phone' | 'currency' | 'crypto' | 'url' | 'credit-card'
@@ -9,8 +16,8 @@ interface InputProps {
     helper?: string
     disabled?: boolean
     error?: string
-    lead?: IconProps['name']
-    tail?: IconProps['name']
+    lead?: TailOrLeadProps
+    tail?: TailOrLeadProps
 }
 
-export type { InputProps }
+export type { InputProps, TailOrLeadProps }
