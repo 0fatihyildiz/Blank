@@ -1,3 +1,5 @@
+export * from './avatar'
+export * from './avatarGroups'
 export * from './button'
 export * from './buttonGroups'
 export * from './input'
