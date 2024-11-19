@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, ButtonGroup, Container, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
+import { Button, ButtonGroup, Container, Icon, Input, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
 </script>
 
 <template>
