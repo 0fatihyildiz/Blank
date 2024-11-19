@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { InputProps } from '@blank/types'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import Base from './base.vue'
 
 interface Currency {
@@ -29,10 +29,36 @@ fetch('https://gist.githubusercontent.com/ksafranski/2973986/raw/5fda5e87189b066
     .catch((error) => {
         console.error('Error:', error)
     })
+
+const model = defineModel({
+    default: {
+        currency: 'USD',
+        value: '',
+    },
+})
+
+const value = computed({
+    get: () => model.value.value,
+    set: (value: string) => {
+        const number = Number.parseFloat(value)
+        if (Number.isNaN(number)) {
+            model.value = {
+                currency: selectedCurrency.value,
+                value: '',
+            }
+        }
+        else {
+            model.value = {
+                currency: selectedCurrency.value,
+                value: String(number.toFixed(currency.value?.[selectedCurrency.value].decimal_digits)),
+            }
+        }
+    },
+})
 </script>
 
 <template>
-    <Base v-bind="props" :lead="{ size: 'medium' }">
+    <Base v-bind="props" v-model="value" :lead="{ size: 'medium' }">
         <template #tail>
             <span>{{ currency?.[selectedCurrency].symbol }}</span>
         </template>

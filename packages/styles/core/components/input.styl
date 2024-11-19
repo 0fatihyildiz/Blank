@@ -1,3 +1,59 @@
+.blank__inputGroup
+    &.credit-card
+        display: grid
+        gap: 0
+        grid-template-columns: repeat(2, 2fr)
+        grid-template-rows: auto
+
+        &.error
+            .blank__input__base
+                border-color: $Destructive200
+
+        .card-number, .card-expiry, .card-cvc
+            &.disabled .blank__input__base
+                border: solid 1px $AlphaBlack5
+
+        .card-number
+            grid-column: 1 / -1
+
+            .blank__input__base, &.disabled .blank__input__base
+                box-shadow: none
+                border-bottom-width: 0
+                border-radius: 12px 12px 0 0
+
+                &:focus-within
+                    focus-ring()
+                    z-index: 1
+
+            .payment-method
+                display: flex
+                gap: 8px
+                justify-content: flex-end
+                padding-right: 12px
+
+                .icon
+                    flex-shrink: 0
+
+                .text
+                    Body2(400)
+                    color: $AlphaBlack60
+
+        .card-expiry
+            grid-column: 1 / 2
+
+            .blank__input__base, &.disabled .blank__input__base
+                border-radius: 0 0 0 12px
+
+        .card-cvc
+            grid-column: 2 / 4
+
+            .blank__input__base, &.disabled .blank__input__base
+                border-left-width: 0
+                border-radius: 0 0 12px 0
+
+    .blank__input
+        gap: 0
+
 .blank
     &__input
         spacing('gap', 8px)
@@ -13,134 +69,135 @@
 
         &__error-text
             Caption1(400)
-            color $Destructive500
-
+            color: $Destructive500
 
         &__base
             shadow-1()
             Body2(300)
-            position relative
-            color $Primary900
-            background-color $BaseWhite
-            border solid 1px $AlphaBlack10
-            border-radius 12px
+            background-color: $BaseWhite
+            border: solid 1px $AlphaBlack10
+            border-radius: 12px
+            color: $Primary900
+            position: relative
 
             &.medium
-                height 40px
+                height: 40px
 
             &.large
-                height 48px
+                height: 48px
 
             &:hover
-                border-color $AlphaBlack20
+                border-color: $AlphaBlack20
 
             &:focus-within
                 focus-ring()
-
+                z-index: 1
 
             .slot
-                position absolute
-                top 50%
-                transform translateY(-50%)
                 height: 100%
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
                 flex(column, center, center, flex)
 
                 &.tail
-                    left 0
+                    left: 0
 
                 &.lead
-                    right 0
+                    right: 0
 
                 &.small
-                    width 42px
+                    width: 42px
 
                 &.medium
-                    width 100px
+                    width: 100px
                     spacing('padding', 4px, 4px)
 
                 .icon
-                    height 20px
-                    color $AlphaBlack60
+                    color: $AlphaBlack60
+                    height: 20px
 
                 div, button, svg, select
-                    border-radius 10px
-                    width 100%
-                    height 100%
+                    border-radius: 10px
+                    height: 100%
+                    width: 100%
 
             input
                 spacing('padding', 0, 16px)
                 form-inherit()
-                width 100%
-                height 100%
-                border-radius 12px
-                cursor text
+                border-radius: 12px
+                cursor: text
+                height: 100%
+                width: 100%
 
                 &.tail
                     &__small
-                        padding-left 48px
+                        padding-left: 48px
+
                     &__medium
-                        padding-left 104px
+                        padding-left: 104px
 
                 &.lead
                     &__small
-                        padding-right 48px
+                        padding-right: 48px
+
                     &__medium
-                        padding-right 104px
+                        padding-right: 104px
 
                 &::placeholder
-                    color $AlphaBlack60
+                    color: $AlphaBlack60
 
         &.error
             .blank__input__base
-                border-color $Destructive200
-                background-color $Destructive50
+                background-color: $Destructive50
+                border-color: $Destructive200
 
                 input
-                    color $Destructive500
+                    color: $Destructive500
 
                     &::placeholder
-                        color $Destructive400
+                        color: $Destructive400
 
         &.disabled
             .blank__input__base
-                border none
-                box-shadow none
-                background-color $AlphaBlack5
+                background-color: $AlphaBlack5
+                border-color: transparent
+                box-shadow: none
 
                 input
-                    color $AlphaBlack60
+                    color: $AlphaBlack60
 
                     &::placeholder
-                        color $AlphaBlack30
+                        color: $AlphaBlack30
 
-            .icon
-                color $AlphaBlack30
+                .icon
+                    color: $AlphaBlack30
 
         &.url
             .blank__input__base
                 .slot
                     &.tail
                         spacing('padding', 0)
-                        width 87px
+                        width: 87px
 
                         .url-slot
                             flex(row, center, center, flex)
                             Body2(400)
-                            color $AlphaBlack40
+                            border-radius: 0
                             border-right: solid 1px $AlphaBlack10
-                            border-radius 0 !important
+                            color: $AlphaBlack40
 
         &.phone
             .blank__input__base
                 .slot
                     &.tail
-                        width 96px
+                        width: 96px
 
                         .phone-slot
                             spacing('padding', 0, 8px)
                             flex(row, center, center, flex)
                             Body2(400)
-                            color $AlphaBlack50
+                            color: $AlphaBlack50
 
         &.currency
             .blank__input__base
@@ -150,14 +207,14 @@
                             spacing('padding', 0, 8px)
                             flex(row, center, center, flex)
                             Body2(400)
-                            color $AlphaBlack50
+                            color: $AlphaBlack50
 
                     &.lead
                         text-align: right
-                        width 75px
+                        width: 75px
+
                         select
                             spacing('padding', 0, 8px)
                             flex(row, center, center, flex)
                             Body2(400)
-                            color $AlphaBlack50
-
+                            color: $AlphaBlack50

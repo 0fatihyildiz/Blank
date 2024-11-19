@@ -4,7 +4,7 @@ import { Cryptocurrency, Logos, Payment, Remix } from '@blank/icons'
 import { addCollection, Icon } from '@iconify/vue'
 import { computed } from 'vue'
 
-const props = defineProps<IconProps>()
+const { size = 'medium', ...props } = defineProps<IconProps>()
 
 const defaultInherit = ['cryptocurrency', 'payment']
 
@@ -14,8 +14,14 @@ addCollection(Cryptocurrency)
 addCollection(Logos)
 addCollection(Payment)
 addCollection(Remix)
+
+const sizes = {
+    small: 16,
+    medium: 24,
+    large: 32,
+}
 </script>
 
 <template>
-    <Icon :icon="name" :color="(inheritIcon || inherit) ? 'transparent' : color" :width="size" :height="size" />
+    <Icon :icon="name" :color="(inheritIcon || inherit) ? 'transparent' : color" :width="sizes[size]" :height="sizes[size]" />
 </template>

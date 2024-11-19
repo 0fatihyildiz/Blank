@@ -12,7 +12,7 @@ type CryptocurrencyIconNames = Prefix<'cryptocurrency', CryptocurrencyName>
 type PaymentIconNames = Prefix<'payment', PaymentNames>
 
 interface IconProps {
-    size?: string
+    size?: 'small' | 'medium' | 'large'
     color?: string
     name: RemixIconNames | LogosIconNames | CryptocurrencyIconNames | PaymentIconNames
     inherit?: boolean

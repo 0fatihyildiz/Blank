@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import type { InputProps } from '@blank/types'
 import { useSlots } from 'vue'
-import inputBase from './base.vue'
-import inputCurrency from './currency.vue'
-import inputPhone from './phone.vue'
-import inputUrl from './url.vue'
 
-const { appearance, ...inputProps } = withDefaults(defineProps<InputProps>(), {
-    appearance: 'default',
-})
+import base from './base.vue'
+import creditCard from './creditCard.vue'
+import currency from './currency.vue'
+import phone from './phone.vue'
+import url from './url.vue'
+
+const { appearance = 'default', ...inputProps } = defineProps<InputProps>()
 
 const appearanceMap = {
-    'default': inputBase,
-    'phone': inputPhone,
-    'currency': inputCurrency,
-    'crypto': inputBase,
-    'url': inputUrl,
-    'credit-card': inputBase,
+    'default': base,
+    'phone': phone,
+    'currency': currency,
+    'crypto': undefined,
+    'url': url,
+    'credit-card': creditCard,
 }
 
 const slots = useSlots()

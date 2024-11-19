@@ -18,6 +18,8 @@ const slots = defineSlots<{
 const tail = computed(() => props.tail || slots.tail)
 const lead = computed(() => props.lead || slots.lead)
 
+const model = defineModel<string>()
+
 const classes = computed(() => ({
     disabled: props.disabled,
     error: props.error,
@@ -37,6 +39,7 @@ const classes = computed(() => ({
 
             <input
                 :id="props.id"
+                v-model="model"
                 :aria-describedby="props.error ? 'hint' : undefined"
                 :aria-invalid="props.error ? 'true' : undefined"
                 :type="props.type"
