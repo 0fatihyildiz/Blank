@@ -7,7 +7,7 @@ const props = withDefaults(defineProps<AvatarGroupsProps>(), {
     maxDisplay: 3,
     size: 'medium',
     rounded: 'none',
-    avatars: [] as { src: string, name: string }[],
+    avatars: () => [] as { src: string, name: string }[],
 })
 
 const displayAvatars = computed(() => props.avatars.slice(0, props.maxDisplay))
