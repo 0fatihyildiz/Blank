@@ -1,4 +1,4 @@
-import type { AvatarGroupsProps, AvatarProps } from '@blank/types'
+import type { AvatarGroupsProps } from '@blank/types'
 import type { PropsWithChildren } from 'react'
 import Avatar from './avatar'
 
