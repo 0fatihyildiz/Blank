@@ -1,4 +1,5 @@
 export * from './button'
 export * from './buttonGroups'
+export * from './input'
 export * from './tabs'
 export * from './toggle'
