@@ -1,10 +1,8 @@
-import { Badge, BadgeGroup, Button, Icon, Toggle } from '@blank/react'
+import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
 
 function App() {
 	const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
-import { Avatar, AvatarGroup, Button, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
 
-function App() {
 	const avatars = [
 		{ name: 'Berke Yılmaz', src: 'https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp' },
 		{ name: 'Gamze Hanım', src: 'https://files.kick.com/images/user/26616760/profile_image/conversion/c5c62ef5-eef7-42b8-a491-d4c8d7a30214-fullsize.webp' },
