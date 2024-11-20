@@ -4,7 +4,6 @@ import Avatar from './avatar'
 
 function AvatarGroup({ avatars, maxDisplay = 3, size = 'medium', rounded }: PropsWithChildren<AvatarGroupsProps>) {
     const displayAvatars = avatars.slice(0, maxDisplay)
-    const remainingCount = avatars.length - maxDisplay
 
     return (
         <div className="blank__avatar-group ">
@@ -17,12 +16,6 @@ function AvatarGroup({ avatars, maxDisplay = 3, size = 'medium', rounded }: Prop
                     rounded={rounded}
                 />
             ))}
-            {remainingCount > 0 && (
-                <span className={`avatar-group__extra avatar--${size}`}>
-                    +
-                    {remainingCount}
-                </span>
-            )}
         </div>
     )
 }
