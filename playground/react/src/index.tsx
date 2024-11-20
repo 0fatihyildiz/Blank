@@ -1,3 +1,7 @@
+import { Badge, BadgeGroup, Button, Icon, Toggle } from '@blank/react'
+
+function App() {
+	const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
 import { Avatar, AvatarGroup, Button, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
 
 function App() {
@@ -48,6 +52,18 @@ function App() {
 				<Toggle label="berke" labelDirection="left" size="medium"></Toggle>
 				<Toggle size="medium" label="berke" disabled></Toggle>
 			</div>
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+				<Badge variant="primary" size="medium">
+					berke
+					<Icon name="remix:command-fill" />
+				</Badge>
+				<Badge variant="primary" size="small">
+					<Icon name="remix:command-fill" />
+					berke
+				</Badge>
+			</div>
+			<BadgeGroup variant="info" badges={badges}>
+			</BadgeGroup>
 			<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
 			<AvatarGroup avatars={avatars} maxDisplay={8} size="medium" rounded="rounded" />
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

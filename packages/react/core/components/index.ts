@@ -1,5 +1,7 @@
 export { default as Avatar } from './avatar'
 export { default as AvatarGroup } from './avatarGroup'
+export { default as Badge } from './badge'
+export { default as BadgeGroup } from './badgeGroup'
 export { default as Button } from './button'
 export { default as ButtonGroup } from './buttonGroup'
 export { Tabs, TabsContent, TabsList, TabsTrigger } from './tabs'

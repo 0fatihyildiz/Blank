@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { Avatar, AvatarGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
+import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
 import { ref, watch } from 'vue'
+
+const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
+function handleClick() {
+	console.log('Badge group clicked!')
+}
 
 const selectedRadio = ref<string>('')
 watch(selectedRadio, (newValue) => {
@@ -133,6 +138,10 @@ const avatars = [
 			<Toggle label="berke" label-direction="right" size="medium" />
 			<Toggle label="berke" size="medium" disabled />
 		</div>
+		<Badge variant="default" @click="handleClick">
+			test
+		</Badge>
+		<BadgeGroup variant="primary" :badges="badges" @click="handleClick" />
 
 		<div>
 			<Avatar
