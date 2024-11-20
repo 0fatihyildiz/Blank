@@ -2,13 +2,13 @@
     &__avatar-group
         display inline-flex
         align-items center
-
+        & > *:not(:first-child)
+            margin-left -15px
+            z-index auto
     &__avatar
         border 2px solid $BaseWhite
         position relative
-        &:not(:first-child)
-            margin-left -15px 
-            z-index auto
+
     &__extra
             display flex
             align-items center
