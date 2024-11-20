@@ -1,5 +1,13 @@
 <script setup lang="ts">
-import { Avatar, AvatarGroup, Button, ButtonGroup, Container, Icon, Input, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
+import { Avatar, AvatarGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
+import { ref, watch } from 'vue'
+
+const selectedRadio = ref<string>('')
+watch(selectedRadio, (newValue) => {
+	if (newValue) {
+		console.log(`Seçilen değer INDEX: ${newValue}`)
+	}
+})
 
 const avatars = [
 	{ name: 'Berke Yılmaz', src: 'https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp' },
@@ -12,6 +20,11 @@ const avatars = [
 
 <template>
 	<Container>
+		<RadioGroup v-model="selectedRadio" size="medium" direction="right-group">
+			<Radio label="Kerem" />
+			<Radio label="Kerem1" />
+			<Radio label="Kerem2" />
+		</RadioGroup>
 		<Button variant="primary">
 			Click me
 		</Button>
@@ -91,37 +104,23 @@ const avatars = [
 
 		<div>
 			<ButtonGroup size="small">
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
 
 		<div>
 			<ButtonGroup>
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
 
 		<div>
 			<ButtonGroup size="large">
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Primary
-				</Button>
-				<Button>
-					Quaternary
-				</Button>
+				<Button> Primary </Button>
+				<Button> Primary </Button>
+				<Button> Quaternary </Button>
 			</ButtonGroup>
 		</div>
 		<div :style="{ display: 'flex', flexDirection: 'column' }">
