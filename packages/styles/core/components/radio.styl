@@ -1,0 +1,66 @@
+.blank__radio
+    cursor: pointer
+
+    &.right
+        flex(row-reverse, center, center, flex)
+
+    &.left
+        flex(row, center, center, flex)
+
+    input
+        border: 1px solid $AlphaBlack10
+        border-radius: 50%
+        cursor: pointer
+        position: relative
+
+        &.medium
+            height: 24px
+            width: 24px
+
+        &.small
+            height: 20px
+            width: 20px
+
+        &:disabled
+            background-color: $AlphaBlack10
+
+        &:checked
+            background: $Info500
+            border: 0
+
+            &::after
+                background: $BaseWhite
+                border-radius: 50%
+                content: ''
+                height: 8px
+                left: 50%
+                position: absolute
+                top: 50%
+                transform: translate(-50%, -50%)
+                transition: background-color .2s
+                width: 8px
+
+                &.medium
+                    height: 8px
+                    width: 8px
+
+                &.small
+                    height: 6px
+                    width: 6px
+
+    label
+        Body1(500)
+        color: $Primary900
+        cursor: pointer
+        margin 0 8px
+        font-size: 100px
+
+
+        &.medium
+            Body1(500)
+        &.small
+            Body2(500)
+
+    input:disabled + label
+        color: $AlphaBlack20
+        cursor: not-allowed
