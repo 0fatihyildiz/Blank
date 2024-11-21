@@ -30,7 +30,7 @@ const CreditCard: React.FC<CreditCardProps> = (props) => {
     }
 
     return (
-        <div className="blank__inputGroup">
+        <div className="blank inputGroup">
             <Base
                 {...props}
                 placeholder="Card number"

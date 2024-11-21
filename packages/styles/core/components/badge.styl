@@ -1,44 +1,46 @@
 .blank
-    &__badge
-        width fit-content
-        flex(row,center,center,flex)
+    &.badge
+        width: fit-content
+        flex(row, center, center, flex)
         border-radius: 20px
-        spacing('padding',4px,8px)
-        spacing('gap',4px)
-       
+        spacing('padding', 4px, 8px)
+        spacing('gap', 4px)
         Caption1(500)
+
         &.medium
-            height 24px
+            height: 24px
+
         &.small
-            height 20px
+            height: 20px
+
         &.default
-            color $Primary900
-            background-color $BaseWhite
-            border 1px solid $AlphaBlack10  
+            background-color: $BaseWhite
+            border: 1px solid $AlphaBlack10
+            color: $Primary900
 
         &.neutral
-            color $Primary900
-            background-color $AlphaBlack5
+            background-color: $AlphaBlack5
+            color: $Primary900
 
         &.destructive
-            color $Destructive600
-            background-color $Destructive100 
+            background-color: $Destructive100
+            color: $Destructive600
 
         &.warning
-            color  $Warning600
-            background-color $Warning100
+            background-color: $Warning100
+            color: $Warning600
 
         &.success
-            color $Success600 
-            background-color $Success100
+            background-color: $Success100
+            color: $Success600
 
         &.primary
-            color $BaseWhite
-            background-color $Primary900
+            background-color: $Primary900
+            color: $BaseWhite
 
         &.white
-            color $Primary900
-            background-color #FFFFFF
-            
-        &.clickable 
-            cursor: pointer;    
+            background-color: #FFFFFF
+            color: $Primary900
+
+        &.clickable
+            cursor: pointer

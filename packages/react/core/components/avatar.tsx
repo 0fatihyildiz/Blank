@@ -10,7 +10,7 @@ function Avatar({ size = 'medium', name, src, rounded = 'none' }: PropsWithChild
             .slice(0, 2)
         : ''
     return (
-        <div className={`blank__avatar ${size} ${rounded}`}>
+        <div className={`blank avatar ${size} ${rounded}`}>
             {src
                 ? (
                         <img src={src} alt={name} className="src" />

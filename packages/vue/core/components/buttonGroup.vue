@@ -12,7 +12,7 @@ provide('buttonGroup', {
 </script>
 
 <template>
-    <div class="blank__button-group">
+    <div class="blank button-group">
         <slot />
     </div>
 </template>

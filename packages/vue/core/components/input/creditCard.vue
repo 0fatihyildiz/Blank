@@ -54,7 +54,7 @@ function onCVVInput(val: string) {
 </script>
 
 <template>
-    <div class="blank__inputGroup">
+    <div class="blank inputGroup">
         <!-- Card Number Input -->
         <Base
             v-bind="props" class="card-number" placeholder="Card number"

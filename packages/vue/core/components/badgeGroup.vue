@@ -11,12 +11,12 @@ const props = withDefaults(defineProps<BadgeGroupProps>(), {
 
 <template>
     <div
-        class="blank__badge-group" :class="[props.variant || '', { clickable: props.onClick }]"
+        class="blank badge-group" :class="[props.variant || '', { clickable: props.onClick }]"
     >
         <div
             v-for="(badge, index) in props.badges"
             :key="index"
-            class="blank__badge small"
+            class="blank badge small"
             :style="{ backgroundColor: badge.backgroundColor || 'transparent', color: badge.color || '#000' }"
         >
             <span>{{ badge.label }}</span>

@@ -33,7 +33,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <div :class="classes" class="blank__radio">
+    <div :class="classes" class="blank radio">
         <input
             :id="props.label"
             name="radio"

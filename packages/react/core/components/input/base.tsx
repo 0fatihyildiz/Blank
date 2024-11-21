@@ -36,15 +36,15 @@ const Base: React.FC<BaseProps> = ({
     }
 
     return (
-        <div className={`blank__input ${Object.entries(classes)
+        <div className={`blank input ${Object.entries(classes)
             .filter(([_, value]) => value)
             .map(([key]) => key)
             .join(' ')}`}
         >
-            <label className="blank__input__label" htmlFor={id}>
+            <label className="blank input__label" htmlFor={id}>
                 {label}
             </label>
-            <div className={`blank__input__base ${size}`}>
+            <div className={`blank input__base ${size}`}>
                 {(tail || tailSlot) && (
                     <div className={`slot tail ${tail?.size || 'small'}`}>
                         {tailSlot || (tail?.name && <Icon name={tail.name} size={tail.size} />)}

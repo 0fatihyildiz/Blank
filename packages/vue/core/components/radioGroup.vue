@@ -24,7 +24,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <div :class="classes" class="blank__radio-group">
+    <div :class="classes" class="blank radio-group">
         <slot />
     </div>
 </template>

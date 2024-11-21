@@ -26,7 +26,7 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     }, [buttonGroup, size])
 
     const classes = clsx(
-        'blank__button',
+        'blank button',
         buttonAppearance,
         buttonVariant,
         buttonSize,

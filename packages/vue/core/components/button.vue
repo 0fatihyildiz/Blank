@@ -33,7 +33,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <button class="blank__button" :class="classes" :disabled="props.disabled">
+    <button class="blank button" :class="classes" :disabled="props.disabled">
         <slot />
     </button>
 </template>

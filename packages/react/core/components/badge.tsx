@@ -5,7 +5,7 @@ function Badge({ size, variant, children, onClick }: PropsWithChildren<BadgeProp
     return (
         <div
             onClick={onClick}
-            className={`blank__badge ${variant} ${size} ${onClick ? 'clickable' : ''}`}
+            className={`blank badge ${variant} ${size} ${onClick ? 'clickable' : ''}`}
         >
             {children}
         </div>

@@ -17,9 +17,9 @@ provide(TABS_CONTEXT_KEY, {
 })
 
 const classes = computed(() => [
-    'blank__tabs',
-    `blank__tabs--${props.type}`,
-    props.fullWidth && 'blank__tabs--full',
+    'blank tabs',
+    `blank tabs--${props.type}`,
+    props.fullWidth && 'blank tabs--full',
     props.className,
 ])
 </script>

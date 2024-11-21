@@ -7,7 +7,7 @@ const ButtonGroupContext = createContext<{ size: 'small' | 'medium' | 'large' }>
 const ButtonGroup: React.FC<PropsWithChildren<ButtonGroupProps>> = ({ size = 'medium', children }) => {
     return (
         <ButtonGroupContext.Provider value={{ size }}>
-            <div className="blank__button-group">
+            <div className="blank button-group">
                 {children}
             </div>
         </ButtonGroupContext.Provider>

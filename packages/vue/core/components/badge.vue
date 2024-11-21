@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<BadgeProps>(), {
 
 <template>
     <div
-        class="blank__badge"
+        class="blank badge"
         :class="[props.variant, props.size, { clickable: props.onClick }]"
         @click="props.onClick"
     >

@@ -6,7 +6,7 @@ function AvatarGroup({ maxDisplay, children }: PropsWithChildren<AvatarGroupsPro
     const childrenArray = React.Children.toArray(children)
     const displayedAvatars = childrenArray.slice(0, maxDisplay)
     return (
-        <div className="blank__avatar-group ">
+        <div className="blank avatar-group ">
             {displayedAvatars.map((child, index) => (
                 <div key={index}>
                     {child}

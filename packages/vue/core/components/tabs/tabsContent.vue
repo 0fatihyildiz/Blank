@@ -14,7 +14,7 @@ const isActive = computed(() => context.activeValue.value === props.value)
 </script>
 
 <template>
-    <div v-if="isActive" class="blank__tabs-content" :class="[props.className]" role="tabpanel">
+    <div v-if="isActive" class="blank tabs-content" :class="[props.className]" role="tabpanel">
         <slot />
     </div>
 </template>

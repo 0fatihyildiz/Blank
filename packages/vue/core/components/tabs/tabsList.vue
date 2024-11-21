@@ -6,7 +6,7 @@ const props = defineProps<TabsListProps>()
 </script>
 
 <template>
-    <div class="blank__tabs-list" :class="[props.className]" role="tablist">
+    <div class="blank tabs-list" :class="[props.className]" role="tablist">
         <slot />
     </div>
 </template>
