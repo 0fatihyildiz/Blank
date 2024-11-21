@@ -1,20 +1,16 @@
 import type { AvatarGroupsProps } from '@blank/types'
 import type { PropsWithChildren } from 'react'
-import Avatar from './avatar'
+import React from 'react'
 
-function AvatarGroup({ avatars, maxDisplay = 3, size = 'medium', rounded }: PropsWithChildren<AvatarGroupsProps>) {
-    const displayAvatars = avatars.slice(0, maxDisplay)
-
+function AvatarGroup({ maxDisplay, children }: PropsWithChildren<AvatarGroupsProps>) {
+    const childrenArray = React.Children.toArray(children)
+    const displayedAvatars = childrenArray.slice(0, maxDisplay)
     return (
         <div className="blank__avatar-group ">
-            {displayAvatars.map((avatar, index) => (
-                <Avatar
-                    key={index}
-                    src={avatar.src}
-                    name={avatar.name}
-                    size={size}
-                    rounded={rounded}
-                />
+            {displayedAvatars.map((child, index) => (
+                <div key={index}>
+                    {child}
+                </div>
             ))}
         </div>
     )
