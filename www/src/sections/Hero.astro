@@ -1,0 +1,57 @@
+---
+import HeroGradient from '../components/HeroGradient.astro'
+
+interface Props {
+  title?: string
+  description?: string
+  align?: 'center' | 'left'
+}
+
+const { title, description, align = 'left' } = Astro.props
+---
+
+<section
+  class="relative h-svh text-neutral-700 px-4 pt-24 pb-8 md:px-8 overflow-clip"
+>
+  <div
+    class="relative flex items-center w-full h-full bg-gradient-to-b from-primary/5 via-primary/0 via-70% to-secondary/5 rounded-3xl overflow-clip"
+  >
+    <HeroGradient />
+
+    <div
+      class:list={[
+        'relative container flex flex-col gap-16',
+        align === 'center' ? 'text-center' : '',
+      ]}
+    >
+      <div class="flex flex-col gap-8">
+        {
+          title && (
+            <h1
+              class:list={[
+                'text-[8vw] sm:text-[7.5vw] md:text-[7vw] lg:text-[6vw] xl:text-[5vw] leading-none [&>strong]:font-medium',
+                align === 'center' ? 'mx-auto' : '',
+              ]}
+              set:html={title}
+            />
+          )
+        }
+        {
+          description && (
+            <p
+              class:list={[
+                'text-neutral-500 lg:text-lg',
+                align === 'center' ? 'mx-auto' : '',
+              ]}
+              set:html={description}
+            />
+          )
+        }
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,245 @@
+---
+import {
+  basicUsageCode,
+  customStylesCode,
+  customVariablesCode,
+  disabledCode,
+  iconOnlyCode,
+  importCode,
+  sizesCode,
+  tableHead,
+  tableRows,
+  variantsCode,
+  withIconCode,
+} from '../../data/button.ts'
+import { Button as ButtonAc, Tab, TabItem } from 'free-astro-components'
+import Article from '../../components/Article.astro'
+import CodeBlock from '../../components/CodeBlock.astro'
+import Content from '../../layouts/Content.astro'
+import Header from '../../components/Header.astro'
+import Heading from '../../components/Heading.astro'
+import Layout from '../../layouts/Layout.astro'
+import List from '../../components/List.astro'
+import ListItem from '../../components/ListItem.astro'
+import Preview from '../../components/Preview.astro'
+import Prose from '../../components/Prose.astro'
+import Sidebar from '../../layouts/Sidebar.astro'
+import Text from '../../components/Text.astro'
+import Table from '../../components/Table.astro'
+---
+
+<Layout title="Free Astro Components - Button">
+  <Header />
+  <Sidebar />
+  <Content>
+    <section>
+      <Article>
+        <Heading
+          slot="header"
+          level={1}
+          gradient
+          class="inline-block"
+          text="Button"
+        />
+        <Prose>
+          <Text>
+            The button component is a versatile UI element for triggering
+            actions or navigating through your application. Below are the
+            available configurations and usage examples.
+          </Text>
+        </Prose>
+        <Prose>
+          <Heading level={2} text="Import" />
+          <Text>
+            To use the button component, first import it into your project:
+          </Text>
+          <CodeBlock lang="astro" code={importCode} />
+        </Prose>
+        <Prose>
+          <Heading level={2} text="Usage" />
+          <Text>
+            To button component can be easily added to your project. Below are
+            various use cases.
+          </Text>
+          <Heading level={3} text="Basic Usage" />
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <ButtonAc label="Button" />
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={basicUsageCode} />
+            </TabItem>
+          </Tab>
+          <Heading level={3} text="Disabled" />
+          <Text>
+            To disable the button, use the <code>disabled</code> prop.
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc label="Button disabled" disabled />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={disabledCode} />
+            </TabItem>
+          </Tab>
+          <Heading level={3} text="Sizes" />
+          <Text>
+            The component supports two sizes: <code>medium</code> and <code
+              >small</code
+            >.
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc label="Buton small" size="small" />
+                  <ButtonAc label="Button medium" size="medium" />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={sizesCode} />
+            </TabItem>
+          </Tab>
+          <Heading level={3} text="Variants" />
+          <Text>
+            Choose from four visual variants to match different design contexts:
+            <code>'primary' | 'secondary' | 'dark' | 'light'</code>.
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc label="Button primary" variant="primary" />
+                  <ButtonAc label="Button secondary" variant="secondary" />
+                  <ButtonAc label="Button dark" variant="dark" />
+                  <ButtonAc label="Button light" variant="light" />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={variantsCode} />
+            </TabItem>
+          </Tab>
+          <Heading level={3} text="With Icon" />
+          <Text>
+            You can add an icon to the button, either on the left or right side
+            of the label.
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc
+                    label="Button"
+                    icon="arrow-left"
+                    iconPosition="left"
+                  />
+                  <ButtonAc
+                    label="Button"
+                    icon="arrow-right"
+                    iconPosition="right"
+                  />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={withIconCode} />
+            </TabItem>
+          </Tab>
+          <Heading level={3} text="Icon Only" />
+          <Text>
+            For an icon-only button, omit the <code>label</code> prop.
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc icon="star" />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={iconOnlyCode} />
+            </TabItem>
+          </Tab>
+        </Prose>
+        <Prose>
+          <Heading level={2} text="Custom Styles" />
+          <Text>
+            The button component offers various CSS variables that you can
+            customize to match your design needs. Below are the available
+            variables and an example of how to use them:
+          </Text>
+          <Heading level={3} text="Available Variables" />
+          <CodeBlock lang="css" code={customVariablesCode} />
+          <Heading level={3} text="Example Customization" />
+          <Text>
+            To customize the button styles, you can override these variables in
+            your CSS:
+          </Text>
+          <Tab tabs={[{ label: 'Preview', active: true }, { label: 'Code' }]}>
+            <TabItem active>
+              <Preview>
+                <div class="flex items-center flex-wrap gap-4">
+                  <ButtonAc label="Custom button" class="custom-button" />
+                </div>
+              </Preview>
+            </TabItem>
+            <TabItem>
+              <CodeBlock lang="astro" code={customStylesCode} />
+            </TabItem>
+          </Tab>
+        </Prose>
+        <Prose>
+          <Heading level={2} text="Props" />
+          <Table head={tableHead} rows={tableRows} />
+        </Prose>
+        <Prose>
+          <Heading level={2} text="Accessibility" />
+          <List>
+            <ListItem>
+              <Text>
+                <strong>Keyboard Accessibility</strong>: Ensure that all buttons
+                are reachable and operable using a keyboard. Focus should be
+                clearly visible, and buttons should respond to keyboard events.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text>
+                <strong>ARIA Attributes</strong>: Use appropriate ARIA roles and
+                attributes to convey the button's purpose and state to assistive
+                technologies.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <Text>
+                <strong>Visual Clarity</strong>: Buttons should have sufficient
+                contrast against their background to be easily distinguishable.
+              </Text>
+            </ListItem>
+          </List>
+        </Prose>
+      </Article>
+    </section>
+  </Content>
+</Layout>
+
+<style>
+  .custom-button {
+    --ac-btn-border-radius: 999px;
+    --ac-btn-font-weight: 600;
+    border-width: 0;
+    background-image: linear-gradient(
+      90deg,
+      rgb(var(--ac-primary)) 0%,
+      rgb(var(--ac-secondary)) 100%
+    );
+  }
+</style>

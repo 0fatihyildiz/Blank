@@ -1,0 +1,59 @@
+---
+import { Icon, ThemeSwitch } from 'free-astro-components'
+import Hamburguer from './Hamburguer.astro'
+---
+
+<header
+  class="fixed inset-x-0 top-0 bg-neutral-100/60 text-neutral-700 py-4 border-b border-neutral-300/50 backdrop-blur-md z-20"
+>
+  <div class="container flex justify-between items-center gap-8">
+    <a
+      class="text-primary hover:text-secondary text-4xl font-bold leading-none transition duration-300 ease-in-out"
+      href="/"
+      aria-label="Free Astro components"
+    >
+      <Icon icon="star" class="w-8 h-8" />
+    </a>
+
+    <nav>
+      <ul class="flex items-center gap-8">
+        <li>
+          <a
+            class="text-sm hover:text-primary transition duration-300 ease-in-out"
+            href="/guide/installation">Documentation</a
+          >
+        </li>
+        <li class="hidden lg:block">
+          <a
+            class="text-sm hover:text-primary transition duration-300 ease-in-out"
+            href="/components/button">Components</a
+          >
+        </li>
+        <li>
+          <ThemeSwitch />
+        </li>
+        <li class="lg:hidden">
+          <Hamburguer />
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  import { DOMLoaded } from '../ts/utils'
+
+  DOMLoaded(() => {
+    const body = document.querySelector('body') as HTMLElement
+    const hamburguer = document.querySelector(
+      '[data-hamburguer]'
+    ) as HTMLButtonElement
+    const nav = document.querySelector('[data-nav]') as HTMLElement
+
+    hamburguer.addEventListener('click', () => {
+      hamburguer.toggleAttribute('open')
+      nav.toggleAttribute('open')
+      body.classList.toggle('overflow-hidden')
+    })
+  })
+</script>
