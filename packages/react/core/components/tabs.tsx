@@ -29,7 +29,7 @@ function Tabs({ children, defaultValue = 0, type = 'underline', className, fullW
                     fullWidth && 'blank__tabs--full',
                     className,
                 )}
-                role="tablist" // ARIA role for the tab list
+                role="tablist"
             >
                 {children}
             </div>
