@@ -51,46 +51,46 @@ import { Icon } from 'free-astro-components'
 export const tableHead = ['Attribute', 'Type', 'Description', 'Default']
 
 export const tableRows = [
-  [
-    {head: 'Attribute', label:'icon'},
-    {head: 'Type', label:'<code>string</code>'},
-    {head: 'Description', label:'The name of the icon to display.'},
-    {head: 'Default', label:'-'}
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'class',
-    },
-    {
-      head: 'Type',
-      label: '<code>string</code>',
-    },
-    {
-      head: 'Description',
-      label: 'CSS class to apply to the icon for defining size and color.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'other',
-    },
-    {
-      head: 'Type',
-      label: '<code>any</code>',
-    },
-    {
-      head: 'Description',
-      label: 'Any other props will be passed to the <code>svg</code> element of the icon.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
+    [
+        { head: 'Attribute', label: 'icon' },
+        { head: 'Type', label: '<code>string</code>' },
+        { head: 'Description', label: 'The name of the icon to display.' },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'class',
+        },
+        {
+            head: 'Type',
+            label: '<code>string</code>',
+        },
+        {
+            head: 'Description',
+            label: 'CSS class to apply to the icon for defining size and color.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'other',
+        },
+        {
+            head: 'Type',
+            label: '<code>any</code>',
+        },
+        {
+            head: 'Description',
+            label: 'Any other props will be passed to the <code>svg</code> element of the icon.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
 ]

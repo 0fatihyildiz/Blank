@@ -176,157 +176,157 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'free-astro-c
 export const tableHead = ['Attribute', 'Type', 'Description', 'Default']
 
 export const tableRows = [
-  [
-    { head: 'Attribute', label: 'id' },
-    { head: 'Type', label: '<code>string</code>' },
-    {
-      head: 'Description',
-      label: 'The unique identifier for the modal.',
-    },
-    { head: 'Default', label: '-' },
-  ],
-  [
-    { head: 'Attribute', label: 'size' },
-    {
-      head: 'Type',
-      label:
-        "<code>'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | 'full'</code>",
-    },
-    {
-      head: 'Description',
-      label: 'The size of the modal.',
-    },
-    { head: 'Default', label: '<code>md</code>' },
-  ],
-  [
-    { head: 'Attribute', label: 'children' },
-    {
-      head: 'Type',
-      label:
+    [
+        { head: 'Attribute', label: 'id' },
+        { head: 'Type', label: '<code>string</code>' },
+        {
+            head: 'Description',
+            label: 'The unique identifier for the modal.',
+        },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        { head: 'Attribute', label: 'size' },
+        {
+            head: 'Type',
+            label:
+        '<code>\'xs\' | \'sm\' | \'md\' | \'lg\' | \'xl\' | \'2xl\' | \'3xl\' | \'4xl\' | \'full\'</code>',
+        },
+        {
+            head: 'Description',
+            label: 'The size of the modal.',
+        },
+        { head: 'Default', label: '<code>md</code>' },
+    ],
+    [
+        { head: 'Attribute', label: 'children' },
+        {
+            head: 'Type',
+            label:
         '<code>ModalHeader | ModalBody | ModalFooter | [ModalHeader, ModalBody, ModalFooter]</code>',
-    },
-    {
-      head: 'Description',
-      label:
+        },
+        {
+            head: 'Description',
+            label:
         'The content of the modal, including <code>ModalHeader</code>, <code>ModalBody</code>, and <code>ModalFooter</code> components.',
-    },
-    { head: 'Default', label: '-' },
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'class',
-    },
-    {
-      head: 'Type',
-      label: '<code>string</code>',
-    },
-    {
-      head: 'Description',
-      label: 'CSS class for custom styling.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
+        },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'class',
+        },
+        {
+            head: 'Type',
+            label: '<code>string</code>',
+        },
+        {
+            head: 'Description',
+            label: 'CSS class for custom styling.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
 ]
 
 export const tableHeaderRows = [
-  [
-    { head: 'Attribute', label: 'children' },
-    {
-      head: 'Type',
-      label: '<code>any</code>',
-    },
-    {
-      head: 'Description',
-      label: 'The content of the header. Typically includes a title.',
-    },
-    { head: 'Default', label: '-' },
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'class',
-    },
-    {
-      head: 'Type',
-      label: '<code>string</code>',
-    },
-    {
-      head: 'Description',
-      label: 'CSS class for custom styling.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
+    [
+        { head: 'Attribute', label: 'children' },
+        {
+            head: 'Type',
+            label: '<code>any</code>',
+        },
+        {
+            head: 'Description',
+            label: 'The content of the header. Typically includes a title.',
+        },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'class',
+        },
+        {
+            head: 'Type',
+            label: '<code>string</code>',
+        },
+        {
+            head: 'Description',
+            label: 'CSS class for custom styling.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
 ]
 
 export const tableBodyRows = [
-  [
-    { head: 'Attribute', label: 'children' },
-    {
-      head: 'Type',
-      label: '<code>any</code>',
-    },
-    {
-      head: 'Description',
-      label: 'The content of the body. Supports scrollable content.',
-    },
-    { head: 'Default', label: '-' },
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'class',
-    },
-    {
-      head: 'Type',
-      label: '<code>string</code>',
-    },
-    {
-      head: 'Description',
-      label: 'CSS class for custom styling.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
+    [
+        { head: 'Attribute', label: 'children' },
+        {
+            head: 'Type',
+            label: '<code>any</code>',
+        },
+        {
+            head: 'Description',
+            label: 'The content of the body. Supports scrollable content.',
+        },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'class',
+        },
+        {
+            head: 'Type',
+            label: '<code>string</code>',
+        },
+        {
+            head: 'Description',
+            label: 'CSS class for custom styling.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
 ]
 
 export const tableFooterRows = [
-  [
-    { head: 'Attribute', label: 'children' },
-    {
-      head: 'Type',
-      label: '<code>any</code>',
-    },
-    {
-      head: 'Description',
-      label: 'The content of the footer. Typically includes action buttons.',
-    },
-    { head: 'Default', label: '-' },
-  ],
-  [
-    {
-      head: 'Attribute',
-      label: 'class',
-    },
-    {
-      head: 'Type',
-      label: '<code>string</code>',
-    },
-    {
-      head: 'Description',
-      label: 'CSS class for custom styling.',
-    },
-    {
-      head: 'Default',
-      label: '-',
-    },
-  ],
+    [
+        { head: 'Attribute', label: 'children' },
+        {
+            head: 'Type',
+            label: '<code>any</code>',
+        },
+        {
+            head: 'Description',
+            label: 'The content of the footer. Typically includes action buttons.',
+        },
+        { head: 'Default', label: '-' },
+    ],
+    [
+        {
+            head: 'Attribute',
+            label: 'class',
+        },
+        {
+            head: 'Type',
+            label: '<code>string</code>',
+        },
+        {
+            head: 'Description',
+            label: 'CSS class for custom styling.',
+        },
+        {
+            head: 'Default',
+            label: '-',
+        },
+    ],
 ]
