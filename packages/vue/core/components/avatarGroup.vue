@@ -10,7 +10,6 @@ const slots = useSlots()
 
 const displayChildren = computed(() => {
     const slotContent = slots.default ? slots.default() : []
-    console.log(slotContent)
     return slotContent.slice(0, props.maxDisplay)
 })
 </script>
