@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { InputProps } from '@blank/types'
-import { ref } from 'vue'
+import type { InputProps, PaymentIconNames } from '@blank/types'
+import { computed, ref } from 'vue'
 import Icon from '../../common/icon.vue'
 import Base from './base.vue'
 
@@ -11,75 +11,91 @@ interface PaymentMethod {
 }
 
 const { label, helper, appearance, ...props } = defineProps<InputProps>()
-const paymentMethods = ref<{ [key: string]: PaymentMethod }>({})
 
-const cardNumber = ref('')
-const expiryDate = ref('')
-const cvv = ref('')
+const paymentMethods = ref<Record<string, PaymentMethod>>({})
+const currentPaymentMethod = ref<string>('')
 
 fetch('https://gist.githubusercontent.com/0fatihyildiz/011cdbdd922b3d9023c764adde6ae345/raw/338df38efe542b458710b185d219325579cc2268/paymentMethods.json')
-    .then(response => response.json())
-    .then((data: { paymentMethods: { [key: string]: PaymentMethod } }) => {
-        paymentMethods.value = data.paymentMethods
-    })
-    .catch(error => console.error('Failed to fetch payment methods:', error))
+    .then(res => res.json())
+    .then(data => (paymentMethods.value = data.paymentMethods))
+    .catch(console.error)
 
-function formatCardNumber(value: string) {
-    return value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ')
+const formatters = {
+    cardNumber: (value: string) => {
+        currentPaymentMethod.value = Object.keys(paymentMethods.value).find(key =>
+            paymentMethods.value[key].prefixes.some(prefix => value.startsWith(prefix)),
+        ) || ''
+        return value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ')
+    },
+    expiryDate: (value: string) => value.replace(/\D/g, '').replace(/^(\d{2})(\d{0,2})$/, '$1/$2').slice(0, 5),
+    cvv: (value: string) => value.replace(/\D/g, '').slice(0, 4),
 }
 
-function formatExpiryDate(value: string) {
-    return value
-        .replace(/\D/g, '')
-        .replace(/^(\d{2})(\d{0,2})$/, '$1/$2')
-        .slice(0, 5)
+const paymentVal = ref({
+    cardNumber: '',
+    expiryDate: '',
+    cvv: '',
+})
+
+const model = defineModel()
+
+function handleInput(field: keyof typeof paymentVal.value, value: string) {
+    paymentVal.value[field] = formatters[field](value)
+    model.value = { ...paymentVal.value }
 }
 
-function formatCVV(value: string) {
-    return value.replace(/\D/g, '').slice(0, 4)
-}
+const cardNumber = computed({
+    get: () => paymentVal.value.cardNumber,
+    set: (value: string) => {
+        paymentVal.value.cardNumber = formatters.cardNumber(value)
+    },
+})
 
-function onCardNumberInput(val: string) {
-    console.log(val)
-    cardNumber.value = formatCardNumber(val)
-}
+const expiryDate = computed({
+    get: () => paymentVal.value.expiryDate,
+    set: (value: string) => {
+        paymentVal.value.expiryDate = formatters.expiryDate(value)
+    },
+})
 
-function onExpiryDateInput(val: string) {
-    expiryDate.value = formatExpiryDate(val)
-}
-
-function onCVVInput(val: string) {
-    cvv.value = formatCVV(val)
-}
+const cvv = computed({
+    get: () => paymentVal.value.cvv,
+    set: (value: string) => {
+        paymentVal.value.cvv = formatters.cvv(value)
+    },
+})
 </script>
 
 <template>
     <div class="blank inputGroup">
-        <!-- Card Number Input -->
         <Base
-            v-bind="props" class="card-number" placeholder="Card number"
+            v-bind="props"
+            class="card-number"
+            placeholder="Card number"
             :model-value="cardNumber"
-            @update:model-value="onCardNumberInput"
+            @update:model-value="val => handleInput('cardNumber', val)"
         >
             <template #lead>
                 <div class="payment-method">
-                    <Icon name="payment:visa" size="small" />
+                    <Icon :name="`payment:${currentPaymentMethod}` as PaymentIconNames" size="small" />
                 </div>
             </template>
         </Base>
 
-        <!-- Expiry Date Input -->
         <Base
-            v-bind="props" class="card-expiry" placeholder="MM/YY"
+            v-bind="props"
+            class="card-expiry"
+            placeholder="MM/YY"
             :model-value="expiryDate"
-            @update:model-value="onExpiryDateInput"
+            @update:model-value="val => handleInput('expiryDate', val)"
         />
 
-        <!-- CVV Input -->
         <Base
-            v-bind="props" class="card-cvc" placeholder="CVV"
+            v-bind="props"
+            class="card-cvc"
+            placeholder="CVV"
             :model-value="cvv"
-            @update:model-value="onCVVInput"
+            @update:model-value="val => handleInput('cvv', val)"
         />
     </div>
 </template>
