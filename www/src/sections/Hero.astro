@@ -1,6 +1,4 @@
 ---
-import HeroGradient from '../components/HeroGradient.astro'
-
 interface Props {
   title?: string
   description?: string
@@ -16,7 +14,6 @@ const { title, description, align = 'left' } = Astro.props
   <div
     class="relative flex items-center w-full h-full bg-gradient-to-b from-primary/5 via-primary/0 via-70% to-secondary/5 rounded-3xl overflow-clip"
   >
-    <HeroGradient />
 
     <div
       class:list={[

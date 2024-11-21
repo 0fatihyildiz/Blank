@@ -21,7 +21,7 @@ const exampleCode = `
 `
 ---
 
-<Layout title="Free Astro Components - Available Icons">
+<Layout title="Blank UI - Available Icons">
   <Header />
   <Sidebar />
   <Content>
@@ -49,7 +49,7 @@ const exampleCode = `
             {
               iconsCategories.map((category) => {
                 const categoryIcons = icons.filter(
-                  (icon) => icon.category === category
+                  (icon) => icon.category === category,
                 )
 
                 return categoryIcons.length > 0 ? (
