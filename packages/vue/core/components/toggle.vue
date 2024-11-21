@@ -22,15 +22,19 @@ function handleToggle() {
 </script>
 
 <template>
-    <div :class="`blank__toggle-container ${labelDirection}`">
-        <span v-if="label" :class="`toggle-label ${size} ${disabled ? 'disabled' : ''}`">
-            {{ label }}
+    <div :class="`blank__toggle-container ${props.labelDirection}`">
+        <span v-if="props.label" :class="`toggle-label ${props.size} ${props.disabled ? 'disabled' : ''}`">
+            {{ props.label }}
         </span>
         <div
+            role="switch"
             :aria-checked="model ? 'true' : 'false'"
-            :aria-disabled="disabled"
-            :class="`toggle ${size} ${model ? 'active' : ''} ${disabled ? 'disabled' : ''} toggle-position`"
+            :aria-disabled="props.disabled ? 'true' : 'false'"
+            :aria-labelledby="props.label ? 'toggle-label' : ''"
+            :class="`toggle ${props.size} ${model ? 'active' : ''} ${props.disabled ? 'disabled' : ''} toggle-position`"
+            tabindex="0"
             @click="handleToggle"
+            @keydown="e => e.key === ' ' || e.key === 'Enter' ? handleToggle() : null"
         >
             <span class="toggle-circle" />
         </div>

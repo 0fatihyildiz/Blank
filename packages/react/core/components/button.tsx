@@ -1,4 +1,4 @@
-import type { ButtonProps } from '@blank/types' // Importing ButtonProps from @blank/types
+import type { ButtonProps } from '@blank/types'
 import type { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import React, { useEffect, useState } from 'react'
@@ -30,10 +30,19 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
         buttonAppearance,
         buttonVariant,
         buttonSize,
+        {
+            clickable: !disabled,
+        },
     )
 
     return (
-        <button className={classes} disabled={disabled}>
+        <button
+            className={classes}
+            disabled={disabled}
+            role="button"
+            aria-disabled={disabled}
+            aria-label="Button"
+        >
             {children}
         </button>
     )

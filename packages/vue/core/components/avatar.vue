@@ -21,9 +21,32 @@ const initials = computed(() => {
 </script>
 
 <template>
-    <div :class="`blank__avatar ${props.size} ${props.rounded ? 'rounded' : ''}`">
-        <img v-if="props.src" :src="props.src" :alt="props.name" class="src">
-        <span v-else-if="initials">{{ initials }}</span>
-        <img v-else alt="default avatar" class="src">
+    <div
+        :class="`blank__avatar ${props.size} ${props.rounded ? 'rounded' : ''}`"
+        :aria-label="props.name ? `Avatar of ${props.name}` : 'User avatar'"
+        role="img"
+    >
+        <img
+            v-if="props.src"
+            :src="props.src"
+            :alt="props.name ? `Avatar of ${props.name}` : 'User avatar'"
+            class="src"
+            :aria-hidden="!props.name"
+        >
+
+        <span
+            v-else-if="initials"
+            class="initials"
+            :aria-hidden="!initials"
+        >
+            {{ initials }}
+        </span>
+
+        <img
+            v-else
+            alt="Default avatar"
+            class="src"
+            aria-hidden="true"
+        >
     </div>
 </template>

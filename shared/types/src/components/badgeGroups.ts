@@ -7,7 +7,6 @@ interface BadgeItem {
 
 interface BadgeGroupProps {
     variant?: 'default' | 'neutral' | 'destructive' | 'warning' | 'success' | 'primary' | 'white' | 'info'
-    badges: BadgeItem[]
     onClick?: () => void
 }
 

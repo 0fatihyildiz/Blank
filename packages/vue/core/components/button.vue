@@ -33,7 +33,14 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <button class="blank__button" :class="classes" :disabled="props.disabled">
+    <button
+        class="blank__button"
+        :class="classes"
+        :disabled="props.disabled"
+        role="button"
+        :aria-disabled="props.disabled ? 'true' : 'false'"
+        aria-label="Button"
+    >
         <slot />
     </button>
 </template>

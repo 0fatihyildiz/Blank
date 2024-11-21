@@ -1,8 +1,9 @@
 import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
 
 function App() {
-	const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
-
+	const test = () => {
+		console.log('test')
+	}
 	return (
 		<div>
 			<Button size="small">
@@ -44,6 +45,16 @@ function App() {
 				<Toggle size="medium" label="berke" disabled></Toggle>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+				<Badge onClick={test} variant="primary" size="medium">
+					berke
+					<Icon name="remix:command-fill" />
+				</Badge>
+				<Badge onClick={test} variant="primary" size="small">
+					<Icon name="remix:command-fill" />
+					berke
+				</Badge>
+			</div>
+			<BadgeGroup onClick={test} variant="success">
 				<Badge variant="primary" size="medium">
 					berke
 					<Icon name="remix:command-fill" />
@@ -52,8 +63,6 @@ function App() {
 					<Icon name="remix:command-fill" />
 					berke
 				</Badge>
-			</div>
-			<BadgeGroup variant="info" badges={badges}>
 			</BadgeGroup>
 			<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
 			<AvatarGroup>
@@ -113,7 +122,6 @@ function App() {
 					<TabsContent value={2}>Content for Tab 3</TabsContent>
 				</Tabs>
 			</div>
-
 		</div>
 	)
 }

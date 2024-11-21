@@ -13,14 +13,12 @@ const props = withDefaults(defineProps<BadgeProps>(), {
     <div
         class="blank__badge"
         :class="[props.variant, props.size, { clickable: props.onClick }]"
+        role="button"
+        :aria-label="`Badge ${props.variant} ${props.size}`"
+        :tabindex="props.onClick ? 0 : -1"
+        :aria-disabled="!props.onClick"
         @click="props.onClick"
     >
         <slot />
     </div>
 </template>
-
-<style scoped>
-.clickable {
-    cursor: pointer;
-}
-</style>

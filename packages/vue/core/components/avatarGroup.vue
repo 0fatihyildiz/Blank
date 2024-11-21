@@ -15,9 +15,17 @@ const displayChildren = computed(() => {
 </script>
 
 <template>
-    <div class="blank__avatar-group">
+    <div
+        class="blank__avatar-group"
+        role="group"
+        aria-label="Avatar group"
+    >
         <div v-for="(children, index) in displayChildren" :key="index">
-            <component :is="children" />
+            <component
+                :is="children"
+                role="img"
+                :aria-label="`Avatar ${index + 1}`"
+            />
         </div>
     </div>
 </template>
