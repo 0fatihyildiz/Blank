@@ -147,6 +147,11 @@ watch(selectedRadio, (newValue) => {
 					size="medium"
 					rounded="rounded"
 				/>
+				<Avatar
+					src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"
+					size="medium"
+					rounded="rounded"
+				/>
 			</AvatarGroup>
 
 			<div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem', gridColumn: '2 / 4' }">

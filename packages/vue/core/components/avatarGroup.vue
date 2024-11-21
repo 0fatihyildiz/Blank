@@ -10,16 +10,15 @@ const slots = useSlots()
 
 const displayChildren = computed(() => {
     const slotContent = slots.default ? slots.default() : []
+    console.log(slotContent)
     return slotContent.slice(0, props.maxDisplay)
 })
 </script>
 
 <template>
     <div class="blank__avatar-group">
-        <template v-for="(child, index) in displayChildren" :key="index">
-            <div>
-                <slot :index="index" />
-            </div>
-        </template>
+        <div v-for="(children, index) in displayChildren" :key="index">
+            <component :is="children" />
+        </div>
     </div>
 </template>
