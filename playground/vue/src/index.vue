@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
+import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, ButtonGroup, Checkbox, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
 import { ref, watch } from 'vue'
 
 const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
@@ -13,6 +13,11 @@ watch(selectedRadio, (newValue) => {
 		console.log(`Seçilen değer INDEX: ${newValue}`)
 	}
 })
+const check = ref(false)
+
+function useCheck(newValue: boolean) {
+	check.value = newValue
+}
 </script>
 
 <template>
@@ -134,7 +139,22 @@ watch(selectedRadio, (newValue) => {
 			test
 		</Badge>
 		<BadgeGroup variant="primary" :badges="badges" @click="handleClick" />
-
+		<Checkbox
+			size="small"
+			direction="left"
+			label="Check Me!"
+			:checked="check"
+			:disabled="false"
+			@on-change="useCheck"
+		/>
+		<Checkbox
+			size="medium"
+			direction="left"
+			label="Check Me!"
+			:checked="check"
+			:disabled="false"
+			@on-change="useCheck"
+		/>
 		<div>
 			<Avatar
 				src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"

@@ -1,8 +1,9 @@
-import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
+import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, Checkbox, Icon, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/react'
+import { useState } from 'react'
 
 function App() {
 	const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
-
+	const [check, useCheck] = useState(false)
 	return (
 		<div>
 			<Button size="small">
@@ -113,6 +114,22 @@ function App() {
 					<TabsContent value={2}>Content for Tab 3</TabsContent>
 				</Tabs>
 			</div>
+			<Checkbox
+				size="small"
+				direction="right"
+				label="Chek Me!"
+				checked={check}
+				onChange={() => useCheck(!check)}
+				disabled={false}
+			/>
+			<Checkbox
+				size="medium"
+				direction="left"
+				label="Chek Me!"
+				checked={check}
+				onChange={() => useCheck(!check)}
+				disabled={false}
+			/>
 
 		</div>
 	)
