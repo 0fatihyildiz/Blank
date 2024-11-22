@@ -1,4 +1,4 @@
-import type { ButtonProps } from '@blank/types' // Importing ButtonProps from @blank/types
+import type { ButtonProps } from '@blank/types'
 import type { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import React, { useEffect, useState } from 'react'

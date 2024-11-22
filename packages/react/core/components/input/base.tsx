@@ -1,51 +1,48 @@
 import type { InputProps } from '@blank/types'
-// Base.tsx
-import React, { useMemo } from 'react'
-import Icon from '../../common/icon'
+import { useMemo } from 'react'
+import { Icon } from '../../common'
 
-interface BaseProps extends InputProps {
+interface BaseInputProps extends InputProps {
+    value?: string
+    onChange?: (value: string) => void
     className?: string
+    children?: React.ReactNode
     tailSlot?: React.ReactNode
     leadSlot?: React.ReactNode
-    value: string
-    onChange?: (value: string) => void
 }
 
-const Base: React.FC<BaseProps> = ({
+export function BaseInput({
     id = 'input',
     type = 'text',
     size = 'medium',
-    label,
     disabled,
     error,
+    label,
     placeholder,
     tail,
     lead,
-    tailSlot,
-    leadSlot,
     value,
     onChange,
-}) => {
+    tailSlot,
+    leadSlot,
+    className,
+    children,
+}: BaseInputProps) {
     const classes = useMemo(() => ({
         disabled,
         error,
-    }), [disabled, error])
+    }), [disabled, error]) as { [key: string]: boolean | undefined }
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value)
-    }
+    const tailContent = useMemo(() => tail || tailSlot, [tail, tailSlot])
+    const leadContent = useMemo(() => lead || leadSlot, [lead, leadSlot])
 
     return (
-        <div className={`blank input ${Object.entries(classes)
-            .filter(([_, value]) => value)
-            .map(([key]) => key)
-            .join(' ')}`}
-        >
+        <div className={`blank input ${Object.keys(classes).filter(k => classes[k]).join(' ')} ${className || ''}`.trim()}>
             <label className="blank input__label" htmlFor={id}>
                 {label}
             </label>
             <div className={`blank input__base ${size}`}>
-                {(tail || tailSlot) && (
+                {(tailContent) && (
                     <div className={`slot tail ${tail?.size || 'small'}`}>
                         {tailSlot || (tail?.name && <Icon name={tail.name} size={tail.size} />)}
                     </div>
@@ -54,25 +51,27 @@ const Base: React.FC<BaseProps> = ({
                 <input
                     id={id}
                     value={value}
-                    onChange={handleChange}
+                    onChange={e => onChange?.(e.target.value)}
                     aria-describedby={error ? 'hint' : undefined}
-                    aria-invalid={error ? true : undefined}
+                    aria-invalid={error ? 'true' : undefined}
                     type={type}
                     placeholder={placeholder}
                     className={`
-            ${tail ? `tail__${tail?.size || 'small'}` : ''}
-            ${lead ? `lead__${lead?.size || 'small'}` : ''}`.trim()}
+                        ${tail ? `tail__${tail?.size || 'small'}` : ''}
+                        ${lead ? `lead__${lead?.size || 'small'}` : ''}
+                    `.trim()}
                     disabled={disabled}
                 />
 
-                {(lead || leadSlot) && (
+                {(leadContent) && (
                     <div className={`slot lead ${lead?.size || 'small'}`}>
                         {leadSlot || (lead?.name && <Icon name={lead.name} size={lead.size} />)}
                     </div>
                 )}
             </div>
+            {children}
         </div>
     )
 }
 
-export default Base
+export default BaseInput
