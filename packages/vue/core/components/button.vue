@@ -34,7 +34,7 @@ const classes = computed(() => ({
 
 <template>
     <button
-        class="blank__button"
+        class="blank button"
         :class="classes"
         :disabled="props.disabled"
         role="button"

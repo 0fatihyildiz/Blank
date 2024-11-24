@@ -26,7 +26,7 @@ const classes = computed(() => ({
 <template>
     <div
         :class="classes"
-        class="blank__radio-group"
+        class="blank radio-group"
         role="radiogroup"
         aria-labelledby="radio-group-label"
         aria-describedby="radio-group-description"

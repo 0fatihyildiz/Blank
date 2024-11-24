@@ -16,7 +16,7 @@ const displayChildren = computed(() => {
 
 <template>
     <div
-        class="blank__avatar-group"
+        class="blank avatar-group"
         role="group"
         aria-label="Avatar group"
     >

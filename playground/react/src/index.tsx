@@ -18,11 +18,6 @@ import {
 } from '@blank/react'
 
 const IndexPage: React.FC = () => {
-	const badges = [
-		{ label: 'test', backgroundColor: 'grey', color: 'white' },
-		{ label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' },
-	]
-
 	const handleClick = () => {
 		console.log('Badge group clicked!')
 	}
@@ -134,17 +129,17 @@ const IndexPage: React.FC = () => {
 			</div>
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-				<Badge onClick={test} variant="primary" size="medium">
+				<Badge variant="primary" size="medium">
 					berke
 					<Icon name="remix:command-fill" />
 				</Badge>
-				<Badge onClick={test} variant="primary" size="small">
+				<Badge variant="primary" size="small">
 					<Icon name="remix:command-fill" />
 					berke
 				</Badge>
 			</div>
 
-			<BadgeGroup onClick={test} variant="success">
+			<BadgeGroup variant="success">
 				<Badge variant="primary" size="medium">
 					berke
 					<Icon name="remix:command-fill" />
@@ -190,7 +185,7 @@ const IndexPage: React.FC = () => {
 			<Badge variant="default" onClick={handleClick}>
 				test
 			</Badge>
-			<BadgeGroup variant="primary" badges={badges} onClick={handleClick} />
+			<BadgeGroup variant="primary" onClick={handleClick} />
 
 			<div>
 				<Avatar

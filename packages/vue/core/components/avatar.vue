@@ -22,7 +22,7 @@ const initials = computed(() => {
 
 <template>
     <div
-        :class="`blank__avatar ${props.size} ${props.rounded ? 'rounded' : ''}`"
+        :class="`blank avatar ${props.size} ${props.rounded ? 'rounded' : ''}`"
         :aria-label="props.name ? `Avatar of ${props.name}` : 'User avatar'"
         role="img"
     >

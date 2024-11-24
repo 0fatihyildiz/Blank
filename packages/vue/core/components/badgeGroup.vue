@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<BadgeGroupProps>(), {
 
 <template>
     <div
-        class="blank__badge-group" :class="[props.variant || '', { clickable: props.onClick }]"
+        class="blank badge-group" :class="[props.variant || '', { clickable: props.onClick }]"
         role="group"
         aria-label="Badge group"
         @click="props.onClick"

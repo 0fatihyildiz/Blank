@@ -7,7 +7,7 @@ function AvatarGroup({ maxDisplay, children }: PropsWithChildren<AvatarGroupsPro
     const displayedAvatars = childrenArray.slice(0, maxDisplay)
 
     return (
-        <div className="blank__avatar-group" role="list" aria-label="Avatar group">
+        <div className="blank avatar-group" role="list" aria-label="Avatar group">
             {displayedAvatars.map((child, index) => (
                 <div key={index} role="listitem">
                     {child}

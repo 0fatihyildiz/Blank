@@ -22,7 +22,7 @@ function handleToggle() {
 </script>
 
 <template>
-    <div :class="`blank__toggle-container ${props.labelDirection}`">
+    <div :class="`blank toggle-container ${props.labelDirection}`">
         <span v-if="props.label" :class="`toggle-label ${props.size} ${props.disabled ? 'disabled' : ''}`">
             {{ props.label }}
         </span>

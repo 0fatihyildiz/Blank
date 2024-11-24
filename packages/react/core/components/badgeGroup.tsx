@@ -6,7 +6,7 @@ function BadgeGroup({ variant, onClick, children }: PropsWithChildren<BadgeGroup
     return (
         <div
             onClick={onClick}
-            className={`blank__badge-group ${variant || ''} ${onClick !== undefined ? 'clickable' : ''}`}
+            className={`blank badge-group ${variant || ''} ${onClick !== undefined ? 'clickable' : ''}`}
             role={onClick ? 'group' : undefined}
             aria-label="Badge group"
         >

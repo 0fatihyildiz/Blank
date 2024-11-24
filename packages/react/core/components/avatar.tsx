@@ -11,7 +11,7 @@ function Avatar({ size = 'medium', name, src, rounded = 'none' }: PropsWithChild
         : ''
 
     return (
-        <div className={`blank__avatar ${size} ${rounded}`} role="img" aria-label={name ? `${name}'s avatar` : 'User avatar'}>
+        <div className={`blank avatar ${size} ${rounded}`} role="img" aria-label={name ? `${name}'s avatar` : 'User avatar'}>
             {src
                 ? (
                         <img src={src} alt={name ? `${name}'s avatar` : 'User avatar'} className="src" />

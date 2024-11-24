@@ -13,7 +13,7 @@ provide('buttonGroup', {
 
 <template>
     <div
-        class="blank__button-group"
+        class="blank button-group"
         role="group"
         aria-labelledby="button-group-label"
     >

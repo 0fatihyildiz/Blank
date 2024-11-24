@@ -8,7 +8,7 @@ const ButtonGroup: React.FC<PropsWithChildren<ButtonGroupProps>> = ({ size = 'me
     return (
         <ButtonGroupContext.Provider value={{ size }}>
             <div
-                className="blank__button-group"
+                className="blank button-group"
                 role="group"
                 aria-label="Button group"
             >

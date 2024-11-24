@@ -76,7 +76,7 @@ function TabsContent({ children, value, className }: PropsWithChildren<TabsConte
     return activeValue === value
         ? (
                 <div
-                    className={clsx('blank__tabs-content', className)}
+                    className={clsx('blank tabs-content', className)}
                     role="tabpanel"
                     aria-labelledby={`tab-${value}`}
                 >
