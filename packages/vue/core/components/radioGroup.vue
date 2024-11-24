@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { RadioGroupProps } from '@blank/types'
-import { computed, defineEmits, provide, toRef, watch } from 'vue'
+import { computed, defineEmits, provide, toRef } from 'vue'
 
 const props = withDefaults(defineProps<RadioGroupProps>(), {
     size: 'medium',
@@ -24,7 +24,13 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <div :class="classes" class="blank__radio-group">
+    <div
+        :class="classes"
+        class="blank radio-group"
+        role="radiogroup"
+        aria-labelledby="radio-group-label"
+        aria-describedby="radio-group-description"
+    >
         <slot />
     </div>
 </template>

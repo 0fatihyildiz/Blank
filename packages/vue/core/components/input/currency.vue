@@ -17,7 +17,7 @@ interface Currency {
 
 const props = defineProps<InputProps>()
 
-const currency = ref<Currency>()
+const currency = ref<Currency | null>(null)
 const selectedCurrency = ref<string>('USD')
 
 // special thanks to the @ksafranski of the JSON file
@@ -50,7 +50,7 @@ const value = computed({
         else {
             model.value = {
                 currency: selectedCurrency.value,
-                value: String(number.toFixed(currency.value?.[selectedCurrency.value].decimal_digits)),
+                value: (currency.value?.[selectedCurrency.value]?.decimal_digits || '').toString(),
             }
         }
     },
@@ -60,12 +60,12 @@ const value = computed({
 <template>
     <Base v-bind="props" v-model="value" :lead="{ size: 'medium' }">
         <template #tail>
-            <span>{{ currency?.[selectedCurrency].symbol }}</span>
+            <span>{{ currency?.[selectedCurrency]?.symbol }}</span>
         </template>
         <template #lead>
             <select v-model="selectedCurrency">
-                <option v-for="c in currency" :key="c.code" :value="c.code">
-                    {{ c.code }}
+                <option v-for="(_c, code) in currency" :key="code" :value="code">
+                    {{ code }}
                 </option>
             </select>
         </template>

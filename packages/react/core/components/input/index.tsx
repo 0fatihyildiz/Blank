@@ -15,6 +15,8 @@ interface InputComponentProps extends InputProps {
     value?: string
     onChange?: (value: string) => void
     className?: string
+    tailSlot?: React.ReactNode
+    leadSlot?: React.ReactNode
 }
 
 const appearanceMap = {
@@ -39,7 +41,7 @@ const Input: React.FC<InputComponentProps> = ({
     }
 
     return (
-        <Component {...inputProps} value={inputProps.value || ''} className={appearance || ''} onChange={inputProps.onChange || (() => {})} />
+        <Component {...inputProps} value={inputProps.value || ''} appearance={appearance} onChange={inputProps.onChange || (() => {})} />
     )
 }
 

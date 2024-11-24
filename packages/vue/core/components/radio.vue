@@ -33,7 +33,7 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <div :class="classes" class="blank__radio">
+    <div :class="classes" class="blank radio">
         <input
             :id="props.label"
             name="radio"
@@ -41,6 +41,10 @@ const classes = computed(() => ({
             :disabled="props.disabled"
             type="radio"
             :value="props.label"
+            :checked="radioGroup?.modelValue === props.label"
+            :aria-checked="radioGroup?.modelValue === props.label ? 'true' : 'false'"
+            :aria-disabled="props.disabled ? 'true' : 'false'"
+            tabindex="0"
             @change="onSelect"
         >
         <label v-show="props.label" :class="classes" :for="props.label">

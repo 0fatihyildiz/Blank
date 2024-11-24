@@ -6,10 +6,10 @@ type LogosName = keyof typeof Logos['icons']
 type PaymentNames = keyof typeof Payment['icons']
 type RemixNames = keyof typeof Remix['icons']
 
-type RemixIconNames = Prefix<'remix', RemixNames>
-type LogosIconNames = Prefix<'logo', LogosName>
-type CryptocurrencyIconNames = Prefix<'cryptocurrency', CryptocurrencyName>
-type PaymentIconNames = Prefix<'payment', PaymentNames>
+export type RemixIconNames = Prefix<'remix', RemixNames>
+export type LogosIconNames = Prefix<'logo', LogosName>
+export type CryptocurrencyIconNames = Prefix<'cryptocurrency', CryptocurrencyName>
+export type PaymentIconNames = Prefix<'payment', PaymentNames>
 
 interface IconProps {
     size?: 'small' | 'medium' | 'large'

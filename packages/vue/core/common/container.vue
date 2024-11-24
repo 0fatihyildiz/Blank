@@ -5,7 +5,7 @@ useContext()
 </script>
 
 <template>
-    <div class="blank__container">
+    <div class="blank container">
         <slot />
     </div>
 </template>

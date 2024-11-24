@@ -13,8 +13,8 @@ if (!context) {
 const isActive = computed(() => context.activeValue.value === props.value)
 
 const classes = computed(() => [
-    'blank__tabs-trigger',
-    isActive.value && 'blank__tabs-trigger--active',
+    'blank tabs-trigger',
+    isActive.value && 'blank tabs-trigger--active',
     props.className,
 ])
 </script>

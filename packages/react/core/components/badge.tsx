@@ -5,7 +5,11 @@ function Badge({ size, variant, children, onClick }: PropsWithChildren<BadgeProp
     return (
         <div
             onClick={onClick}
-            className={`blank__badge ${variant} ${size} ${onClick ? 'clickable' : ''}`}
+            className={`blank badge ${variant} ${size} ${onClick !== undefined ? 'clickable' : ''}`}
+            role={onClick ? 'button' : undefined}
+            aria-label={onClick ? 'Click to perform action' : undefined}
+            tabIndex={onClick ? 0 : undefined}
+            aria-disabled={!onClick}
         >
             {children}
         </div>

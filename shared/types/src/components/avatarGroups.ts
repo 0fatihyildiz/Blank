@@ -1,7 +1,4 @@
 interface AvatarGroupsProps {
-    avatars: { src: string, name: string }[]
-    maxDisplay: number
-    size: 'small' | 'medium' | 'large'
-    rounded?: 'rounded' | 'semi-rounded' | 'none'
+    maxDisplay?: number
 }
 export type { AvatarGroupsProps }

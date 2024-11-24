@@ -1,78 +1,67 @@
 import type { InputProps } from '@blank/types'
-// Base.tsx
-import React, { useMemo } from 'react'
-import Icon from '../../common/icon'
+import { useMemo } from 'react'
+import { Icon } from '../../common'
 
-interface BaseProps extends InputProps {
+interface BaseInputProps extends InputProps {
+    value?: string
+    onChange?: (value: string) => void
     className?: string
+    children?: React.ReactNode
     tailSlot?: React.ReactNode
     leadSlot?: React.ReactNode
-    value: string
-    onChange?: (value: string) => void
 }
 
-const Base: React.FC<BaseProps> = ({
+export function BaseInput({
     id = 'input',
     type = 'text',
     size = 'medium',
-    label,
     disabled,
     error,
-    placeholder,
-    tail,
-    lead,
-    tailSlot,
-    leadSlot,
-    value,
-    onChange,
-}) => {
+    ...props
+}: BaseInputProps) {
     const classes = useMemo(() => ({
         disabled,
         error,
-    }), [disabled, error])
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onChange?.(e.target.value)
+    }), [disabled, error]) as {
+        [key: string]: boolean | undefined
     }
 
+    const tailContent = useMemo(() => props.tail || props.tailSlot, [props.tail, props.tailSlot])
+    const leadContent = useMemo(() => props.lead || props.leadSlot, [props.lead, props.leadSlot])
+
     return (
-        <div className={`blank__input ${Object.entries(classes)
-            .filter(([_, value]) => value)
-            .map(([key]) => key)
-            .join(' ')}`}
-        >
-            <label className="blank__input__label" htmlFor={id}>
-                {label}
+        <div className={`blank input ${Object.keys(classes).filter(k => classes[k]).join(' ')}${props.className || ''}`.trim()}>
+            <label className="blank input__label" htmlFor={id}>
+                {props.label}
             </label>
-            <div className={`blank__input__base ${size}`}>
-                {(tail || tailSlot) && (
-                    <div className={`slot tail ${tail?.size || 'small'}`}>
-                        {tailSlot || (tail?.name && <Icon name={tail.name} size={tail.size} />)}
+            <div className={`blank input__base ${size}`}>
+                {(tailContent) && (
+                    <div className={`slot tail ${props.tail?.size || 'small'}`}>
+                        {props.tailSlot || (props.tail?.name && <Icon name={props.tail.name} size={props.tail.size} />)}
                     </div>
                 )}
 
                 <input
                     id={id}
-                    value={value}
-                    onChange={handleChange}
+                    value={props.value}
+                    onChange={e => props.onChange?.(e.target.value)}
                     aria-describedby={error ? 'hint' : undefined}
-                    aria-invalid={error ? true : undefined}
+                    aria-invalid={error ? 'true' : undefined}
                     type={type}
-                    placeholder={placeholder}
-                    className={`
-            ${tail ? `tail__${tail?.size || 'small'}` : ''}
-            ${lead ? `lead__${lead?.size || 'small'}` : ''}`.trim()}
+                    placeholder={props.placeholder}
+                    className={`${props.tail ? `tail__${props.tail?.size || 'small'}` : ''} ${props.lead ? `lead__${props.lead?.size || 'small'}` : ''}`.trim()}
                     disabled={disabled}
                 />
 
-                {(lead || leadSlot) && (
-                    <div className={`slot lead ${lead?.size || 'small'}`}>
-                        {leadSlot || (lead?.name && <Icon name={lead.name} size={lead.size} />)}
+                {(leadContent) && (
+                    <div className={`slot lead ${props.lead?.size || 'small'}`}>
+                        {props.leadSlot || (props.lead?.name && <Icon name={props.lead.name} size={props.lead.size} />)}
                     </div>
                 )}
             </div>
+            {props.children}
         </div>
     )
 }
 
-export default Base
+export default BaseInput

@@ -1,6 +1,5 @@
 import type { InputProps } from '@blank/types'
-
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Base from './base'
 
 interface CurrencyVal {
@@ -22,7 +21,7 @@ interface CurrencyProps extends InputProps {
 }
 
 const Currency: React.FC<CurrencyProps> = (props) => {
-    const [currency, setCurrency] = useState<CurrencyVal>()
+    const [currency, setCurrency] = useState<CurrencyVal | null>(null)
     const [selectedCurrency, setSelectedCurrency] = useState('USD')
 
     useEffect(() => {
@@ -36,9 +35,31 @@ const Currency: React.FC<CurrencyProps> = (props) => {
             })
     }, [])
 
+    const handleValueChange = (value: string) => {
+        const number = Number.parseFloat(value)
+        if (Number.isNaN(number)) {
+            props.onChange('')
+        }
+        else {
+            const decimalDigits = currency?.[selectedCurrency]?.decimal_digits ?? 0
+            props.onChange(number.toFixed(decimalDigits))
+        }
+    }
+
+    const computedValue = useMemo(() => {
+        const number = Number.parseFloat(props.value)
+        if (Number.isNaN(number))
+            return ''
+        const decimalDigits = currency?.[selectedCurrency]?.decimal_digits ?? 0
+        return number.toFixed(decimalDigits)
+    }, [props.value, selectedCurrency, currency])
+
     return (
         <Base
             {...props}
+            value={computedValue}
+            onChange={val => handleValueChange(val)}
+            tail={{ size: 'small' }}
             lead={{ size: 'medium' }}
             tailSlot={
                 <span>{currency?.[selectedCurrency]?.symbol}</span>

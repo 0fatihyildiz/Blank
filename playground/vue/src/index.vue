@@ -2,7 +2,6 @@
 import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
 import { ref, watch } from 'vue'
 
-const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
 function handleClick() {
 	console.log('Badge group clicked!')
 }
@@ -13,14 +12,6 @@ watch(selectedRadio, (newValue) => {
 		console.log(`Seçilen değer INDEX: ${newValue}`)
 	}
 })
-
-const avatars = [
-	{ name: 'Berke Yılmaz', src: 'https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp' },
-	{ name: 'Gamze Hanım', src: 'https://files.kick.com/images/user/26616760/profile_image/conversion/c5c62ef5-eef7-42b8-a491-d4c8d7a30214-fullsize.webp' },
-	{ name: 'Ali Veli', src: 'https://files.kick.com/images/user/1793403/profile_image/conversion/15a48d7b-0b0a-4a7b-86eb-d5596dd6d27b-thumb.webp' },
-	{ name: 'Ayşe Fatma', src: 'https://files.kick.com/images/user/7647446/profile_image/conversion/0b68d46c-9043-4b0e-9b3a-e13ec6b6e96b-thumb.webp' },
-	{ name: 'Mehmet Can', src: '' },
-]
 </script>
 
 <template>
@@ -141,7 +132,15 @@ const avatars = [
 		<Badge variant="default" @click="handleClick">
 			test
 		</Badge>
-		<BadgeGroup variant="primary" :badges="badges" @click="handleClick" />
+		<BadgeGroup variant="primary"
+			@click="handleClick"
+		>
+			<Badge variant="default">
+				test
+			</Badge><Badge variant="default">
+				test
+			</Badge>
+		</BadgeGroup>
 
 		<div>
 			<Avatar
@@ -149,12 +148,19 @@ const avatars = [
 				size="medium"
 				rounded="rounded"
 			/>
-			<AvatarGroup
-				:avatars="avatars"
-				:max-display="2"
-				size="medium"
-				rounded="rounded"
-			/>
+			<AvatarGroup :max-display="3">
+				<Avatar
+					src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"
+					size="medium"
+					rounded="rounded"
+				/>
+				<Avatar
+					src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"
+					size="medium"
+					rounded="rounded"
+				/>
+			</AvatarGroup>
+
 			<div :style="{ display: 'flex', flexDirection: 'column', gap: '1rem', gridColumn: '2 / 4' }">
 				<Tabs default-value="0" full-width @value-change="v => console.log(v)">
 					<TabsList>
