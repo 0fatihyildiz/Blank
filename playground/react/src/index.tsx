@@ -18,11 +18,6 @@ import {
 } from '@blank/react'
 
 const IndexPage: React.FC = () => {
-	const badges = [
-		{ label: 'test', backgroundColor: 'grey', color: 'white' },
-		{ label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' },
-	]
-
 	const handleClick = () => {
 		console.log('Badge group clicked!')
 	}
@@ -124,6 +119,59 @@ const IndexPage: React.FC = () => {
 			</div>
 
 			<div style={{ display: 'flex', flexDirection: 'column' }}>
+				<Toggle size="small"></Toggle>
+				<Toggle size="medium"></Toggle>
+				<Toggle size="small" disabled></Toggle>
+				<Toggle size="medium" disabled></Toggle>
+				<Toggle label="berke" labelDirection="right" size="small"></Toggle>
+				<Toggle label="berke" labelDirection="left" size="medium"></Toggle>
+				<Toggle size="medium" label="berke" disabled></Toggle>
+			</div>
+
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+				<Badge variant="primary" size="medium">
+					berke
+					<Icon name="remix:command-fill" />
+				</Badge>
+				<Badge variant="primary" size="small">
+					<Icon name="remix:command-fill" />
+					berke
+				</Badge>
+			</div>
+
+			<BadgeGroup variant="success">
+				<Badge variant="primary" size="medium">
+					berke
+					<Icon name="remix:command-fill" />
+				</Badge>
+				<Badge variant="primary" size="small">
+					<Icon name="remix:command-fill" />
+					berke
+				</Badge>
+			</BadgeGroup>
+
+			<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+
+			<AvatarGroup>
+				<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+				<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+				<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+				<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+				<Avatar src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp" size="medium" rounded="rounded"></Avatar>
+			</AvatarGroup>
+
+			<div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+				<Tabs
+					defaultValue={0}
+					onValueChange={v => console.log(v)}
+					fullWidth
+				>
+					<TabsList>
+						<TabsTrigger value={0}>Tab 1</TabsTrigger>
+						<TabsTrigger value={1}>Tab 2</TabsTrigger>
+						<TabsTrigger value={2}>Tab 3</TabsTrigger>
+					</TabsList>
+				</Tabs>
 				<Toggle size="small" />
 				<Toggle size="medium" />
 				<Toggle size="small" disabled />
@@ -137,7 +185,7 @@ const IndexPage: React.FC = () => {
 			<Badge variant="default" onClick={handleClick}>
 				test
 			</Badge>
-			<BadgeGroup variant="primary" badges={badges} onClick={handleClick} />
+			<BadgeGroup variant="primary" onClick={handleClick} />
 
 			<div>
 				<Avatar

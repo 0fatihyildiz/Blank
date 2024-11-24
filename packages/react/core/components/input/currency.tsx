@@ -59,6 +59,7 @@ const Currency: React.FC<CurrencyProps> = (props) => {
             {...props}
             value={computedValue}
             onChange={val => handleValueChange(val)}
+            tail={{ size: 'small' }}
             lead={{ size: 'medium' }}
             tailSlot={
                 <span>{currency?.[selectedCurrency]?.symbol}</span>

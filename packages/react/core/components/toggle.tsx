@@ -1,6 +1,6 @@
 import type { ToggleProps } from '@blank/types'
 import type { PropsWithChildren } from 'react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Toggle({
     size = 'medium',
@@ -18,7 +18,6 @@ function Toggle({
 
     const handleToggle = () => {
         if (!disabled) {
-            setIsActive(!isActive)
             const newState = !isActive
             setIsActive(newState)
             if (onChange) {
@@ -36,6 +35,7 @@ function Toggle({
             )}
             <div
                 onClick={!disabled ? handleToggle : undefined}
+                role="switch"
                 aria-checked={isActive ? 'true' : 'false'}
                 aria-disabled={disabled}
                 className={`toggle ${size} ${isActive ? 'active' : ''} ${disabled ? 'disabled' : ''} toggle-position`}
@@ -45,4 +45,5 @@ function Toggle({
         </div>
     )
 }
+
 export default Toggle

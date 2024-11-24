@@ -12,7 +12,11 @@ provide('buttonGroup', {
 </script>
 
 <template>
-    <div class="blank button-group">
+    <div
+        class="blank button-group"
+        role="group"
+        aria-labelledby="button-group-label"
+    >
         <slot />
     </div>
 </template>

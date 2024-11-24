@@ -2,7 +2,6 @@
 import { Avatar, AvatarGroup, Badge, BadgeGroup, Button, ButtonGroup, Container, Icon, Input, Radio, RadioGroup, Tabs, TabsContent, TabsList, TabsTrigger, Toggle } from '@blank/vue'
 import { ref, watch } from 'vue'
 
-const badges = [{ label: 'test', backgroundColor: 'grey', color: 'white' }, { label: 'test', backgroundColor: 'transparent', color: 'white', icon: 'remix:command-fill' }]
 function handleClick() {
 	console.log('Badge group clicked!')
 }
@@ -133,7 +132,15 @@ watch(selectedRadio, (newValue) => {
 		<Badge variant="default" @click="handleClick">
 			test
 		</Badge>
-		<BadgeGroup variant="primary" :badges="badges" @click="handleClick" />
+		<BadgeGroup variant="primary"
+			@click="handleClick"
+		>
+			<Badge variant="default">
+				test
+			</Badge><Badge variant="default">
+				test
+			</Badge>
+		</BadgeGroup>
 
 		<div>
 			<Avatar

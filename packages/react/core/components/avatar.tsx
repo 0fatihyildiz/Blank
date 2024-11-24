@@ -9,11 +9,12 @@ function Avatar({ size = 'medium', name, src, rounded = 'none' }: PropsWithChild
             .join('')
             .slice(0, 2)
         : ''
+
     return (
-        <div className={`blank avatar ${size} ${rounded}`}>
+        <div className={`blank avatar ${size} ${rounded}`} role="img" aria-label={name ? `${name}'s avatar` : 'User avatar'}>
             {src
                 ? (
-                        <img src={src} alt={name} className="src" />
+                        <img src={src} alt={name ? `${name}'s avatar` : 'User avatar'} className="src" />
                     )
                 : initials
                     ? (

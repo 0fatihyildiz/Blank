@@ -5,7 +5,10 @@ import type { PropsWithChildren } from 'react'
 import clsx from 'clsx'
 import { createContext, useContext, useState } from 'react'
 
-interface TabsContextType { activeValue: TabValue, onClickTab: (value: TabValue) => void }
+interface TabsContextType {
+    activeValue: TabValue
+    onClickTab: (value: TabValue) => void
+}
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined)
 
@@ -26,6 +29,7 @@ function Tabs({ children, defaultValue = 0, type = 'underline', className, fullW
                     fullWidth && 'blank tabs--full',
                     className,
                 )}
+                role="tablist"
             >
                 {children}
             </div>
@@ -55,6 +59,7 @@ function TabsTrigger({ children, value, className }: PropsWithChildren<TabsTrigg
             onClick={onClickTab.bind(undefined, value)}
             role="tab"
             aria-selected={isActive}
+            id={`tab-${value}`}
         >
             {children}
         </button>
@@ -68,7 +73,17 @@ function TabsContent({ children, value, className }: PropsWithChildren<TabsConte
     }
     const { activeValue } = context
 
-    return activeValue === value ? <div className={clsx('blank tabs-content', className)} role="tabpanel">{children}</div> : null
+    return activeValue === value
+        ? (
+                <div
+                    className={clsx('blank tabs-content', className)}
+                    role="tabpanel"
+                    aria-labelledby={`tab-${value}`}
+                >
+                    {children}
+                </div>
+            )
+        : null
 }
 
 export { Tabs, TabsContent, TabsList, TabsTrigger }

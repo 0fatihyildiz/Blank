@@ -30,10 +30,19 @@ const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
         buttonAppearance,
         buttonVariant,
         buttonSize,
+        {
+            clickable: !disabled,
+        },
     )
 
     return (
-        <button className={classes} disabled={disabled}>
+        <button
+            className={classes}
+            disabled={disabled}
+            role="button"
+            aria-disabled={disabled}
+            aria-label="Button"
+        >
             {children}
         </button>
     )
