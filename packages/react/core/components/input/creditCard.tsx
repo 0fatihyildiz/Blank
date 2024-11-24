@@ -1,60 +1,81 @@
-import type { InputProps } from '@blank/types'
-import React, { useState } from 'react'
+import type { InputProps, PaymentIconNames } from '@blank/types'
+import React, { useEffect, useRef, useState } from 'react'
 import Icon from '../../common/icon'
 import Base from './base'
 
-interface CreditCardProps extends InputProps {
-    className?: string
-    value?: string
-    onChange?: (value: string) => void
+interface PaymentMethod {
+    description: string
+    prefixes: string[]
+    type: 'card' | 'digital_wallet' | 'payment_gateway' | 'cryptocurrency'
 }
 
-const CreditCard: React.FC<CreditCardProps> = (props) => {
-    const [cardNumber, setCardNumber] = useState('')
-    const [expiryDate, setExpiryDate] = useState('')
-    const [cvv, setCvv] = useState('')
+const CreditCard: React.FC<InputProps> = ({ label, helper, appearance, ...props }) => {
+    const [paymentMethods, setPaymentMethods] = useState<Record<string, PaymentMethod>>({})
+    const [currentPaymentMethod, setCurrentPaymentMethod] = useState<string>('')
+    const [paymentVal, setPaymentVal] = useState({
+        cardNumber: '',
+        expiryDate: '',
+        cvv: '',
+    })
 
-    const formatCardNumber = (value: string) => {
-        return value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ')
+    useEffect(() => {
+        fetch(
+            'https://gist.githubusercontent.com/0fatihyildiz/011cdbdd922b3d9023c764adde6ae345/raw/338df38efe542b458710b185d219325579cc2268/paymentMethods.json',
+        )
+            .then(res => res.json())
+            .then(data => setPaymentMethods(data.paymentMethods))
+            .catch(console.error)
+    }, [])
+
+    const formatters = {
+        cardNumber: (value: string) => {
+            const paymentMethodKey
+        = Object.keys(paymentMethods).find(key =>
+            paymentMethods[key].prefixes.some(prefix => value.startsWith(prefix)),
+        ) || ''
+            setCurrentPaymentMethod(paymentMethodKey)
+            return value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ')
+        },
+        expiryDate: (value: string) =>
+            value.replace(/\D/g, '').replace(/^(\d{2})(\d{0,2})$/, '$1/$2').slice(0, 5),
+        cvv: (value: string) => value.replace(/\D/g, '').slice(0, 4),
     }
 
-    const formatExpiryDate = (value: string) => {
-        return value
-            .replace(/\D/g, '')
-            .replace(/^(\d{2})(\d{0,2})$/, '$1/$2')
-            .slice(0, 5)
-    }
-
-    const formatCVV = (value: string) => {
-        return value.replace(/\D/g, '').slice(0, 4)
+    const handleInput = (field: keyof typeof paymentVal, value: string) => {
+        setPaymentVal(prev => ({
+            ...prev,
+            [field]: formatters[field](value),
+        }))
     }
 
     return (
-        <div className="blank inputGroup">
+        <div className={`blank inputGroup ${appearance}`}>
             <Base
                 {...props}
+                className="card-number"
                 placeholder="Card number"
-                value={cardNumber}
-                onChange={value => setCardNumber(formatCardNumber(value))}
-                leadSlot={(
-                    <div className="payment-method">
-                        <Icon name="payment:visa" size="small" />
-                    </div>
-                )}
-            />
+                value={paymentVal.cardNumber}
+                onChange={val => handleInput('cardNumber', val)}
+            >
+                <div slot="lead" className="payment-method">
+                    <Icon name={`payment:${currentPaymentMethod}` as PaymentIconNames} size="small" />
+                </div>
+            </Base>
 
             <Base
                 {...props}
+                className="card-expiry"
                 placeholder="MM/YY"
-                value={expiryDate}
-                onChange={value => setExpiryDate(formatExpiryDate(value))}
+                value={paymentVal.expiryDate}
+                onChange={val => handleInput('expiryDate', val)}
             />
 
             <Base
                 {...props}
+                className="card-cvc"
                 placeholder="CVV"
-                value={cvv}
-                onChange={value => setCvv(formatCVV(value))}
+                value={paymentVal.cvv}
+                onChange={val => handleInput('cvv', val)}
             />
         </div>
     )

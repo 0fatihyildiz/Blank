@@ -53,6 +53,7 @@ const IndexPage: React.FC = () => {
 				placeholder="Placeholder"
 				size="medium"
 				tail={{ size: 'medium' }}
+				tailSlot={<Button size="small">Click</Button>}
 				lead={{ name: 'remix:command-fill', type: 'icon', size: 'small' }}
 			/>
 

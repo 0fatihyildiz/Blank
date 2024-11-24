@@ -15,6 +15,8 @@ interface InputComponentProps extends InputProps {
     value?: string
     onChange?: (value: string) => void
     className?: string
+    tailSlot?: React.ReactNode
+    leadSlot?: React.ReactNode
 }
 
 const appearanceMap = {
