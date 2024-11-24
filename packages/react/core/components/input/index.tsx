@@ -41,7 +41,7 @@ const Input: React.FC<InputComponentProps> = ({
     }
 
     return (
-        <Component {...inputProps} value={inputProps.value || ''} className={appearance || ''} onChange={inputProps.onChange || (() => {})} />
+        <Component {...inputProps} value={inputProps.value || ''} appearance={appearance} onChange={inputProps.onChange || (() => {})} />
     )
 }
 
