@@ -1,5 +1,5 @@
 import type { InputProps, PaymentIconNames } from '@blank/types'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Icon from '../../common/icon'
 import Base from './base'
 
