@@ -27,7 +27,7 @@ function Toggle({
     }
 
     return (
-        <div className={`blank__toggle-container ${labelDirection}`}>
+        <div className={`blank toggle-container ${labelDirection}`}>
             {label && (
                 <span className={`toggle-label ${size} ${disabled ? 'disabled' : ''}`}>
                     {label}

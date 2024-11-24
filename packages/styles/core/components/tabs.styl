@@ -1,70 +1,71 @@
-.blank__tabs
-    .blank__tabs-list
-        overflow: auto
-        width: fit-content
+.blank
+    &.tabs
+        .tabs-list
+            overflow: auto
+            width: fit-content
 
-        .blank__tabs-trigger
-            flex(column, center, center)
-            Body2(500)
-            color: $AlphaBlack60
+            .tabs-trigger
+                flex(column, center, center)
+                Body2(500)
+                color: $AlphaBlack60
 
-            &:hover
-                color: $Primary900
-
-            &--active
-                color: $Primary900
-
-    .blank__tabs-content
-        spacing('padding', 16px)
-
-    &--full
-        .blank__tabs-list
-            width: 100%
-
-    &--underline
-        .blank__tabs-list
-            flex(row, flex-start, flex-start, inline-flex)
-            border-bottom: 1px solid $AlphaBlack10
-            spacing('gap', 24px)
-
-            .blank__tabs-trigger
-                spacing('padding', 12px, 0, 12px, 0)
+                &:hover
+                    color: $Primary900
 
                 &--active
-                    border-bottom: 2px solid $Primary900
+                    color: $Primary900
 
-    &--underline&--full
-        .blank__tabs-list
-            display: flex
-            spacing('gap', 0)
+        .tabs-content
+            spacing('padding', 16px)
 
-            .blank__tabs-trigger
-                flex-basis: 0%
-                flex-grow: 1
-                flex-shrink: 1
-                spacing('padding', 12px, 24px, 12px, 24px)
+        &--full
+            .tabs-list
+                width: 100%
 
-    &--segmented
-        .blank__tabs-list
-            background-color: $Primary50
-            flex(row, flex-start, flex-start, inline-flex)
-            spacing('padding', 4px, 4px, 4px, 4px)
-            spacing('gap', 4px)
-            border-radius: 24px
+        &--underline
+            .tabs-list
+                flex(row, flex-start, flex-start, inline-flex)
+                border-bottom: 1px solid $AlphaBlack10
+                spacing('gap', 24px)
 
-            .blank__tabs-trigger
-                spacing('padding', 8px, 16px, 8px, 16px)
+                .tabs-trigger
+                    spacing('padding', 12px, 0, 12px, 0)
 
-                &--active
-                    background-color: $BaseWhite
-                    border-radius: 24px
-                    shadow-1()
+                    &--active
+                        border-bottom: 2px solid $Primary900
 
-    &--segmented&--full
-        .blank__tabs-list
-            display: flex
+        &--underline&--full
+            .tabs-list
+                display: flex
+                spacing('gap', 0)
 
-            .blank__tabs-trigger
-                flex-basis: 0%
-                flex-grow: 1
-                flex-shrink: 1
+                .tabs-trigger
+                    flex-basis: 0%
+                    flex-grow: 1
+                    flex-shrink: 1
+                    spacing('padding', 12px, 24px, 12px, 24px)
+
+        &--segmented
+            .tabs-list
+                background-color: $Primary50
+                flex(row, flex-start, flex-start, inline-flex)
+                spacing('padding', 4px, 4px, 4px, 4px)
+                spacing('gap', 4px)
+                border-radius: 24px
+
+                .tabs-trigger
+                    spacing('padding', 8px, 16px, 8px, 16px)
+
+                    &--active
+                        background-color: $BaseWhite
+                        border-radius: 24px
+                        shadow-1()
+
+        &--segmented&--full
+            .tabs-list
+                display: flex
+
+                .tabs-trigger
+                    flex-basis: 0%
+                    flex-grow: 1
+                    flex-shrink: 1

@@ -1,61 +1,62 @@
-.blank__inputGroup
-    &.credit-card
-        display: grid
-        gap: 0
-        grid-template-columns: repeat(2, 2fr)
-        grid-template-rows: auto
+.blank
+    &.inputGroup
+        &.credit-card
+            display: grid
+            gap: 0
+            grid-template-columns: repeat(2, 2fr)
+            grid-template-rows: auto
 
-        &.error
-            .blank__input__base
-                border-color: $Destructive200
+            &.error
+                .input__base
+                    border-color: $Destructive200
 
-        .card-number, .card-expiry, .card-cvc
-            &.disabled .blank__input__base
-                border: solid 1px $AlphaBlack5
+            .card-number, .card-expiry, .card-cvc
+                &.disabled .input__base
+                    border: solid 1px $AlphaBlack5
 
-        .card-number
-            grid-column: 1 / -1
+            .card-number
+                grid-column: 1 / -1
 
-            .blank__input__base, &.disabled .blank__input__base
-                box-shadow: none
-                border-bottom-width: 0
-                border-radius: 12px 12px 0 0
+                .input__base, .disabled .input__base
+                    border-bottom-width: 0
+                    border-radius: 12px 12px 0 0
+                    box-shadow: none
 
-                &:focus-within
-                    focus-ring()
-                    z-index: 1
+                    &:focus-within
+                        focus-ring()
+                        z-index: 1
 
-            .payment-method
-                display: flex
-                gap: 8px
-                justify-content: flex-end
-                padding-right: 12px
+                .payment-method
+                    display: flex
+                    gap: 8px
+                    justify-content: flex-end
+                    padding-right: 12px
 
-                .icon
-                    flex-shrink: 0
+                    .iconify
+                        flex-shrink: 0
 
-                .text
-                    Body2(400)
-                    color: $AlphaBlack60
+                    .text
+                        Body2(400)
+                        color: $AlphaBlack60
 
-        .card-expiry
-            grid-column: 1 / 2
+            .card-expiry
+                grid-column: 1 / 2
 
-            .blank__input__base, &.disabled .blank__input__base
-                border-radius: 0 0 0 12px
+                .input__base, .disabled .input__base
+                    border-radius: 0 0 0 12px
 
-        .card-cvc
-            grid-column: 2 / 4
+            .card-cvc
+                grid-column: 2 / 4
 
-            .blank__input__base, &.disabled .blank__input__base
-                border-left-width: 0
-                border-radius: 0 0 12px 0
+                .input__base, .disabled .input__base
+                    border-left-width: 0
+                    border-radius: 0 0 12px 0
 
-    .blank__input
-        gap: 0
+        .input
+            gap: 0
 
 .blank
-    &__input
+    &.input
         spacing('gap', 8px)
         flex(column, flex-start, stretch, inline-flex)
 
@@ -113,7 +114,7 @@
                     width: 100px
                     spacing('padding', 4px, 4px)
 
-                .icon
+                .iconify
                     color: $AlphaBlack60
                     height: 20px
 
@@ -148,7 +149,7 @@
                     color: $AlphaBlack60
 
         &.error
-            .blank__input__base
+            .input__base
                 background-color: $Destructive50
                 border-color: $Destructive200
 
@@ -159,7 +160,7 @@
                         color: $Destructive400
 
         &.disabled
-            .blank__input__base
+            .input__base
                 background-color: $AlphaBlack5
                 border-color: transparent
                 box-shadow: none
@@ -170,11 +171,11 @@
                     &::placeholder
                         color: $AlphaBlack30
 
-                .icon
+                .iconify
                     color: $AlphaBlack30
 
         &.url
-            .blank__input__base
+            .input__base
                 .slot
                     &.tail
                         spacing('padding', 0)
@@ -188,7 +189,7 @@
                             color: $AlphaBlack40
 
         &.phone
-            .blank__input__base
+            .input__base
                 .slot
                     &.tail
                         width: 96px
@@ -200,7 +201,7 @@
                             color: $AlphaBlack50
 
         &.currency
-            .blank__input__base
+            .input__base
                 .slot
                     &.tail
                         span

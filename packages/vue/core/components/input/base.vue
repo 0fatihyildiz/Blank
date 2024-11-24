@@ -27,14 +27,14 @@ const classes = computed(() => ({
 </script>
 
 <template>
-    <div class="blank__input" :class="classes">
-        <label class="blank__input__label" :for="props.id">
+    <div class="blank input" :class="classes">
+        <label class="blank input__label" :for="props.id">
             {{ label }}
         </label>
-        <div class="blank__input__base" :class="props.size">
+        <div class="blank input__base" :class="props.size">
             <div v-if="tail || slots.tail" class="slot tail" :class="tail?.size || 'small'">
                 <slot v-if="slots.tail" name="tail" />
-                <Icon v-else-if="tail?.name" class="icon" :name="tail.name" :size="tail.size" />
+                <Icon v-else-if="tail?.name" :name="tail.name" :size="tail.size" />
             </div>
 
             <input
@@ -53,7 +53,7 @@ const classes = computed(() => ({
 
             <div v-if="lead || slots.lead" class="slot lead" :class="lead?.size || 'small'">
                 <slot v-if="slots.lead" name="lead" />
-                <Icon v-else-if="lead?.name" class="icon" :name="lead.name" :size="lead.size" />
+                <Icon v-else-if="lead?.name" :name="lead.name" :size="lead.size" />
             </div>
         </div>
     </div>

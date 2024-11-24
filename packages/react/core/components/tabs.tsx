@@ -24,9 +24,9 @@ function Tabs({ children, defaultValue = 0, type = 'underline', className, fullW
         <TabsContext.Provider value={{ activeValue, onClickTab }}>
             <div
                 className={clsx(
-                    'blank__tabs',
-                    `blank__tabs--${type}`,
-                    fullWidth && 'blank__tabs--full',
+                    'blank tabs',
+                    `blank tabs--${type}`,
+                    fullWidth && 'blank tabs--full',
                     className,
                 )}
                 role="tablist"
@@ -38,7 +38,7 @@ function Tabs({ children, defaultValue = 0, type = 'underline', className, fullW
 }
 
 function TabsList({ children, className }: PropsWithChildren<TabsListProps>) {
-    return <div className={clsx('blank__tabs-list', className)} role="tablist">{children}</div>
+    return <div className={clsx('blank tabs-list', className)} role="tablist">{children}</div>
 }
 
 function TabsTrigger({ children, value, className }: PropsWithChildren<TabsTriggerProps>) {
@@ -52,8 +52,8 @@ function TabsTrigger({ children, value, className }: PropsWithChildren<TabsTrigg
     return (
         <button
             className={clsx(
-                'blank__tabs-trigger',
-                isActive && 'blank__tabs-trigger--active',
+                'blank tabs-trigger',
+                isActive && 'blank tabs-trigger--active',
                 className,
             )}
             onClick={onClickTab.bind(undefined, value)}
