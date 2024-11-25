@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "ESNext",
+        "jsx": "preserve",
         "baseUrl": ".",
         "rootDir": "core",
         "module": "ESNext",
@@ -16,6 +17,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
+
     },
     "include": ["core/**/*"],
     "exclude": ["node_modules", "dist"]
