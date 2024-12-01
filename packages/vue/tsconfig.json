@@ -8,7 +8,7 @@
         "moduleResolution": "node",
         "paths": {
             "@/*": ["core/*"],
-            "@blank/types": ["../../src/shared/types/index.d.ts"] // updated path
+            "@blank/types": ["../../src/shared/types/index.d.ts"]
         },
         "strict": true,
         "declaration": true,
