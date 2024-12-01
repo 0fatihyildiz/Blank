@@ -8,7 +8,7 @@
         "moduleResolution": "node",
         "paths": {
             "@/*": ["core/*"],
-            "@blank/types": ["../../src/shared/types/.tsuo/declaration/index.d.ts"]
+            "@blank/types": ["../../src/shared/types/index.d.ts"] // updated path
         },
         "strict": true,
         "declaration": true,
