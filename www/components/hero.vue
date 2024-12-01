@@ -1,5 +1,14 @@
 <script lang="ts" setup>
 import { Avatar, AvatarGroup, Button, Icon, Item, Text } from "@blank/vue"
+
+const { data, status, error, refresh, clear } = await useAsyncData(
+    'collaborators',
+    () => $fetch('/api/creators-team/Blank')
+)
+
+onMounted(() => {
+    console.log(data.value)
+})
 </script>
 
 <template>
@@ -26,13 +35,8 @@ import { Avatar, AvatarGroup, Button, Icon, Item, Text } from "@blank/vue"
             </div>
 
             <div class="collobrators">
-                <AvatarGroup :max-display="3">
-                    <Avatar
-                        src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"
-                        size="small" rounded="rounded" draggable="false" />
-                    <Avatar
-                        src="https://files.kick.com/images/user/27079011/profile_image/conversion/6e002a5e-8fd1-461c-8c7a-79fe6b71cdff-medium.webp"
-                        size="small" rounded="rounded" draggable="false" />
+                <AvatarGroup>
+                    <Avatar v-for="collaborator in data" :src="collaborator.avatar_url" rounded="rounded" draggable="false" />
                 </AvatarGroup>
 
                 <Text variant="caption1" tag="p">

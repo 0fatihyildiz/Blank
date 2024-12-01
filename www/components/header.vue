@@ -1,11 +1,17 @@
 <script setup lang="ts">
-import { Item, Button, Icon } from "@blank/vue";
+import { version } from "@blank/vue/package.json";
+import { Item, Button, Icon, Badge } from "@blank/vue";
 </script>
 
 <template>
     <Item col="full" class="header">
         <div class="left">
-            <NuxtImg src="logo.svg" alt="Blank" class="logo" />
+            <div class="meta">
+                <NuxtImg src="logo.svg" alt="Blank" class="logo" />
+                <Badge variant="neutral">
+                    v{{ version }}
+                </Badge>
+            </div>
 
             <div class="navigation">
                 <Button appearance="text">Documentation</Button>
@@ -27,9 +33,14 @@ import { Item, Button, Icon } from "@blank/vue";
     .left {
         @apply flex gap-12;
 
-        .logo {
-            @apply size-12;
+        .meta {
+            @apply flex gap-4 items-center;
+
+            .logo {
+                @apply size-12;
+            }
         }
+
 
         .navigation {
             @apply flex gap-4;

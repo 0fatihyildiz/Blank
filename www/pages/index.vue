@@ -4,9 +4,11 @@ import { Container } from "@blank/vue"
 
 <template>
   <StunningGodRay class="!absolute -z-10" />
-  <Container class="justify-center-center">
+  <Container class="justify-center-center max-w-7xl w-full">
     <Header />
     <Hero />
+    <Feature />
+    <Footer />
   </Container>
 </template>
 
