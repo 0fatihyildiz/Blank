@@ -27,11 +27,12 @@
         "lint:fix": "eslint . --fix",
         "lint:styles": "pnpm --filter @blank/styles lint",
         "clean": "sh ./bin/clean.sh",
-        "prepare": "husky",
         "commitlint": "commitlint --edit",
         "version": "auto-changelog -p && git add CHANGELOG.md",
         "generate-changelog": "auto-changelog -u",
+        "prepare": "husky",
         "postinstall": "npm-run-all2 build:styles build:icons build:types --parallel build:vue build:react "
+
     },
     "workspaces": [
         "packages/*",
@@ -45,7 +46,7 @@
         "@antfu/eslint-config": "^3.8.0",
         "@commitlint/cli": "^19.5.0",
         "@commitlint/config-conventional": "^19.5.0",
-        "@types/node": "^22.8.1",
+        "@types/node": "^22.9.3",
         "@vitejs/plugin-vue": "^5.1.4",
         "@vue/compiler-sfc": "^3.5.12",
         "auto-changelog": "^2.5.0",
