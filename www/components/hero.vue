@@ -1,14 +1,10 @@
 <script lang="ts" setup>
 import { Avatar, AvatarGroup, Button, Icon, Item, Text } from '@blank/vue'
 
-const { data, status, error, refresh, clear } = await useAsyncData(
+const { data } = await useAsyncData(
     'collaborators',
     () => $fetch('/api/creators-team/Blank'),
 )
-
-onMounted(() => {
-    console.log(data.value)
-})
 </script>
 
 <template>
@@ -39,13 +35,13 @@ onMounted(() => {
             <div class="collobrators">
                 <AvatarGroup>
                     <Avatar
-                        v-for="collaborator in data" :key="collaborator.id" :src="collaborator.avatar_url"
+                        v-for="collaborator in data?.slice(0, 4)" :key="collaborator.id" :src="collaborator.avatar_url"
                         rounded="rounded" draggable="false"
                     />
                 </AvatarGroup>
 
-                <Text variant="caption1" tag="p">
-                    And 10+ more collaborators
+                <Text v-if="data" variant="caption1" tag="p">
+                    And {{ data.length - 4 }}+ more collaborators
                 </Text>
             </div>
         </div>

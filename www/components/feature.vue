@@ -1,35 +1,35 @@
 <script lang="ts" setup>
-import { Button, Item, Text, Icon } from "@blank/vue";
-import type { PaymentIconNames, RemixIconNames, LogosIconNames, CryptocurrencyIconNames } from "@blank/types";
+import type { CryptocurrencyIconNames, LogosIconNames, PaymentIconNames, RemixIconNames } from '@blank/types'
+import { Button, Icon, Item, Text } from '@blank/vue'
 
 interface Feature {
-    title: string;
-    description: string;
-    icon: RemixIconNames | LogosIconNames | CryptocurrencyIconNames | PaymentIconNames;
-    to: string;
-    soon?: boolean;
+    title: string
+    description: string
+    icon: RemixIconNames | LogosIconNames | CryptocurrencyIconNames | PaymentIconNames
+    to: string
+    soon?: boolean
 }
 
 const features: Feature[] = [
     {
-        title: "Components",
-        description: "10 items",
-        icon: "remix:dashboard-line",
-        to: "/"
+        title: 'Components',
+        description: '10 items',
+        icon: 'remix:dashboard-line',
+        to: '/',
     },
     {
-        title: "Templates",
-        description: "Soon",
-        icon: "remix:file-list-2-line",
-        to: "/",
-        soon: true
+        title: 'Templates',
+        description: 'Soon',
+        icon: 'remix:file-list-2-line',
+        to: '/',
+        soon: true,
     },
     {
-        title: "Blocks",
-        description: "Soon",
-        icon: "remix:layout-line",
-        to: "/",
-        soon: true
+        title: 'Blocks',
+        description: 'Soon',
+        icon: 'remix:layout-line',
+        to: '/',
+        soon: true,
     },
 ]
 </script>
@@ -47,7 +47,7 @@ const features: Feature[] = [
         </div>
 
         <div class="content">
-            <NuxtLink class="category" v-for="feature in features" :key="feature.title" :to="feature.to" :class="{soon: feature?.soon}">
+            <NuxtLink v-for="feature in features" :key="feature.title" class="category" :to="feature.to" :class="{ soon: feature?.soon }">
                 <div class="icon">
                     <Icon :name="feature.icon" class="iconify" />
                 </div>
@@ -67,7 +67,7 @@ const features: Feature[] = [
 
 <style lang="postcss">
 .feature {
-    @apply relative w-full px-14 h-full flex flex-col justify-between gap-4;
+    @apply relative w-full px-12 h-full flex flex-col justify-between gap-4;
 
     .header {
         @apply flex items-center justify-between w-full border-b border-solid border-alpha-black-10 pb-4;

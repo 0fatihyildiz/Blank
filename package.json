@@ -12,6 +12,7 @@
         "dev:react": "npm-run-all2 --parallel dev:styles dev:react:build dev:playground-react dev:icons dev:types",
         "dev:styles": "pnpm --filter @blank/styles dev",
         "dev:icons": "pnpm --filter icons dev",
+        "setup": "npm-run-all2 build:styles build:icons build:types --parallel build:vue build:react ",
         "dev:types": "pnpm --filter types dev",
         "dev:vue:build": "pnpm --filter @blank/vue dev",
         "dev:react:build": "pnpm --filter @blank/react dev",
@@ -30,9 +31,7 @@
         "commitlint": "commitlint --edit",
         "version": "auto-changelog -p && git add CHANGELOG.md",
         "generate-changelog": "auto-changelog -u",
-        "prepare": "husky",
-        "postinstall": "npm-run-all2 build:styles build:icons build:types --parallel build:vue build:react "
-
+        "prepare": "husky"
     },
     "workspaces": [
         "packages/*",
