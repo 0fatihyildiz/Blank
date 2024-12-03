@@ -3,7 +3,7 @@ import { Container } from "@blank/vue"
 </script>
 
 <template>
-  <StunningGodRay class="!absolute -z-10" />
+  <StunningGodRay class="!absolute -z-10 opacity-20" />
   <Container class="justify-center-center max-w-7xl w-full">
     <Header />
     <Hero />

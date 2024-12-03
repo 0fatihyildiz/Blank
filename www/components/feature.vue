@@ -1,26 +1,95 @@
 <script lang="ts" setup>
-import { Item, Text } from "@blank/vue";
+import { Button, Item, Text, Icon } from "@blank/vue";
+
+const features = [
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    },
+    {
+        title: "Home",
+        description: "10 items",
+        icon: "remix:home-2-fill",
+        to: "/"
+    }
+]
 </script>
 
 <template>
     <Item class="feature" col="full">
         <div class="header">
-            <Text class="title" variant="body2" tag="span">
+            <Text class="title" variant="body1" tag="span">
                 Categories
             </Text>
-        </div>
-        <div class="content">
 
+            <Button appearance="text" size="small">
+                View all
+            </Button>
+        </div>
+
+        <div class="content">
+            <NuxtLink class="category" v-for="feature in features" :key="feature.title" :to="feature.to">
+                <div class="icon">
+                    <Icon name="remix:home-2-fill" />
+                </div>
+
+                <div class="text-content">
+                    <Text variant="body2" tag="span" class="title">
+                        {{ feature.title }}
+                    </Text>
+                    <Text variant="caption1" tag="span" class="description">
+                        {{ feature.description }}
+                    </Text>
+                </div>
+            </NuxtLink>
         </div>
     </Item>
 </template>
 
 <style lang="postcss">
 .feature {
-    @apply relative w-full px-12 h-full flex justify-between gap-4;
+    @apply relative w-full px-14 h-full flex flex-col justify-between gap-4;
 
     .header {
-        @apply border-b border-alpha-black-10 pb-4;
+        @apply flex items-center justify-between w-full border-b border-solid border-alpha-black-10 pb-4;
 
         .title {
             @apply text-primary-900 font-medium;
@@ -28,7 +97,31 @@ import { Item, Text } from "@blank/vue";
     }
 
     .content {
-        @apply h-full justify-center flex flex-col gap-4;
+        @apply h-full grid grid-cols-4 gap-4;
+
+        .category {
+            @apply flex items-center justify-start border border-solid border-alpha-black-5 hover:bg-primary-50 shadow-sm rounded-xl p-2 gap-2.5;
+
+            .icon {
+                @apply p-2.5 border border-solid border-alpha-black-5 rounded-md;
+
+                .iconify {
+                    @apply text-primary-900 h-6 w-6;
+                }
+            }
+
+            .text-content {
+                @apply flex flex-col;
+
+                .title {
+                    @apply text-primary-900;
+                }
+
+                .description {
+                    @apply text-alpha-black-40;
+                }
+            }
+        }
     }
 }
 </style>

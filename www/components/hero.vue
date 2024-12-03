@@ -14,14 +14,16 @@ onMounted(() => {
 <template>
     <Item class="hero" col="full">
         <div class="content">
-            <Text class="title" variant="h2" tag="h2">
-                Website Design System and UI Components
-            </Text>
+            <div class="text-content">
+                <Text class="title" variant="h3" tag="h3">
+                    Website Design System and UI Components
+                </Text>
 
-            <Text class="description" variant="subheadline" tag="p">
-                Build your website with our design system and UI components. Create
-                your own design system or start with our pre-built components.
-            </Text>
+                <Text class="description" variant="body2" tag="p">
+                    Build your website with our design system and UI components. Create
+                    your own design system or start with our pre-built components.
+                </Text>
+            </div>
 
             <div class="buttons">
                 <Button variant="secondary">
@@ -36,7 +38,8 @@ onMounted(() => {
 
             <div class="collobrators">
                 <AvatarGroup>
-                    <Avatar v-for="collaborator in data" :src="collaborator.avatar_url" rounded="rounded" draggable="false" />
+                    <Avatar v-for="collaborator in data" :src="collaborator.avatar_url" rounded="rounded"
+                        draggable="false" />
                 </AvatarGroup>
 
                 <Text variant="caption1" tag="p">
@@ -56,12 +59,16 @@ onMounted(() => {
     .content {
         @apply h-full justify-center flex flex-col gap-4;
 
-        .title {
-            @apply text-primary-900 font-semibold;
-        }
+        .text-content {
+            @apply flex flex-col gap-1;
 
-        .description {
-            @apply mt-4 text-alpha-black-60 font-normal;
+            .title {
+                @apply text-primary-900 font-semibold;
+            }
+
+            .description {
+                @apply mt-4 text-alpha-black-60 font-normal;
+            }
         }
 
         .buttons {
