@@ -1,55 +1,36 @@
 <script lang="ts" setup>
 import { Button, Item, Text, Icon } from "@blank/vue";
+import type { PaymentIconNames, RemixIconNames, LogosIconNames, CryptocurrencyIconNames } from "@blank/types";
 
-const features = [
+interface Feature {
+    title: string;
+    description: string;
+    icon: RemixIconNames | LogosIconNames | CryptocurrencyIconNames | PaymentIconNames;
+    to: string;
+    soon?: boolean;
+}
+
+const features: Feature[] = [
     {
-        title: "Home",
+        title: "Components",
         description: "10 items",
-        icon: "remix:home-2-fill",
+        icon: "remix:dashboard-line",
         to: "/"
     },
     {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
+        title: "Templates",
+        description: "Soon",
+        icon: "remix:file-list-2-line",
+        to: "/",
+        soon: true
     },
     {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
+        title: "Blocks",
+        description: "Soon",
+        icon: "remix:layout-line",
+        to: "/",
+        soon: true
     },
-    {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
-    },
-    {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
-    },
-    {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
-    },
-    {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
-    },
-    {
-        title: "Home",
-        description: "10 items",
-        icon: "remix:home-2-fill",
-        to: "/"
-    }
 ]
 </script>
 
@@ -66,9 +47,9 @@ const features = [
         </div>
 
         <div class="content">
-            <NuxtLink class="category" v-for="feature in features" :key="feature.title" :to="feature.to">
+            <NuxtLink class="category" v-for="feature in features" :key="feature.title" :to="feature.to" :class="{soon: feature?.soon}">
                 <div class="icon">
-                    <Icon name="remix:home-2-fill" />
+                    <Icon :name="feature.icon" class="iconify" />
                 </div>
 
                 <div class="text-content">
@@ -101,6 +82,10 @@ const features = [
 
         .category {
             @apply flex items-center justify-start border border-solid border-alpha-black-5 hover:bg-primary-50 shadow-sm rounded-xl p-2 gap-2.5;
+
+            &.soon {
+                @apply opacity-50 pointer-events-none shadow-none;
+            }
 
             .icon {
                 @apply p-2.5 border border-solid border-alpha-black-5 rounded-md;

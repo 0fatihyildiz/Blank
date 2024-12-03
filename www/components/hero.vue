@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { Avatar, AvatarGroup, Button, Icon, Item, Text } from "@blank/vue"
+import { Avatar, AvatarGroup, Button, Icon, Item, Text } from '@blank/vue'
 
 const { data, status, error, refresh, clear } = await useAsyncData(
     'collaborators',
-    () => $fetch('/api/creators-team/Blank')
+    () => $fetch('/api/creators-team/Blank'),
 )
 
 onMounted(() => {
@@ -38,8 +38,10 @@ onMounted(() => {
 
             <div class="collobrators">
                 <AvatarGroup>
-                    <Avatar v-for="collaborator in data" :src="collaborator.avatar_url" rounded="rounded"
-                        draggable="false" />
+                    <Avatar
+                        v-for="collaborator in data" :key="collaborator.id" :src="collaborator.avatar_url"
+                        rounded="rounded" draggable="false"
+                    />
                 </AvatarGroup>
 
                 <Text variant="caption1" tag="p">
