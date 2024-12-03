@@ -1,13 +1,14 @@
 {
     "compilerOptions": {
         "target": "ESNext",
+        "jsx": "preserve",
         "baseUrl": ".",
         "rootDir": "core",
         "module": "ESNext",
         "moduleResolution": "node",
         "paths": {
             "@/*": ["core/*"],
-            "@blank/types": ["../../src/shared/types/.tsuo/declaration/index.d.ts"]
+            "@blank/types": ["../../src/shared/types/index.d.ts"]
         },
         "strict": true,
         "declaration": true,
@@ -16,6 +17,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true
+
     },
     "include": ["core/**/*"],
     "exclude": ["node_modules", "dist"]

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { AvatarGroupsProps } from '@blank/types'
-import { computed, useSlots } from 'vue'
+import { computed, useSlots, withDefaults } from 'vue'
 
 const props = withDefaults(defineProps<AvatarGroupsProps>(), {
     maxDisplay: 3,
@@ -20,12 +20,11 @@ const displayChildren = computed(() => {
         role="group"
         aria-label="Avatar group"
     >
-        <div v-for="(children, index) in displayChildren" :key="index">
-            <component
-                :is="children"
-                role="img"
-                :aria-label="`Avatar ${index + 1}`"
-            />
-        </div>
+        <component
+            :is="children" v-for="(children, index) in displayChildren"
+            :key="index"
+            role="img"
+            :aria-label="`Avatar ${index + 1}`"
+        />
     </div>
 </template>
