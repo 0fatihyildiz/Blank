@@ -21,6 +21,6 @@ export default defineNuxtConfig({
         exposeConfig: true,
     },
     runtimeConfig: {
-        GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+        GITHUB_TOKEN: import.meta.env.GITHUB_TOKEN,
     },
 })
