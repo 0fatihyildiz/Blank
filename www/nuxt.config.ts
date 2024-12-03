@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    // favicon
     app: {
         head: {
             meta: [
@@ -20,5 +19,8 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/image'],
     tailwindcss: {
         exposeConfig: true,
+    },
+    runtimeConfig: {
+        GITHUB_TOKEN: process.env.GITHUB_TOKEN,
     },
 })

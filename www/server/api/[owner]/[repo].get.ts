@@ -3,10 +3,12 @@ import { ofetch } from 'ofetch'
 const baseURL = 'https://api.github.com/'
 
 async function getCollaborators(owner: string, repo: string): Promise<any[]> {
+    const config = useRuntimeConfig()
+
     const collaborators = await ofetch(`repos/${owner}/${repo}/collaborators?affiliation=direct`, {
         baseURL,
         headers: {
-            Authorization: `token <TOKEN>`,
+            Authorization: `token ${config.GITHUB_TOKEN}`,
             Accept: 'application/vnd.github.v3+json',
         },
     })
