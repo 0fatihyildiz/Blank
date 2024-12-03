@@ -6,7 +6,7 @@ async function getCollaborators(owner: string, repo: string): Promise<any[]> {
     const collaborators = await ofetch(`repos/${owner}/${repo}/collaborators?affiliation=direct`, {
         baseURL,
         headers: {
-            Authorization: `token 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`,
+            Authorization: `token <TOKEN>`,
             Accept: 'application/vnd.github.v3+json',
         },
     })
