@@ -7,18 +7,18 @@
     "license": "MIT",
     "keywords": [],
     "scripts": {
-        "dev": "npm-run-all2 --parallel dev:*",
-        "dev:vue": "npm-run-all2 --parallel dev:styles dev:types dev:icons dev:vue:build dev:playground-vue",
-        "dev:react": "npm-run-all2 --parallel dev:styles dev:react:build dev:playground-react dev:icons dev:types",
+        "dev": "npm-run-all --parallel dev:*",
+        "dev:vue": "npm-run-all --parallel dev:vue:build dev:playground-vue",
+        "dev:react": "npm-run-all --parallel dev:react:build dev:playground-react",
         "dev:styles": "pnpm --filter @blank/styles dev",
         "dev:icons": "pnpm --filter icons dev",
-        "setup": "npm-run-all2 build:styles build:icons build:types --parallel build:vue build:react ",
+        "setup": "npm-run-all build:styles build:icons build:types build:vue build:react",
         "dev:types": "pnpm --filter types dev",
         "dev:vue:build": "pnpm --filter @blank/vue dev",
         "dev:react:build": "pnpm --filter @blank/react dev",
         "dev:playground-vue": "pnpm --filter playground-vue dev",
         "dev:playground-react": "pnpm --filter playground-react dev",
-        "build": "npm-run-all2 --parallel build:*",
+        "build": "npm-run-all --parallel build:*",
         "build:styles": "pnpm --filter @blank/styles build",
         "build:vue": "pnpm --filter @blank/vue build",
         "build:react": "pnpm --filter @blank/react build",
@@ -27,11 +27,11 @@
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
         "lint:styles": "pnpm --filter @blank/styles lint",
-        "clean": "sh ./bin/clean.sh",
+        "clean": "pnpm store prune && rimraf dist node_modules package-lock.json",
         "commitlint": "commitlint --edit",
         "version": "auto-changelog -p && git add CHANGELOG.md",
         "generate-changelog": "auto-changelog -u",
-        "prepare": "husky"
+        "prepare": "husky install"
     },
     "workspaces": [
         "packages/*",
@@ -51,6 +51,7 @@
         "auto-changelog": "^2.5.0",
         "eslint": "^9.12.0",
         "husky": "^9.1.6",
+        "rimraf": "^6.0.1",
         "typescript": "^5.6.3",
         "vite": "^5.4.9"
     }
