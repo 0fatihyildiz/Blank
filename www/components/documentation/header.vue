@@ -6,10 +6,12 @@ const search = ref<string>('');
 
 <template>
     <Item col="full" class="header">
-        <NuxtImg src="logo.svg" alt="Blank" class="logo" />
+        <NuxtLink to="/documentation">
+            <NuxtImg src="logo.svg" alt="Blank" class="logo" />
+        </NuxtLink>
 
         <Input id="search-input" v-model="search" :tail="{ size: 'small', name: 'remix:search-2-line' }"
-            placeholder="Search" />
+            placeholder="Search" size="medium" />
     </Item>
 </template>
 
