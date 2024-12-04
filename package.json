@@ -8,8 +8,8 @@
     "keywords": [],
     "scripts": {
         "dev": "npm-run-all --parallel dev:*",
-        "dev:vue": "npm-run-all --parallel dev:vue:build dev:playground-vue",
-        "dev:react": "npm-run-all --parallel dev:react:build dev:playground-react",
+        "dev:vue": "npm-run-all --parallel dev:vue:build dev:playground-vue dev:styles dev:icons dev:types",
+        "dev:react": "npm-run-all --parallel dev:react:build dev:playground-react dev:styles dev:icons dev:types",
         "dev:styles": "pnpm --filter @blank/styles dev",
         "dev:icons": "pnpm --filter icons dev",
         "setup": "npm-run-all build:styles build:icons build:types build:vue build:react",
