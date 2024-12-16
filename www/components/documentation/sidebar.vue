@@ -3,7 +3,7 @@ import { Icon, Item, Tabs, TabsList, TabsTrigger } from '@blank/vue';
 </script>
 
 <template>
-    <Item col="3">
+    <Item class="sidebar" col="4">
         <Tabs default-value="0" type="segmented" class="w-full">
             <TabsList>
                 <TabsTrigger value="vue" class="gap-2">
@@ -21,7 +21,7 @@ import { Icon, Item, Tabs, TabsList, TabsTrigger } from '@blank/vue';
 
 <style scoped lang="postcss">
 .sidebar {
-    @apply flex justify-between items-center bg-red-500;
+    @apply pl-10 flex justify-between items-center ;
 
 }
 </style>

@@ -3,13 +3,13 @@ import { Item } from '@blank/vue';
 </script>
 
 <template>
-    <Item col="9" class="content">
-        <slot />
-    </Item>
+        <div class="content">
+            <slot />
+        </div>
 </template>
 
 <style scoped lang="postcss">
 .content {
-    @apply px-12 w-full bg-blue-500;
+    @apply col-span-11 mr-12 px-12 bg-blue-500;
 }
 </style>
