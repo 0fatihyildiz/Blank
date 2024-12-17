@@ -4,7 +4,7 @@ import { Container } from '@blank/vue'
 
 <template>
     <StunningGodRay class="!absolute -z-10 opacity-20" />
-    <Container class="justify-center-center max-w-7xl w-full">
+    <Container class="justify-center-center max-w-7xl w-full h-full">
         <Header />
         <Hero />
         <Feature />

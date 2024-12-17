@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Avatar, AvatarGroup, Button, Icon, Item, Text } from '@blank/vue'
 
+const router = useRouter()
 const { data } = await useAsyncData(
     'collaborators',
     () => $fetch('/api/creators-team/Blank'),
@@ -22,11 +23,11 @@ const { data } = await useAsyncData(
             </div>
 
             <div class="buttons">
-                <Button variant="secondary">
+                <Button variant="secondary" @click="router.push('/documentation/components')">
                     Components
                 </Button>
 
-                <Button>
+                <Button @click="router.push('/documentation')">
                     <Icon name="remix:flashlight-fill" class="size-4" />
                     Get started
                 </Button>
@@ -34,10 +35,8 @@ const { data } = await useAsyncData(
 
             <div class="collobrators">
                 <AvatarGroup>
-                    <Avatar
-                        v-for="collaborator in data?.slice(0, 4)" :key="collaborator.id" :src="collaborator.avatar_url"
-                        rounded="rounded" draggable="false"
-                    />
+                    <Avatar v-for="collaborator in data?.slice(0, 4)" :key="collaborator.id"
+                        :src="collaborator.avatar_url" rounded="rounded" draggable="false" />
                 </AvatarGroup>
 
                 <Text v-if="data" variant="caption1" tag="p">
