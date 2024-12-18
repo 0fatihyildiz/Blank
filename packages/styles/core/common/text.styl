@@ -1,0 +1,23 @@
+typographyVariants = {
+    display: { fontSize: 96px, lineHeight: 100px, letterSpacing: -1.92px },
+    h1: { fontSize: 72px, lineHeight: 78px, letterSpacing: -1.44px },
+    h2: { fontSize: 64px, lineHeight: 68px, letterSpacing: -1.28px },
+    h3: { fontSize: 48px, lineHeight: 54px, letterSpacing: -.96px },
+    h4: { fontSize: 36px, lineHeight: 42px, letterSpacing: -.648px },
+    h5: { fontSize: 30px, lineHeight: 36px, letterSpacing: -.54px },
+    h6: { fontSize: 24px, lineHeight: 32px, letterSpacing: -.384px },
+    subheadline: { fontSize: 20px, lineHeight: 28px, letterSpacing: -.28px },
+    body1: { fontSize: 18px, lineHeight: 26px, letterSpacing: -.216px },
+    body2: { fontSize: 16px, lineHeight: 24px, letterSpacing: -.16px },
+    caption1: { fontSize: 14px, lineHeight: 20px, letterSpacing: -.16px },
+    caption2: { fontSize: 12px, lineHeight: 16px, letterSpacing: -.16px }
+}
+
+.blank
+    for name, values in typographyVariants
+        &.{name}
+            font-family: 'Inter', sans-serif
+            font-size: values.fontSize
+            font-style: normal
+            letter-spacing: values.letterSpacing
+            line-height: values.lineHeight

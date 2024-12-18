@@ -1,0 +1,25 @@
+{
+    "name": "@blank/styles",
+    "type": "module",
+    "version": "0.0.1",
+    "private": false,
+    "exports": {
+        ".": "./dist/style.css"
+    },
+    "main": "./dist/style.css",
+    "scripts": {
+        "dev": "vite build --watch",
+        "lint": "pnpm stylus-supremacy format ./**/*.styl --options ./.stylintrc",
+        "build": "tsc && vite build"
+    },
+    "dependencies": {
+        "stylus": "^0.63.0"
+    },
+    "devDependencies": {
+        "stylelint": "^16.10.0",
+        "stylelint-stylus": "^1.0.0",
+        "stylus-supremacy": "^4.0.0",
+        "typescript": "^5.5.3",
+        "vite": "^5.4.8"
+    }
+}

@@ -1,0 +1,96 @@
+@import '../mixins'
+.blank
+  *, *::before, *::after
+    appearance: none
+    background: transparent
+    border: 0
+    box-sizing: border-box
+    font-family: inherit
+    font-size: inherit
+    line-height: inherit
+    margin: 0
+    outline: none
+    padding: 0
+    vertical-align: baseline
+    -moz-appearance: none
+    -webkit-appearance: none
+
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+  a, button, input, textarea, select, label
+    color: inherit
+    display: inline-block
+    text-decoration: none
+
+  button, input, select, textarea
+    background-color: transparent
+    border: 0
+    box-shadow: none
+    color: inherit
+    cursor: default
+    font-family: inherit
+    font-size: 100%
+    margin: 0
+    outline: none
+    padding: 0
+    resize: none
+
+  button
+    background-color: transparent
+    cursor: pointer
+
+  button::-moz-focus-inner, input::-moz-focus-inner
+    border: 0
+    padding: 0
+
+  input[type='text'], input[type='search'], input[type='number'], input[type='email'], input[type='tel'], input[type='url'], input[type='password']
+    appearance: none
+
+  :focus
+    outline: none
+
+  fieldset
+    border: 0
+
+  legend
+    display: block
+    padding: 0
+
+  ol, ul, menu
+    list-style: none
+
+  /* Reset table elements */
+  table
+    border-collapse: collapse
+    border-spacing: 0
+
+  caption, th, td
+    font-weight: normal
+    text-align: left
+    vertical-align: middle
+
+  /* Reset media elements */
+  audio, canvas, video
+    display: inline-block
+
+  img, svg
+    border-style: none
+    display: block
+    height: auto
+    max-width: 100%
+    vertical-align: middle
+
+  /* Reset blockquotes, figures */
+  blockquote, figure
+    margin: 0
+
+  /* Reset hr */
+  hr
+    border: 0
+    border-top: 1px solid #e0e0e0
+    margin: 1em 0
+
+  /* Reset forms and controls */
+  form
+    margin: 0

@@ -1,0 +1,22 @@
+.blank
+    &.item
+        &.full
+            grid-col(12)
+            grid-col-mobile(4)
+
+        &.half
+            grid-col(6)
+            grid-col-mobile(2)
+
+        &.third
+            grid-col(4)
+            grid-col-mobile(2)
+
+        &.offset-item
+            grid-col(6, 3)
+            grid-col-mobile(2, 1)
+
+        for i in 1..12
+            &.col-{i}
+                grid-col(i)
+                grid-col-mobile(i)

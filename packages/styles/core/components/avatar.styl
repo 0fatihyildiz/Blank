@@ -1,0 +1,35 @@
+.blank
+    &.avatar
+        Body1(500)
+        flex(row, center, center, flex)
+        position relative
+        overflow hidden
+        background-color $Primary50
+        color $Primary900
+
+        &.xlarge
+            width 64px
+            height 64px
+        &.large
+            width 48px
+            height 48px
+        &.medium
+            width 40px
+            height 40px
+
+        &.small
+            width 32px
+            height 32px
+        &.xsmall
+            width 24px
+            height 24px
+
+        .src
+            width 100%
+            height 100%
+            object-fit cover
+
+        &.rounded
+            border-radius: 50%
+        &.semi-rounded
+            border-radius: 12px

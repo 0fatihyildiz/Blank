@@ -1,0 +1,221 @@
+.blank
+    &.inputGroup
+        &.credit-card
+            display: grid
+            gap: 0
+            grid-template-columns: repeat(2, 2fr)
+            grid-template-rows: auto
+
+            &.error
+                .input__base
+                    border-color: $Destructive200
+
+            .card-number, .card-expiry, .card-cvc
+                &.disabled .input__base
+                    border: solid 1px $AlphaBlack5
+
+            .card-number
+                grid-column: 1 / -1
+
+                .input__base, .disabled .input__base
+                    border-bottom-width: 0
+                    border-radius: 12px 12px 0 0
+                    box-shadow: none
+
+                    &:focus-within
+                        focus-ring()
+                        z-index: 1
+
+                .payment-method
+                    display: flex
+                    gap: 8px
+                    justify-content: flex-end
+                    padding-right: 12px
+
+                    .iconify
+                        flex-shrink: 0
+
+                    .text
+                        Body2(400)
+                        color: $AlphaBlack60
+
+            .card-expiry
+                grid-column: 1 / 2
+
+                .input__base, .disabled .input__base
+                    border-radius: 0 0 0 12px
+
+            .card-cvc
+                grid-column: 2 / 4
+
+                .input__base, .disabled .input__base
+                    border-left-width: 0
+                    border-radius: 0 0 12px 0
+
+        .input
+            gap: 0
+
+.blank
+    &.input
+        spacing('gap', 8px)
+        flex(column, flex-start, stretch, inline-flex)
+
+        &__label
+            Body2(500)
+            color: $Primary900
+
+        &__helper
+            Caption1(400)
+            color: $AlphaBlack60
+
+        &__error-text
+            Caption1(400)
+            color: $Destructive500
+
+        &__base
+            shadow-1()
+            Body2(300)
+            background-color: $BaseWhite
+            border: solid 1px $AlphaBlack10
+            border-radius: 12px
+            color: $Primary900
+            position: relative
+
+            &.medium
+                height: 40px
+
+            &.large
+                height: 48px
+
+            &:hover
+                border-color: $AlphaBlack20
+
+            &:focus-within
+                focus-ring()
+                z-index: 1
+
+            .slot
+                height: 100%
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                flex(column, center, center, flex)
+
+                &.tail
+                    left: 0
+
+                &.lead
+                    right: 0
+
+                &.small
+                    width: 42px
+
+                &.medium
+                    width: 100px
+                    spacing('padding', 4px, 4px)
+
+                .iconify
+                    color: $AlphaBlack60
+                    height: 20px
+
+                div, button, svg, select
+                    border-radius: 10px
+                    height: 100%
+                    width: 100%
+
+            input
+                spacing('padding', 0, 16px)
+                form-inherit()
+                border-radius: 12px
+                cursor: text
+                height: 100%
+                width: 100%
+
+                &.tail
+                    &__small
+                        padding-left: 48px
+
+                    &__medium
+                        padding-left: 104px
+
+                &.lead
+                    &__small
+                        padding-right: 48px
+
+                    &__medium
+                        padding-right: 104px
+
+                &::placeholder
+                    color: $AlphaBlack60
+
+        &.error
+            .input__base
+                background-color: $Destructive50
+                border-color: $Destructive200
+
+                input
+                    color: $Destructive500
+
+                    &::placeholder
+                        color: $Destructive400
+
+        &.disabled
+            .input__base
+                background-color: $AlphaBlack5
+                border-color: transparent
+                box-shadow: none
+
+                input
+                    color: $AlphaBlack60
+
+                    &::placeholder
+                        color: $AlphaBlack30
+
+                .iconify
+                    color: $AlphaBlack30
+
+        &.url
+            .input__base
+                .slot
+                    &.tail
+                        spacing('padding', 0)
+                        width: 87px
+
+                        .url-slot
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            border-radius: 0
+                            border-right: solid 1px $AlphaBlack10
+                            color: $AlphaBlack40
+
+        &.phone
+            .input__base
+                .slot
+                    &.tail
+                        width: 96px
+
+                        .phone-slot
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color: $AlphaBlack50
+
+        &.currency
+            .input__base
+                .slot
+                    &.tail
+                        span
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color: $AlphaBlack50
+
+                    &.lead
+                        text-align: right
+                        width: 75px
+
+                        select
+                            spacing('padding', 0, 8px)
+                            flex(row, center, center, flex)
+                            Body2(400)
+                            color: $AlphaBlack50

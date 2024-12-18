@@ -1,0 +1,46 @@
+.blank
+    &.badge
+        width: fit-content
+        flex(row, center, center, flex)
+        border-radius: 20px
+        spacing('padding', 4px, 8px)
+        spacing('gap', 4px)
+        Caption1(500)
+
+        &.medium
+            height: 24px
+
+        &.small
+            height: 20px
+
+        &.default
+            background-color: $BaseWhite
+            border: 1px solid $AlphaBlack10
+            color: $Primary900
+
+        &.neutral
+            background-color: $AlphaBlack5
+            color: $Primary900
+
+        &.destructive
+            background-color: $Destructive100
+            color: $Destructive600
+
+        &.warning
+            background-color: $Warning100
+            color: $Warning600
+
+        &.success
+            background-color: $Success100
+            color: $Success600
+
+        &.primary
+            background-color: $Primary900
+            color: $BaseWhite
+
+        &.white
+            background-color: #FFFFFF
+            color: $Primary900
+
+        &.clickable
+            cursor: pointer

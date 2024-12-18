@@ -1,0 +1,34 @@
+.blank
+    &.right-group
+        flex(column, center, end, flex)
+
+        .radio
+            flex(row-reverse, center, center, flex)
+
+    &.left-group
+        flex(column, center, start, flex)
+
+        .radio
+            flex(row, center, center, flex)
+
+        &__radio-group
+            flex(column, center, start, flex)
+
+            .radio
+                border-radius: 0
+
+    &.medium
+        .radio
+            input
+                height: 24px
+                width: 24px
+            label
+                Body1(500)
+
+    &.small
+        .radio
+            input
+                height: 20px
+                width: 20px
+            label
+                Body2(500)

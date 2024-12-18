@@ -1,0 +1,131 @@
+.blank
+  &.button
+    flex(row, center, center, inline-flex)
+
+    &.large
+      Body2(500)
+      spacing('gap', 8px)
+      spacing('padding', 12px, 16px)
+      border-radius: 12px
+
+    &.medium
+      Body2(500)
+      spacing('gap', 8px)
+      spacing('padding', 8px, 16px)
+      border-radius: 12px
+
+    &.small
+      Caption1(500)
+      spacing('gap', 4px)
+      spacing('padding', 8px, 16px)
+      border-radius: 8px
+
+    &.icon
+      border-radius: 50%
+      padding: 0
+
+      &.large
+        height: 48px
+        width: 48px
+
+      &.medium
+        height: 40px
+        width: 40px
+
+      &.small
+        height: 32px
+        width: 32px
+
+    &__text
+      color: inherit
+      text-decoration: none
+
+    &.primary
+      background-color: $Primary900
+      color: $BaseWhite
+      shadow-1()
+
+      &:hover
+        background-color: $Primary800
+
+      &:active
+        background-color: $Primary700
+
+    &.secondary
+      background-color: $BaseWhite
+      border: solid 1px $AlphaBlack10
+      color: $BaseBlack
+      shadow-1()
+
+      &:hover
+        background-color: $Primary50
+
+      &:active
+        background-color: $Primary100
+
+    &.tertiary
+      background-color: $AlphaBlack5
+      color: $BaseBlack
+
+      &:hover
+        background-color: $AlphaBlack10
+
+      &:active
+        background-color: $AlphaBlack20
+
+    &.quaternary
+      color: $AlphaBlack60
+
+      &:hover
+        background-color: $Primary100
+        color: $BaseBlack
+
+      &:active
+        background-color: $Primary200
+
+    &.destructive
+      background-color: $Destructive500
+      color: $BaseWhite
+      shadow-1()
+
+      &:hover
+        background-color: $Destructive600
+
+      &:active
+        background-color: $Destructive700
+
+    &:focus
+      z-index: 1
+      focus-ring()
+
+    &:disabled
+      background-color: $AlphaBlack5
+      border: none
+      box-shadow: none
+      color: $AlphaBlack30
+      cursor: not-allowed
+
+      &:hover
+        background-color: $AlphaBlack5
+
+      &:active
+        background-color: $AlphaBlack5
+
+    &.text
+      background-color: transparent
+      border: none
+      box-shadow: none
+      color: $AlphaBlack60
+      padding: 0
+
+      &:hover
+        background-color: transparent
+        color: $Primary900
+
+      &:active
+        background: transparent
+        color: $Primary900
+
+      &:disabled
+        color: $AlphaBlack30
+        cursor: not-allowed

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@blank/react/button";
+import "@blank/styles";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -33,14 +34,4 @@ export const Primary: Story = {
     </Button>
   ),
   name: "Button",
-  args: {
-    children: "Hello",
-    type: "button",
-    style: {
-      color: "blue",
-      border: "1px solid gray",
-      padding: 10,
-      borderRadius: 10,
-    },
-  },
 };
